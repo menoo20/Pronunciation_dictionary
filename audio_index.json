@@ -1,8 +1,8 @@
 {
-  "last_updated": "2025-08-26T00:01:17.312248",
-  "total_files": 56,
-  "uk_files": 30,
-  "us_files": 26,
+  "last_updated": "2025-08-26T00:12:42.760264",
+  "total_files": 58,
+  "uk_files": 31,
+  "us_files": 27,
   "files": [
     {
       "word": "ban",
@@ -171,6 +171,18 @@
       "accent": "uk",
       "filename": "log_gb.mp3",
       "path": "UK/log_gb.mp3"
+    },
+    {
+      "word": "mango",
+      "accent": "uk",
+      "filename": "mango.mp3",
+      "path": "UK/mango.mp3"
+    },
+    {
+      "word": "mango",
+      "accent": "us",
+      "filename": "mango.mp3",
+      "path": "US/mango.mp3"
     },
     {
       "word": "market",
