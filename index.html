@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- STATIC HOSTING NOTICE -->
+    <!-- This is a static version hosted on GitHub Pages -->
+    <!-- Download functionality requires a Flask server -->
+    <!-- Clone the repository to run locally with full features -->
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Pronunciation Dictionary</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .controls {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .add-word-form {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .add-word-form input, .add-word-form select, .add-word-form button {
+            padding: 12px;
+            border: 2px solid #e1e5e9;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .add-word-form input {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .add-word-form select {
+            min-width: 120px;
+        }
+
+        .add-word-form button {
+            background: #667eea;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .add-word-form button:hover {
+            background: #5a6fd8;
+        }
+
+        .search-btn {
+            background: #52c41a !important;
+            min-width: 200px;
+        }
+
+        .search-btn:hover {
+            background: #45a614 !important;
+        }
+
+        .add-existing-form {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #e1e5e9;
+        }
+
+        /* Modal styles */
+        .modal {
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 15px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid #e1e5e9;
+        }
+
+        .modal-header h3 {
+            margin: 0;
+            color: #333;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #666;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .close-btn:hover {
+            color: #ff4757;
+        }
+
+        .modal-body {
+            padding: 20px;
+        }
+
+        .search-result-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border: 2px solid #e1e5e9;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            transition: all 0.3s;
+        }
+
+        .search-result-item:hover {
+            border-color: #667eea;
+            background: #f8f9ff;
+        }
+
+        .search-result-info {
+            flex: 1;
+        }
+
+        .search-result-word {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .search-result-accent {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .download-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-left: 10px;
+        }
+
+        .download-btn:hover {
+            background: #5a6fd8;
+        }
+
+        .download-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .status-badge {
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .status-available {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status-unavailable {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .status-downloading {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+
+        .search-filter {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .search-box {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #e1e5e9;
+            border-radius: 8px;
+            font-size: 16px;
+            min-width: 200px;
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: 5px;
+        }
+
+        .filter-btn {
+            padding: 12px 20px;
+            border: 2px solid #e1e5e9;
+            background: white;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .filter-btn.active {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+
+        .rescan-btn {
+            background: #52c41a;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .rescan-btn:hover {
+            background: #45a614;
+            transform: translateY(-1px);
+        }
+
+        .rescan-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .clear-cache-btn {
+            background: #ff9500;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .clear-cache-btn:hover {
+            background: #e8890b;
+            transform: translateY(-1px);
+        }
+
+        .words-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .word-card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 5px solid #667eea;
+        }
+
+        .word-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .word-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .word-text {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .word-text:hover {
+            color: #667eea;
+        }
+
+        .accent-badge {
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: bold;
+            color: white;
+        }
+
+        .accent-us {
+            background: #ff6b6b;
+        }
+
+        .accent-uk {
+            background: #4ecdc4;
+        }
+
+        .word-actions {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .play-btn {
+            background: #52c41a;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: background 0.3s;
+        }
+
+        .play-btn:hover {
+            background: #45a614;
+        }
+
+        .delete-btn {
+            background: #ff4757;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .delete-btn:hover {
+            background: #ff3742;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            background: rgba(255,255,255,0.2);
+            padding: 15px 25px;
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #666;
+        }
+
+        .empty-state h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 15px 20px;
+            border-radius: 8px;
+            color: white;
+            font-weight: bold;
+            z-index: 1000;
+            transform: translateX(100%);
+            transition: transform 0.3s;
+        }
+
+        .notification.show {
+            transform: translateX(0);
+        }
+
+        .notification.success {
+            background: #52c41a;
+        }
+
+        .notification.error {
+            background: #ff4757;
+        }
+
+        @media (max-width: 768px) {
+            .add-word-form {
+                flex-direction: column;
+            }
+
+            .search-filter {
+                flex-direction: column;
+            }
+
+            .filter-buttons {
+                justify-content: center;
+            }
+
+            .words-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎵 Personal Pronunciation Dictionary</h1>
+            <p>Build your collection of words with audio pronunciations</p>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-number" id="total-words">0</span>
+                <span class="stat-label">Total Words</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" id="us-words">0</span>
+                <span class="stat-label">US Accent</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" id="uk-words">0</span>
+                <span class="stat-label">UK Accent</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="add-word-form">
+                <input type="text" id="word-input" placeholder="Enter a word to search/download (e.g., hello)" />
+                <button onclick="searchWord()" class="search-btn">🔍 Search & Download</button>
+            </div>
+
+            <div class="add-existing-form" style="display: none;">
+                <input type="text" id="existing-word-input" placeholder="Add existing word to dictionary" />
+                <select id="accent-select">
+                    <option value="us">🇺🇸 US Accent</option>
+                    <option value="uk">🇬🇧 UK Accent</option>
+                </select>
+                <button onclick="addWord()">Add to Dictionary</button>
+            </div>
+
+            <div class="search-filter">
+                <input type="text" class="search-box" id="search-input" placeholder="Search words..." oninput="filterWords()" />
+                <div class="filter-buttons">
+                    <button class="filter-btn active" onclick="setFilter('all')">All</button>
+                    <button class="filter-btn" onclick="setFilter('us')">🇺🇸 US</button>
+                    <button class="filter-btn" onclick="setFilter('uk')">🇬🇧 UK</button>
+                    <button class="rescan-btn" id="rescan-btn" onclick="rescanAudioFiles()">
+                        🔄 Rescan Audio Files
+                    </button>
+                    <button class="clear-cache-btn" onclick="clearCacheAndReload()">
+                        🗑️ Clear Cache
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search Results Modal -->
+        <div id="search-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="search-word-title">Search Results</h3>
+                    <button class="close-btn" onclick="closeSearchModal()">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div id="search-results"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="words-grid" id="words-container">
+            <div class="empty-state">
+                <h3>No words yet!</h3>
+                <p>Add your first word using the form above.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Data storage
+        let words = JSON.parse(localStorage.getItem('pronunciationDictionary')) || [];
+        let availableAudioFiles = [];
+        let currentFilter = 'all';
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            loadAvailableAudioFiles();
+        });
+
+        // Load available audio files from the API
+        async function loadAvailableAudioFiles() {
+            try {
+                // First, refresh the index on the server to get latest file count
+                const refreshResponse = await fetch(`${API_BASE_URL}/refresh-index?t=${Date.now()}`, { 
+                    method: 'POST',
+                    cache: 'no-cache'
+                });
+                
+                // Then load the updated index with cache-busting
+                const response = await fetch(`${API_BASE_URL}/audio-index?t=${Date.now()}`, {
+                    cache: 'no-cache',
+                    headers: {
+                        'Cache-Control': 'no-cache',
+                        'Pragma': 'no-cache'
+                    }
+                });
+                const indexData = await response.json();
+                availableAudioFiles = indexData.files || [];
+                
+                // Show scan results
+                console.log(`📁 Found ${indexData.total_files} audio files (UK: ${indexData.uk_files}, US: ${indexData.us_files})`);
+                
+                // Auto-populate dictionary if it's empty
+                if (words.length === 0 && availableAudioFiles.length > 0) {
+                    autoPopulateDictionary();
+                } else {
+                    renderWords();
+                    updateStats();
+                }
+            } catch (error) {
+                console.error('Could not load audio index from API:', error);
+                // Fallback to direct file access with cache-busting
+                try {
+                    const response = await fetch(`audio_index.json?t=${Date.now()}`, {
+                        cache: 'no-cache'
+                    });
+                    const indexData = await response.json();
+                    availableAudioFiles = indexData.files || [];
+                    
+                    if (words.length === 0 && availableAudioFiles.length > 0) {
+                        autoPopulateDictionary();
+                    } else {
+                        renderWords();
+                        updateStats();
+                    }
+                } catch (fallbackError) {
+                    console.error('Could not load audio index:', fallbackError);
+                    showNotification('Could not load audio files. Make sure the server is running.', 'error');
+                    renderWords();
+                    updateStats();
+                }
+            }
+        }
+
+        // Auto-populate dictionary with all available audio files
+        function autoPopulateDictionary() {
+            const shouldPopulate = confirm(
+                `Found ${availableAudioFiles.length} existing audio files!\n\n` +
+                `Would you like to automatically add all of them to your dictionary?\n\n` +
+                `Click OK to add all files, or Cancel to start with an empty dictionary.`
+            );
+            
+            if (shouldPopulate) {
+                words = availableAudioFiles.map((file, index) => ({
+                    id: Date.now() + index,
+                    word: file.word,
+                    accent: file.accent,
+                    dateAdded: new Date().toLocaleDateString(),
+                    audioPath: file.path
+                }));
+                
+                saveWords();
+                showNotification(`Added ${words.length} words to your dictionary!`, 'success');
+            }
+            
+            renderWords();
+            updateStats();
+        }
+
+        // API base URL - change this if using different server
+        const API_BASE_URL = ''; // Static hosting - no API
+
+        // Search for word and show download options
+        async function searchWord() {
+            const wordInput = document.getElementById('word-input');
+            const word = wordInput.value.trim().toLowerCase();
+
+            if (!word) {
+                showNotification('Please enter a word to search!', 'error');
+                return;
+            }
+
+            // Show search modal
+            document.getElementById('search-word-title').textContent = `Search Results for "${word}"`;
+            document.getElementById('search-modal').style.display = 'flex';
+            document.getElementById('search-results').innerHTML = '<div class="loading">🔍 Checking audio availability...</div>';
+
+            try {
+                const response = await fetch(`${API_BASE_URL}/check-audio/${word}`);
+                const data = await response.json();
+
+                if (data.total_available === 0) {
+                    document.getElementById('search-results').innerHTML = `
+                        <div style="text-align: center; padding: 30px; color: #666;">
+                            <h4>No pronunciations found</h4>
+                            <p>Sorry, no audio pronunciations are available for "${word}".</p>
+                            <p>Oxford Dictionary may not have this word or pronunciation files.</p>
+                        </div>
+                    `;
+                    return;
+                }
+
+                // Display available pronunciations
+                let resultsHTML = '';
+                
+                if (data.available.us.available) {
+                    resultsHTML += createSearchResultItem(word, 'us', 'US (American)', true);
+                }
+                
+                if (data.available.uk.available) {
+                    resultsHTML += createSearchResultItem(word, 'uk', 'UK (British)', true);
+                }
+
+                document.getElementById('search-results').innerHTML = resultsHTML;
+
+            } catch (error) {
+                console.error('Search error:', error);
+                document.getElementById('search-results').innerHTML = `
+                    <div style="text-align: center; padding: 30px; color: #ff4757;">
+                        <h4>Search Error</h4>
+                        <p>Could not check audio availability. Please make sure the Flask server is running.</p>
+                        <p>Run: <code>python flask_server.py</code></p>
+                    </div>
+                `;
+            }
+        }
+
+        // Create search result item HTML
+        function createSearchResultItem(word, accent, accentName, available) {
+            const isAlreadyInDictionary = words.some(w => w.word === word && w.accent === accent);
+            const buttonText = isAlreadyInDictionary ? 'Already in Dictionary' : 'Download & Add';
+            const buttonDisabled = isAlreadyInDictionary ? 'disabled' : '';
+            
+            return `
+                <div class="search-result-item">
+                    <div class="search-result-info">
+                        <div class="search-result-word">${word}</div>
+                        <div class="search-result-accent">${accentName} pronunciation</div>
+                    </div>
+                    <div>
+                        <span class="status-badge status-available">Available</span>
+                        <button class="download-btn" ${buttonDisabled} onclick="downloadAndAdd('${word}', '${accent}', this)">
+                            ${buttonText}
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Download audio and add to dictionary
+        async function downloadAndAdd(word, accent, buttonElement) {
+            const originalText = buttonElement.textContent;
+            buttonElement.textContent = 'Downloading...';
+            buttonElement.disabled = true;
+
+            try {
+                const response = await fetch(`${API_BASE_URL}/download-audio`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        word: word,
+                        accent: accent
+                    })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    // Refresh the audio index
+                    await loadAvailableAudioFiles();
+                    
+                    // Add to dictionary automatically
+                    const newWord = {
+                        id: Date.now(),
+                        word: word,
+                        accent: accent,
+                        dateAdded: new Date().toLocaleDateString(),
+                        audioPath: data.file_path
+                    };
+
+                    words.push(newWord);
+                    saveWords();
+                    renderWords();
+                    updateStats();
+
+                    buttonElement.textContent = 'Downloaded!';
+                    showNotification(`Successfully downloaded and added "${word}" (${accent.toUpperCase()})!`, 'success');
+                    
+                    // Close modal after successful download
+                    setTimeout(() => {
+                        closeSearchModal();
+                    }, 1500);
+
+                } else {
+                    buttonElement.textContent = originalText;
+                    buttonElement.disabled = false;
+                    showNotification(data.error || 'Download failed', 'error');
+                }
+
+            } catch (error) {
+                console.error('Download error:', error);
+                buttonElement.textContent = originalText;
+                buttonElement.disabled = false;
+                showNotification('Download failed. Please check the server connection.', 'error');
+            }
+        }
+
+        // Close search modal
+        function closeSearchModal() {
+            document.getElementById('search-modal').style.display = 'none';
+            document.getElementById('word-input').value = '';
+        }
+        function addWord() {
+            const wordInput = document.getElementById('word-input');
+            const accentSelect = document.getElementById('accent-select');
+            
+            const word = wordInput.value.trim().toLowerCase();
+            const accent = accentSelect.value;
+
+            if (!word) {
+                showNotification('Please enter a word!', 'error');
+                return;
+            }
+
+            // Check if word already exists with this accent in our dictionary
+            const exists = words.some(w => w.word === word && w.accent === accent);
+            if (exists) {
+                showNotification('This word with this accent already exists in your dictionary!', 'error');
+                return;
+            }
+
+            // Check if audio file exists in our available files
+            const audioFile = availableAudioFiles.find(f => f.word === word && f.accent === accent);
+            
+            if (audioFile) {
+                const newWord = {
+                    id: Date.now(),
+                    word: word,
+                    accent: accent,
+                    dateAdded: new Date().toLocaleDateString(),
+                    audioPath: audioFile.path
+                };
+
+                words.push(newWord);
+                saveWords();
+                renderWords();
+                updateStats();
+                
+                wordInput.value = '';
+                showNotification(`Added "${word}" (${accent.toUpperCase()}) to your dictionary!`, 'success');
+            } else {
+                showNotification(
+                    `Audio file not found for "${word}" (${accent.toUpperCase()}).\n` +
+                    `Please download it first using: python oxford_audio_downloader.py ${word} ${accent}`, 
+                    'error'
+                );
+            }
+        }
+
+        // Check if audio file exists
+        async function checkAudioFile(word, accent) {
+            const folderName = accent === 'us' ? 'US' : 'UK';
+            const audioPath = `${folderName}/${word}.mp3`;
+            
+            try {
+                const response = await fetch(audioPath, { method: 'HEAD' });
+                return response.ok;
+            } catch (error) {
+                return false;
+            }
+        }
+
+        // Play audio
+        function playAudio(word, accent) {
+            // Find the word in our dictionary first (to get the correct audio path)
+            const dictionaryWord = words.find(w => w.word === word && w.accent === accent);
+            
+            let audioPath;
+            if (dictionaryWord && dictionaryWord.audioPath) {
+                audioPath = dictionaryWord.audioPath;
+            } else {
+                // Fallback to the standard path format
+                const folderName = accent === 'us' ? 'US' : 'UK';
+                audioPath = `${folderName}/${word}.mp3`;
+            }
+            
+            const audio = new Audio(audioPath);
+            audio.play().catch(error => {
+                console.error('Audio playback error:', error);
+                showNotification(`Could not play audio for "${word}". File may be missing: ${audioPath}`, 'error');
+            });
+        }
+
+        // Delete word
+        async function deleteWord(id) {
+            const word = words.find(w => w.id === id);
+            if (!word) return;
+            
+            const confirmMessage = `Are you sure you want to permanently delete "${word.word}" (${word.accent.toUpperCase()})?\n\nThis will remove the audio file from your computer and cannot be undone.`;
+            
+            if (confirm(confirmMessage)) {
+                try {
+                    // Delete the physical audio file via API
+                    const response = await fetch(`${API_BASE_URL}/delete-audio`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            word: word.word,
+                            accent: word.accent
+                        })
+                    });
+                    
+                    const result = await response.json();
+                    
+                    if (result.success) {
+                        // Remove from local array
+                        words = words.filter(w => w.id !== id);
+                        saveWords();
+                        
+                        // Reload fresh data from server
+                        await loadAvailableAudioFiles();
+                        
+                        showNotification(result.message, 'success');
+                    } else {
+                        showNotification(`Error: ${result.error}`, 'error');
+                    }
+                } catch (error) {
+                    console.error('Delete error:', error);
+                    showNotification('Failed to delete audio file. Make sure the server is running.', 'error');
+                }
+            }
+        }
+
+        // Rescan audio files
+        async function rescanAudioFiles() {
+            const rescanBtn = document.getElementById('rescan-btn');
+            const originalText = rescanBtn.innerHTML;
+            
+            try {
+                // Disable button and show loading state
+                rescanBtn.disabled = true;
+                rescanBtn.innerHTML = '🔄 Scanning...';
+                
+                // Force refresh of audio files
+                await loadAvailableAudioFiles();
+                
+                // Show success notification
+                showNotification('Audio files rescanned successfully!', 'success');
+                
+            } catch (error) {
+                console.error('Rescan error:', error);
+                showNotification('Failed to rescan audio files. Make sure the server is running.', 'error');
+            } finally {
+                // Re-enable button and restore text
+                rescanBtn.disabled = false;
+                rescanBtn.innerHTML = originalText;
+            }
+        }
+
+        // Clear cache and reload
+        function clearCacheAndReload() {
+            if (confirm('This will clear the browser cache and reload the page. Continue?')) {
+                // Clear localStorage
+                localStorage.clear();
+                
+                // Clear sessionStorage
+                sessionStorage.clear();
+                
+                // Force reload with cache bypass
+                window.location.reload(true);
+            }
+        }
+
+        // Filter functions
+        function setFilter(filter) {
+            currentFilter = filter;
+            
+            // Update active button
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            renderWords();
+        }
+
+        function filterWords() {
+            renderWords();
+        }
+
+        // Render words
+        function renderWords() {
+            const container = document.getElementById('words-container');
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+            
+            let filteredWords = words;
+
+            // Apply accent filter
+            if (currentFilter !== 'all') {
+                filteredWords = filteredWords.filter(w => w.accent === currentFilter);
+            }
+
+            // Apply search filter
+            if (searchTerm) {
+                filteredWords = filteredWords.filter(w => w.word.includes(searchTerm));
+            }
+
+            if (filteredWords.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <h3>${words.length === 0 ? 'No words yet!' : 'No words found!'}</h3>
+                        <p>${words.length === 0 ? 'Add your first word using the form above.' : 'Try adjusting your search or filter.'}</p>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = filteredWords.map(word => `
+                <div class="word-card">
+                    <div class="word-header">
+                        <span class="word-text" onclick="playAudio('${word.word}', '${word.accent}')">${word.word}</span>
+                        <span class="accent-badge accent-${word.accent}">${word.accent.toUpperCase()}</span>
+                    </div>
+                    <div class="word-actions">
+                        <button class="play-btn" onclick="playAudio('${word.word}', '${word.accent}')">
+                            🔊 Play
+                        </button>
+                        <button class="delete-btn" onclick="deleteWord(${word.id})">
+                            🗑️ Delete
+                        </button>
+                    </div>
+                    <div style="margin-top: 10px; font-size: 0.9em; color: #666;">
+                        Added: ${word.dateAdded}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Update statistics
+        function updateStats() {
+            const totalWords = words.length;
+            const usWords = words.filter(w => w.accent === 'us').length;
+            const ukWords = words.filter(w => w.accent === 'uk').length;
+
+            document.getElementById('total-words').textContent = totalWords;
+            document.getElementById('us-words').textContent = usWords;
+            document.getElementById('uk-words').textContent = ukWords;
+        }
+
+        // Save to localStorage
+        function saveWords() {
+            localStorage.setItem('pronunciationDictionary', JSON.stringify(words));
+        }
+
+        // Show notification
+        function showNotification(message, type) {
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.textContent = message;
+            document.body.appendChild(notification);
+
+            setTimeout(() => notification.classList.add('show'), 100);
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => document.body.removeChild(notification), 300);
+            }, 3000);
+        }
+
+        // Handle Enter key in input
+        document.getElementById('word-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchWord();
+            }
+        });
+
+        // Handle Escape key to close modal
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeSearchModal();
+            }
+        });
+
+        // Close modal when clicking outside
+        document.getElementById('search-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeSearchModal();
+            }
+        });
+    </script>
+</body>
+</html>

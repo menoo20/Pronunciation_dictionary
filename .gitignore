@@ -1,0 +1,13 @@
+# Audio files are included for GitHub Pages
+# Add any files you don't want to commit here
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Local development files
+flask_server.py
+oxford_audio_downloader.py
+scan_audio_files.py
+start_server.py
