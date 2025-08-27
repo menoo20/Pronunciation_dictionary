@@ -408,6 +408,41 @@
             background: #ff3742;
         }
 
+        .navigation {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .nav-link {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            margin: 0 10px;
+            font-size: 0.95em;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .nav-link:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-link:active {
+            transform: translateY(0);
+        }
+
+        .nav-link.current {
+            background: rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
         .stats {
             display: flex;
             justify-content: center;
@@ -500,6 +535,11 @@
         <div class="header">
             <h1>🎵 Personal Pronunciation Dictionary</h1>
             <p>Build your collection of words with audio pronunciations</p>
+        </div>
+
+        <div class="navigation">
+            <a href="pronunciation_dictionary.html" class="nav-link current">📚 Dictionary</a>
+            <a href="jolly_phonics_test.html" class="nav-link">🎯 Jolly Phonics Test</a>
         </div>
 
         <div class="stats">
