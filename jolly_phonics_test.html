@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jolly Phonics Listening Test</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px;
+            color: white;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .back-to-dictionary {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .back-to-dictionary:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+        }
+
+        .group-selector {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .group-selector h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .groups-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .group-card {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: center;
+        }
+
+        .group-card:hover {
+            border-color: #667eea;
+            background: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .group-card.available {
+            border-color: #28a745;
+            background: #d4edda;
+        }
+
+        .group-card.unavailable {
+            border-color: #dc3545;
+            background: #f8d7da;
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .group-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .group-letters {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .group-words-count {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .test-container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            display: none;
+        }
+
+        .test-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .test-progress {
+            background: #e9ecef;
+            height: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .test-progress-bar {
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            height: 100%;
+            transition: width 0.3s;
+            border-radius: 5px;
+        }
+
+        .question-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .question-number {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .audio-player {
+            margin: 20px 0;
+        }
+
+        .play-button {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 20px 40px;
+            border-radius: 50px;
+            font-size: 1.5em;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+        }
+
+        .play-button:hover {
+            background: #218838;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.4);
+        }
+
+        .play-button:disabled {
+            background: #6c757d;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .letter-boxes {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .letter-box {
+            width: 60px;
+            height: 60px;
+            border: 3px solid #dee2e6;
+            border-radius: 8px;
+            font-size: 1.5em;
+            text-align: center;
+            background: white;
+            transition: all 0.3s;
+            outline: none;
+        }
+
+        .letter-box:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .letter-box.correct {
+            border-color: #28a745;
+            background: #d4edda;
+        }
+
+        .letter-box.incorrect {
+            border-color: #dc3545;
+            background: #f8d7da;
+        }
+
+        .controls {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            margin: 0 10px;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #5a67d8;
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #545b62;
+        }
+
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .result-container {
+            text-align: center;
+            display: none;
+        }
+
+        .score {
+            font-size: 3em;
+            font-weight: bold;
+            color: #28a745;
+            margin: 20px 0;
+        }
+
+        .feedback {
+            font-size: 1.2em;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .feedback.excellent {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .feedback.good {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .feedback.needs-practice {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .immediate-feedback {
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 1.1em;
+            font-weight: 500;
+            text-align: center;
+            display: none;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        .immediate-feedback.correct {
+            background: #d4edda;
+            color: #155724;
+            border: 2px solid #28a745;
+        }
+
+        .immediate-feedback.incorrect {
+            background: #f8d7da;
+            color: #721c24;
+            border: 2px solid #dc3545;
+        }
+
+        .correct-answer {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        .mistakes-review {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .mistakes-review h3 {
+            color: #dc3545;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .mistake-item {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .mistake-word {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .mistake-details {
+            text-align: right;
+        }
+
+        .your-answer {
+            color: #dc3545;
+            font-weight: bold;
+        }
+
+        .correct-answer-review {
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .play-mistake-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+
+        .play-mistake-btn:hover {
+            background: #5a67d8;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            padding: 10px 15px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1em;
+            backdrop-filter: blur(10px);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .groups-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .letter-boxes {
+                gap: 5px;
+            }
+
+            .letter-box {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="back-btn" onclick="goHome()" style="display: none;">← Back to Dictionary</button>
+
+    <div class="header">
+        <a href="pronunciation_dictionary.html" class="back-to-dictionary">📚 Back to Dictionary</a>
+        <h1>🎵 Jolly Phonics Listening Test</h1>
+        <p>Listen carefully and write the letters you hear</p>
+    </div>
+
+    <div class="container">
+        <!-- Group Selection -->
+        <div class="group-selector" id="groupSelector">
+            <h2>Choose Your Jolly Phonics Group</h2>
+            <div class="groups-grid" id="groupsGrid">
+                <!-- Groups will be loaded here -->
+            </div>
+        </div>
+
+        <!-- Test Interface -->
+        <div class="test-container" id="testContainer">
+            <div class="test-header">
+                <h2 id="testTitle">Group 1 Test</h2>
+                <div class="test-progress">
+                    <div class="test-progress-bar" id="progressBar" style="width: 0%"></div>
+                </div>
+                <div class="question-number" id="questionNumber">Question 1 of 10</div>
+            </div>
+
+            <div class="question-container">
+                <div class="audio-player">
+                    <button class="play-button" id="playButton" onclick="playWord()">
+                        🔊 Play Word
+                    </button>
+                </div>
+
+                <div class="letter-boxes" id="letterBoxes">
+                    <!-- Letter input boxes will be generated here -->
+                </div>
+
+                <div class="immediate-feedback" id="immediateFeedback">
+                    <!-- Immediate feedback will appear here -->
+                </div>
+
+                <div class="controls">
+                    <button class="btn btn-secondary" onclick="playWord()">🔊 Play Again</button>
+                    <button class="btn btn-primary" id="submitBtn" onclick="submitAnswer()" disabled>Submit Answer</button>
+                    <button class="btn btn-primary" id="nextBtn" onclick="nextQuestion()" style="display: none;">Next Question</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results -->
+        <div class="result-container" id="resultContainer">
+            <h2>🎉 Test Complete!</h2>
+            <div class="score" id="finalScore">8/10</div>
+            <div class="feedback" id="feedback">Excellent work!</div>
+            
+            <!-- Mistakes Review Section -->
+            <div class="mistakes-review" id="mistakesReview" style="display: none;">
+                <h3>📝 Review Your Mistakes</h3>
+                <div id="mistakesList">
+                    <!-- Mistakes will be listed here -->
+                </div>
+            </div>
+            
+            <div class="controls">
+                <button class="btn btn-primary" onclick="restartTest()">Try Again</button>
+                <button class="btn btn-secondary" onclick="goHome()">Back to Dictionary</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let jollyPhonicData = {};
+        let currentGroup = null;
+        let currentTest = [];
+        let currentQuestion = 0;
+        let score = 0;
+        let currentWord = null;
+        let currentAudio = null;
+        let mistakes = []; // Track mistakes for review
+
+        // Load Jolly Phonics data
+        async function loadJollyPhonicsData() {
+            try {
+                const response = await fetch('jolly_phonics_words.json');
+                jollyPhonicData = await response.json();
+                renderGroupSelector();
+            } catch (error) {
+                console.error('Could not load Jolly Phonics data:', error);
+                alert('Could not load test data. Make sure jolly_phonics_analyzer.py has been run.');
+            }
+        }
+
+        function renderGroupSelector() {
+            const grid = document.getElementById('groupsGrid');
+            grid.innerHTML = '';
+
+            for (let i = 1; i <= 7; i++) {
+                const groupData = jollyPhonicData.groups[i.toString()];
+                const card = document.createElement('div');
+                
+                const wordCount = groupData ? groupData.word_count : 0;
+                const isAvailable = wordCount >= 3; // Need at least 3 words for a test
+                
+                card.className = `group-card ${isAvailable ? 'available' : 'unavailable'}`;
+                card.innerHTML = `
+                    <div class="group-number">Group ${i}</div>
+                    <div class="group-words-count">${wordCount} words available</div>
+                `;
+
+                if (isAvailable) {
+                    card.onclick = () => startTest(i);
+                }
+
+                grid.appendChild(card);
+            }
+        }
+
+        function startTest(groupNumber) {
+            currentGroup = groupNumber;
+            const groupData = jollyPhonicData.groups[groupNumber.toString()];
+            
+            // Prepare test words (up to 10)
+            const allWords = Object.keys(groupData.words);
+            const testWords = allWords.sort(() => 0.5 - Math.random()).slice(0, Math.min(10, allWords.length));
+            
+            currentTest = testWords.map(word => {
+                const wordData = groupData.words[word];
+                // Prefer UK accent, fallback to US
+                const audioFile = wordData.find(w => w.accent === 'uk') || wordData[0];
+                return {
+                    word: word,
+                    audioPath: audioFile.path,
+                    letters: word.split('')
+                };
+            });
+
+            // Reset test state
+            currentQuestion = 0;
+            score = 0;
+            mistakes = []; // Reset mistakes for new test
+            
+            // Show test interface
+            document.getElementById('groupSelector').style.display = 'none';
+            document.getElementById('testContainer').style.display = 'block';
+            document.querySelector('.back-btn').style.display = 'block';
+            
+            // Update title
+            document.getElementById('testTitle').textContent = `Group ${groupNumber} Test`;
+            
+            loadQuestion();
+        }
+
+        function loadQuestion() {
+            if (currentQuestion >= currentTest.length) {
+                showResults();
+                return;
+            }
+
+            const question = currentTest[currentQuestion];
+            currentWord = question;
+
+            // Update progress
+            const progress = ((currentQuestion) / currentTest.length) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+            document.getElementById('questionNumber').textContent = `Question ${currentQuestion + 1} of ${currentTest.length}`;
+
+            // Create letter boxes
+            const container = document.getElementById('letterBoxes');
+            container.innerHTML = '';
+            
+            for (let i = 0; i < question.letters.length; i++) {
+                const input = document.createElement('input');
+                input.type = 'text';
+                input.className = 'letter-box';
+                input.maxLength = 1;
+                input.addEventListener('input', handleLetterInput);
+                input.addEventListener('keydown', handleKeyDown);
+                container.appendChild(input);
+            }
+
+            // Focus first box
+            container.firstChild.focus();
+
+            // Hide immediate feedback
+            document.getElementById('immediateFeedback').style.display = 'none';
+
+            // Reset buttons
+            document.getElementById('submitBtn').disabled = true;
+            document.getElementById('nextBtn').style.display = 'none';
+            document.getElementById('playButton').disabled = false;
+
+            // Auto-play the word
+            setTimeout(() => playWord(), 500);
+        }
+
+        function handleLetterInput(event) {
+            const input = event.target;
+            const value = input.value.toLowerCase();
+            
+            // Move to next box if current is filled
+            if (value && input.nextSibling) {
+                input.nextSibling.focus();
+            }
+
+            checkIfComplete();
+        }
+
+        function handleKeyDown(event) {
+            const input = event.target;
+            
+            // Backspace: move to previous box if current is empty
+            if (event.key === 'Backspace' && !input.value && input.previousSibling) {
+                input.previousSibling.focus();
+            }
+            
+            // Enter: submit if complete
+            if (event.key === 'Enter' && !document.getElementById('submitBtn').disabled) {
+                submitAnswer();
+            }
+        }
+
+        function checkIfComplete() {
+            const inputs = document.querySelectorAll('.letter-box');
+            const allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
+            document.getElementById('submitBtn').disabled = !allFilled;
+        }
+
+        function playWord() {
+            if (currentAudio) {
+                currentAudio.pause();
+            }
+
+            currentAudio = new Audio(currentWord.audioPath);
+            currentAudio.play().catch(error => {
+                console.error('Audio playback failed:', error);
+                alert('Could not play audio. Make sure the audio file exists.');
+            });
+
+            // Disable play button briefly to prevent spam
+            const playBtn = document.getElementById('playButton');
+            playBtn.disabled = true;
+            setTimeout(() => {
+                playBtn.disabled = false;
+            }, 1000);
+        }
+
+        function submitAnswer() {
+            const inputs = document.querySelectorAll('.letter-box');
+            const userAnswer = Array.from(inputs).map(input => input.value.toLowerCase()).join('');
+            const correctAnswer = currentWord.word.toLowerCase();
+            
+            let isCorrect = userAnswer === correctAnswer;
+            
+            // Check each letter and mark correct/incorrect
+            inputs.forEach((input, index) => {
+                const userLetter = input.value.toLowerCase();
+                const correctLetter = currentWord.letters[index].toLowerCase();
+                
+                if (userLetter === correctLetter) {
+                    input.classList.add('correct');
+                    input.classList.remove('incorrect');
+                } else {
+                    input.classList.add('incorrect');
+                    input.classList.remove('correct');
+                }
+                
+                input.disabled = true;
+            });
+
+            // Show immediate feedback
+            const feedbackElement = document.getElementById('immediateFeedback');
+            if (isCorrect) {
+                score++;
+                feedbackElement.className = 'immediate-feedback correct';
+                feedbackElement.innerHTML = '✅ Correct! Well done!';
+            } else {
+                // Track mistake for review
+                mistakes.push({
+                    word: currentWord.word,
+                    userAnswer: userAnswer,
+                    correctAnswer: correctAnswer,
+                    audioPath: currentWord.audioPath
+                });
+                
+                feedbackElement.className = 'immediate-feedback incorrect';
+                feedbackElement.innerHTML = `
+                    ❌ Not quite right.
+                    <div class="correct-answer">The correct spelling is: <strong>${correctAnswer.toUpperCase()}</strong></div>
+                `;
+            }
+            
+            feedbackElement.style.display = 'block';
+
+            // Hide submit button, show next button
+            document.getElementById('submitBtn').style.display = 'none';
+            document.getElementById('nextBtn').style.display = 'inline-block';
+        }
+
+        function nextQuestion() {
+            currentQuestion++;
+            
+            // Hide immediate feedback
+            document.getElementById('immediateFeedback').style.display = 'none';
+            
+            // Reset letter boxes
+            const inputs = document.querySelectorAll('.letter-box');
+            inputs.forEach(input => {
+                input.classList.remove('correct', 'incorrect');
+                input.disabled = false;
+                input.value = '';
+            });
+
+            // Reset buttons
+            document.getElementById('submitBtn').style.display = 'inline-block';
+            document.getElementById('nextBtn').style.display = 'none';
+
+            loadQuestion();
+        }
+
+        function showResults() {
+            document.getElementById('testContainer').style.display = 'none';
+            document.getElementById('resultContainer').style.display = 'block';
+
+            const percentage = Math.round((score / currentTest.length) * 100);
+            document.getElementById('finalScore').textContent = `${score}/${currentTest.length} (${percentage}%)`;
+
+            const feedback = document.getElementById('feedback');
+            if (percentage >= 90) {
+                feedback.textContent = "Excellent! You've mastered this group!";
+                feedback.className = 'feedback excellent';
+            } else if (percentage >= 70) {
+                feedback.textContent = "Good job! Keep practicing to improve.";
+                feedback.className = 'feedback good';
+            } else {
+                feedback.textContent = "Keep practicing! Try listening more carefully.";
+                feedback.className = 'feedback needs-practice';
+            }
+
+            // Show mistakes review if there are any mistakes
+            if (mistakes.length > 0) {
+                displayMistakesReview();
+            }
+        }
+
+        function displayMistakesReview() {
+            const mistakesReview = document.getElementById('mistakesReview');
+            const mistakesList = document.getElementById('mistakesList');
+            
+            mistakesList.innerHTML = '';
+            
+            mistakes.forEach((mistake, index) => {
+                const mistakeDiv = document.createElement('div');
+                mistakeDiv.className = 'mistake-item';
+                mistakeDiv.innerHTML = `
+                    <div>
+                        <div class="mistake-word">Word: ${mistake.word.toUpperCase()}</div>
+                        <button class="play-mistake-btn" onclick="playMistakeAudio('${mistake.audioPath}')">
+                            🔊 Listen Again
+                        </button>
+                    </div>
+                    <div class="mistake-details">
+                        <div>Your answer: <span class="your-answer">${mistake.userAnswer.toUpperCase()}</span></div>
+                        <div>Correct answer: <span class="correct-answer-review">${mistake.correctAnswer.toUpperCase()}</span></div>
+                    </div>
+                `;
+                mistakesList.appendChild(mistakeDiv);
+            });
+            
+            mistakesReview.style.display = 'block';
+        }
+
+        function playMistakeAudio(audioPath) {
+            if (currentAudio) {
+                currentAudio.pause();
+            }
+            
+            currentAudio = new Audio(audioPath);
+            currentAudio.play().catch(error => {
+                console.error('Audio playback failed:', error);
+                alert('Could not play audio. Make sure the audio file exists.');
+            });
+        }
+
+        function restartTest() {
+            document.getElementById('resultContainer').style.display = 'none';
+            startTest(currentGroup);
+        }
+
+        function goHome() {
+            window.location.href = 'pronunciation_dictionary.html';
+        }
+
+        // Initialize
+        window.addEventListener('load', loadJollyPhonicsData);
+    </script>
+</body>
+</html>
