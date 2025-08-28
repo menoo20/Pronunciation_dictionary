@@ -1,8 +1,8 @@
 {
-  "last_updated": "2025-08-27T15:53:08.394813",
-  "total_files": 58,
-  "uk_files": 31,
-  "us_files": 27,
+  "last_updated": "2025-08-28T12:14:45.824701",
+  "total_files": 55,
+  "uk_files": 29,
+  "us_files": 26,
   "files": [
     {
       "word": "ban",
@@ -173,18 +173,6 @@
       "path": "UK/log_gb.mp3"
     },
     {
-      "word": "mango",
-      "accent": "uk",
-      "filename": "mango.mp3",
-      "path": "UK/mango.mp3"
-    },
-    {
-      "word": "mango",
-      "accent": "us",
-      "filename": "mango.mp3",
-      "path": "US/mango.mp3"
-    },
-    {
       "word": "market",
       "accent": "uk",
       "filename": "market.mp3",
@@ -327,12 +315,6 @@
       "accent": "uk",
       "filename": "tip.mp3",
       "path": "UK/tip.mp3"
-    },
-    {
-      "word": "tomb",
-      "accent": "uk",
-      "filename": "tomb_gb.mp3",
-      "path": "UK/tomb_gb.mp3"
     },
     {
       "word": "trunk",
