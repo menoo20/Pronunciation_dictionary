@@ -558,11 +558,12 @@
                 const wordCount = groupData ? groupData.word_count : 0;
                 const isAvailable = wordCount >= 3; // Need at least 3 words for a test
                 
-                card.className = `group-card ${isAvailable ? 'available' : 'unavailable'}`;
-                card.innerHTML = `
-                    <div class="group-number">Group ${i}</div>
-                    <div class="group-words-count">${wordCount} words available</div>
-                `;
+                    card.className = `group-card ${isAvailable ? 'available' : 'unavailable'}`;
+                    card.innerHTML = `
+                        <div class="group-number">Group ${i}</div>
+                        <div class="group-letters">${groupData ? groupData.letters.join(', ') : ''}</div>
+                        <div class="group-words-count">${wordCount} words available</div>
+                    `;
 
                 if (isAvailable) {
                     card.onclick = () => startTest(i);
