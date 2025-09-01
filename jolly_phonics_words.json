@@ -9,7 +9,7 @@
         "f",
         "b"
       ],
-      "word_count": 26,
+      "word_count": 20,
       "words": {
         "ban": [
           {
@@ -33,34 +33,14 @@
             "accent": "uk",
             "filename": "blank.mp3",
             "path": "UK/blank.mp3"
-          },
-          {
-            "word": "blank",
-            "accent": "us",
-            "filename": "blank.mp3",
-            "path": "US/blank.mp3"
           }
         ],
         "blink": [
           {
             "word": "blink",
-            "accent": "uk",
-            "filename": "blink.mp3",
-            "path": "UK/blink.mp3"
-          },
-          {
-            "word": "blink",
             "accent": "us",
             "filename": "blink.mp3",
             "path": "US/blink.mp3"
-          }
-        ],
-        "bomb": [
-          {
-            "word": "bomb",
-            "accent": "uk",
-            "filename": "bomb_gb.mp3",
-            "path": "UK/bomb_gb.mp3"
           }
         ],
         "brand": [
@@ -71,34 +51,12 @@
             "path": "US/brand_us.mp3"
           }
         ],
-        "bring": [
-          {
-            "word": "bring",
-            "accent": "uk",
-            "filename": "bring.mp3",
-            "path": "UK/bring.mp3"
-          },
-          {
-            "word": "bring",
-            "accent": "us",
-            "filename": "bring.mp3",
-            "path": "US/bring.mp3"
-          }
-        ],
         "cup": [
           {
             "word": "cup",
             "accent": "uk",
             "filename": "cup.mp3",
             "path": "UK/cup.mp3"
-          }
-        ],
-        "door": [
-          {
-            "word": "door",
-            "accent": "us",
-            "filename": "door.mp3",
-            "path": "US/door.mp3"
           }
         ],
         "fist": [
@@ -157,20 +115,6 @@
             "path": "UK/log_gb.mp3"
           }
         ],
-        "mango": [
-          {
-            "word": "mango",
-            "accent": "uk",
-            "filename": "mango.mp3",
-            "path": "UK/mango.mp3"
-          },
-          {
-            "word": "mango",
-            "accent": "us",
-            "filename": "mango.mp3",
-            "path": "US/mango.mp3"
-          }
-        ],
         "nut": [
           {
             "word": "nut",
@@ -180,12 +124,6 @@
           }
         ],
         "plug": [
-          {
-            "word": "plug",
-            "accent": "uk",
-            "filename": "plug.mp3",
-            "path": "UK/plug.mp3"
-          },
           {
             "word": "plug",
             "accent": "us",
@@ -199,12 +137,6 @@
             "accent": "uk",
             "filename": "pull.mp3",
             "path": "UK/pull.mp3"
-          },
-          {
-            "word": "pull",
-            "accent": "uk",
-            "filename": "pull_gb.mp3",
-            "path": "UK/pull_gb.mp3"
           }
         ],
         "pump": [
@@ -223,34 +155,12 @@
             "path": "UK/push_gb.mp3"
           }
         ],
-        "slang": [
-          {
-            "word": "slang",
-            "accent": "us",
-            "filename": "slang.mp3",
-            "path": "US/slang.mp3"
-          }
-        ],
         "sting": [
-          {
-            "word": "sting",
-            "accent": "uk",
-            "filename": "sting.mp3",
-            "path": "UK/sting.mp3"
-          },
           {
             "word": "sting",
             "accent": "us",
             "filename": "sting.mp3",
             "path": "US/sting.mp3"
-          }
-        ],
-        "tomb": [
-          {
-            "word": "tomb",
-            "accent": "uk",
-            "filename": "tomb_gb.mp3",
-            "path": "UK/tomb_gb.mp3"
           }
         ],
         "trunk": [
@@ -259,12 +169,6 @@
             "accent": "uk",
             "filename": "trunk.mp3",
             "path": "UK/trunk.mp3"
-          },
-          {
-            "word": "trunk",
-            "accent": "us",
-            "filename": "trunk.mp3",
-            "path": "US/trunk.mp3"
           }
         ]
       }
@@ -290,12 +194,6 @@
           }
         ],
         "crank": [
-          {
-            "word": "crank",
-            "accent": "uk",
-            "filename": "crank.mp3",
-            "path": "UK/crank.mp3"
-          },
           {
             "word": "crank",
             "accent": "us",
@@ -333,12 +231,6 @@
             "accent": "uk",
             "filename": "hint_gb.mp3",
             "path": "UK/hint_gb.mp3"
-          },
-          {
-            "word": "hint",
-            "accent": "us",
-            "filename": "hint_us.mp3",
-            "path": "US/hint_us.mp3"
           }
         ],
         "market": [
@@ -355,12 +247,6 @@
             "accent": "uk",
             "filename": "mink.mp3",
             "path": "UK/mink.mp3"
-          },
-          {
-            "word": "mink",
-            "accent": "us",
-            "filename": "mink.mp3",
-            "path": "US/mink.mp3"
           }
         ],
         "nest": [
@@ -398,12 +284,6 @@
         "stamp": [
           {
             "word": "stamp",
-            "accent": "uk",
-            "filename": "stamp.mp3",
-            "path": "UK/stamp.mp3"
-          },
-          {
-            "word": "stamp",
             "accent": "us",
             "filename": "stamp.mp3",
             "path": "US/stamp.mp3"
@@ -429,34 +309,6 @@
             "accent": "us",
             "filename": "test.mp3",
             "path": "US/test.mp3"
-          }
-        ]
-      }
-    },
-    "6": {
-      "letters": [
-        "y",
-        "x",
-        "ch",
-        "sh",
-        "th"
-      ],
-      "word_count": 2,
-      "words": {
-        "gym": [
-          {
-            "word": "gym",
-            "accent": "us",
-            "filename": "gym_us.mp3",
-            "path": "US/gym_us.mp3"
-          }
-        ],
-        "ox": [
-          {
-            "word": "ox",
-            "accent": "us",
-            "filename": "ox.mp3",
-            "path": "US/ox.mp3"
           }
         ]
       }
@@ -514,6 +366,17 @@
       "word_count": 0,
       "words": {}
     },
+    "6": {
+      "letters": [
+        "y",
+        "x",
+        "ch",
+        "sh",
+        "th"
+      ],
+      "word_count": 0,
+      "words": {}
+    },
     "7": {
       "letters": [
         "qu",
@@ -528,5 +391,5 @@
     }
   },
   "generated_at": "2025-08-27",
-  "total_words_analyzed": 45
+  "total_words_analyzed": 37
 }

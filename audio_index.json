@@ -1,8 +1,8 @@
 {
-  "last_updated": "2025-08-28T17:26:49.016574",
-  "total_files": 55,
-  "uk_files": 29,
-  "us_files": 26,
+  "last_updated": "2025-09-01T13:52:21.961641",
+  "total_files": 38,
+  "uk_files": 21,
+  "us_files": 17,
   "files": [
     {
       "word": "ban",
@@ -23,28 +23,10 @@
       "path": "UK/blank.mp3"
     },
     {
-      "word": "blank",
-      "accent": "us",
-      "filename": "blank.mp3",
-      "path": "US/blank.mp3"
-    },
-    {
-      "word": "blink",
-      "accent": "uk",
-      "filename": "blink.mp3",
-      "path": "UK/blink.mp3"
-    },
-    {
       "word": "blink",
       "accent": "us",
       "filename": "blink.mp3",
       "path": "US/blink.mp3"
-    },
-    {
-      "word": "bomb",
-      "accent": "uk",
-      "filename": "bomb_gb.mp3",
-      "path": "UK/bomb_gb.mp3"
     },
     {
       "word": "brand",
@@ -53,28 +35,10 @@
       "path": "US/brand_us.mp3"
     },
     {
-      "word": "bring",
-      "accent": "uk",
-      "filename": "bring.mp3",
-      "path": "UK/bring.mp3"
-    },
-    {
-      "word": "bring",
-      "accent": "us",
-      "filename": "bring.mp3",
-      "path": "US/bring.mp3"
-    },
-    {
       "word": "camp",
       "accent": "us",
       "filename": "camp_us.mp3",
       "path": "US/camp_us.mp3"
-    },
-    {
-      "word": "crank",
-      "accent": "uk",
-      "filename": "crank.mp3",
-      "path": "UK/crank.mp3"
     },
     {
       "word": "crank",
@@ -87,12 +51,6 @@
       "accent": "uk",
       "filename": "cup.mp3",
       "path": "UK/cup.mp3"
-    },
-    {
-      "word": "door",
-      "accent": "us",
-      "filename": "door.mp3",
-      "path": "US/door.mp3"
     },
     {
       "word": "drink",
@@ -125,12 +83,6 @@
       "path": "US/get_us.mp3"
     },
     {
-      "word": "gym",
-      "accent": "us",
-      "filename": "gym_us.mp3",
-      "path": "US/gym_us.mp3"
-    },
-    {
       "word": "hand",
       "accent": "uk",
       "filename": "hand_gb.mp3",
@@ -147,12 +99,6 @@
       "accent": "uk",
       "filename": "hint_gb.mp3",
       "path": "UK/hint_gb.mp3"
-    },
-    {
-      "word": "hint",
-      "accent": "us",
-      "filename": "hint_us.mp3",
-      "path": "US/hint_us.mp3"
     },
     {
       "word": "hub",
@@ -185,12 +131,6 @@
       "path": "UK/mink.mp3"
     },
     {
-      "word": "mink",
-      "accent": "us",
-      "filename": "mink.mp3",
-      "path": "US/mink.mp3"
-    },
-    {
       "word": "nest",
       "accent": "us",
       "filename": "nest_us.mp3",
@@ -209,22 +149,10 @@
       "path": "UK/nut_gb.mp3"
     },
     {
-      "word": "ox",
-      "accent": "us",
-      "filename": "ox.mp3",
-      "path": "US/ox.mp3"
-    },
-    {
       "word": "pen",
       "accent": "us",
       "filename": "pen_us.mp3",
       "path": "US/pen_us.mp3"
-    },
-    {
-      "word": "plug",
-      "accent": "uk",
-      "filename": "plug.mp3",
-      "path": "UK/plug.mp3"
     },
     {
       "word": "plug",
@@ -237,12 +165,6 @@
       "accent": "uk",
       "filename": "pull.mp3",
       "path": "UK/pull.mp3"
-    },
-    {
-      "word": "pull",
-      "accent": "uk",
-      "filename": "pull_gb.mp3",
-      "path": "UK/pull_gb.mp3"
     },
     {
       "word": "pump",
@@ -263,28 +185,10 @@
       "path": "UK/rest_gb.mp3"
     },
     {
-      "word": "slang",
-      "accent": "us",
-      "filename": "slang.mp3",
-      "path": "US/slang.mp3"
-    },
-    {
-      "word": "stamp",
-      "accent": "uk",
-      "filename": "stamp.mp3",
-      "path": "UK/stamp.mp3"
-    },
-    {
       "word": "stamp",
       "accent": "us",
       "filename": "stamp.mp3",
       "path": "US/stamp.mp3"
-    },
-    {
-      "word": "sting",
-      "accent": "uk",
-      "filename": "sting.mp3",
-      "path": "UK/sting.mp3"
     },
     {
       "word": "sting",
@@ -321,12 +225,6 @@
       "accent": "uk",
       "filename": "trunk.mp3",
       "path": "UK/trunk.mp3"
-    },
-    {
-      "word": "trunk",
-      "accent": "us",
-      "filename": "trunk.mp3",
-      "path": "US/trunk.mp3"
     },
     {
       "word": "wind",
