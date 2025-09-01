@@ -702,8 +702,16 @@
         "p",
         "n"
       ],
-      "word_count": 2,
+      "word_count": 3,
       "words": {
+        "sit": [
+          {
+            "word": "sit",
+            "accent": "us",
+            "filename": "sit.mp3",
+            "path": "US/sit.mp3"
+          }
+        ],
         "tap": [
           {
             "word": "tap",
@@ -776,5 +784,5 @@
     }
   },
   "generated_at": "2025-08-27",
-  "total_words_analyzed": 85
+  "total_words_analyzed": 86
 }

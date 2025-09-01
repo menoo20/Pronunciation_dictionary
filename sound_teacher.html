@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jolly Phonics Sound Teacher</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .navigation {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #e9ecef;
+        }
+
+        .nav-btn {
+            display: inline-block;
+            margin: 5px;
+            padding: 12px 24px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-btn:hover {
+            background: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .group-selector {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .group-selector h2 {
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+
+        .group-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .group-card {
+            background: linear-gradient(135deg, #74b9ff, #0984e3);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .group-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .group-card h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .group-letters {
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .sound-learning {
+            padding: 30px;
+            display: none;
+        }
+
+        .sound-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .sound-card {
+            background: white;
+            border: 3px solid #e9ecef;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .sound-card:hover {
+            border-color: #007bff;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .letter-display {
+            font-size: 4em;
+            font-weight: bold;
+            color: #ff6b6b;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .sound-info {
+            margin-bottom: 15px;
+        }
+
+        .sound-type {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .example-words {
+            font-size: 1em;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .play-btn {
+            background: linear-gradient(135deg, #00b894, #00a085);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 5px;
+        }
+
+        .play-btn:hover {
+            background: linear-gradient(135deg, #00a085, #008a75);
+            transform: translateY(-2px);
+        }
+
+        .back-btn {
+            background: #6c757d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            margin: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: #5a6268;
+            transform: translateY(-2px);
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        .examples-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .word-example {
+            display: inline-block;
+            margin: 5px;
+            padding: 8px 16px;
+            background: #007bff;
+            color: white;
+            border-radius: 20px;
+            font-size: 0.9em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .word-example:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .group-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .sound-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .letter-display {
+                font-size: 3em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔤 Jolly Phonics Sound Teacher</h1>
+            <p>Learn the sounds of letters with proper pronunciation</p>
+        </div>
+
+        <div class="navigation">
+            <a href="index.html" class="nav-btn">📚 Back to Dictionary</a>
+            <a href="jolly_phonics_test.html" class="nav-btn">🎯 Take Test</a>
+        </div>
+
+        <div id="groupSelector" class="group-selector">
+            <h2>Choose a Jolly Phonics Group to Learn</h2>
+            <div class="group-cards">
+                <div class="group-card" onclick="showSounds(1)">
+                    <h3>Group 1</h3>
+                    <div class="group-letters">s, a, t, i, p, n</div>
+                    <p>Foundation sounds - Start here!</p>
+                </div>
+                <div class="group-card" onclick="showSounds(2)">
+                    <h3>Group 2</h3>
+                    <div class="group-letters">c, k, e, h, r, m, d</div>
+                    <p>Building consonants and vowels</p>
+                </div>
+                <div class="group-card" onclick="showSounds(3)">
+                    <h3>Group 3</h3>
+                    <div class="group-letters">g, o, u, l, f, b</div>
+                    <p>More letters and sounds</p>
+                </div>
+                <div class="group-card" onclick="showSounds(4)">
+                    <h3>Group 4</h3>
+                    <div class="group-letters">ai, j, oa, ie, ee, or</div>
+                    <p>Digraphs and letter combinations</p>
+                </div>
+                <div class="group-card" onclick="showSounds(5)">
+                    <h3>Group 5</h3>
+                    <div class="group-letters">z, w, ng, v, oo</div>
+                    <p>Complex sounds and combinations</p>
+                </div>
+                <div class="group-card" onclick="showSounds(6)">
+                    <h3>Group 6</h3>
+                    <div class="group-letters">y, x, ch, sh, th</div>
+                    <p>Advanced consonant combinations</p>
+                </div>
+                <div class="group-card" onclick="showSounds(7)">
+                    <h3>Group 7</h3>
+                    <div class="group-letters">qu, ou, oi, ue, er, ar</div>
+                    <p>Complex vowel combinations</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="soundLearning" class="sound-learning">
+            <button class="back-btn" onclick="showGroupSelector()">← Back to Groups</button>
+            <h2 id="currentGroupTitle"></h2>
+            <div id="soundGrid" class="sound-grid"></div>
+        </div>
+    </div>
+
+    <script>
+        // Sound mapping for each letter with different pronunciations
+        const soundLibrary = {
+            // Group 1: s, a, t, i, p, n
+            's': [
+                { file: 's-sit-mess.mp3', type: 'S Sound', examples: ['sit', 'mess', 'sun', 'snake'] },
+                { file: 's-his.mp3', type: 'Z Sound', examples: ['his', 'has', 'dogs', 'runs'] },
+                { file: 's-cent-cirus-cycle.mp3', type: 'C Sound', examples: ['cent', 'circus', 'cycle'] }
+            ],
+            'a': [
+                { file: 'a-apple.mp3', type: 'Short A', examples: ['apple', 'cat', 'bat', 'hat'] },
+                { file: 'a-cake.mp3', type: 'Long A', examples: ['cake', 'gate', 'name', 'game'] }
+            ],
+            't': [
+                { file: 't-tuck.mp3', type: 'T Sound', examples: ['tuck', 'top', 'bat', 'cat'] }
+            ],
+            'i': [
+                { file: 'i-igloo.mp3', type: 'Short I', examples: ['igloo', 'sit', 'bit', 'hit'] },
+                { file: 'i-kite.mp3', type: 'Long I', examples: ['kite', 'bike', 'time', 'fine'] }
+            ],
+            'p': [
+                { file: 'p-pick.mp3', type: 'P Sound', examples: ['pick', 'pop', 'cup', 'tap'] }
+            ],
+            'n': [
+                { file: 'n-nap.mp3', type: 'N Sound', examples: ['nap', 'net', 'sun', 'can'] },
+                { file: 'n-knife.mp3', type: 'Silent N', examples: ['knife', 'knee', 'know'] },
+                { file: 'n-gnome.mp3', type: 'Silent G+N', examples: ['gnome', 'sign', 'design'] }
+            ],
+
+            // Group 2: c, k, e, h, r, m, d
+            'c': [
+                { file: 'c-cut.mp3', type: 'Hard C', examples: ['cut', 'cat', 'cup', 'come'] },
+                { file: 's-cent-cirus-cycle.mp3', type: 'Soft C', examples: ['cent', 'circus', 'cycle'] }
+            ],
+            'k': [
+                { file: 'k-kit.mp3', type: 'K Sound', examples: ['kit', 'kite', 'book', 'back'] }
+            ],
+            'e': [
+                { file: 'e-elephant.mp3', type: 'Short E', examples: ['elephant', 'bed', 'red', 'get'] },
+                { file: 'e-team.mp3', type: 'Long E', examples: ['team', 'green', 'see', 'tree'] }
+            ],
+            'h': [
+                { file: 'h-hat.mp3', type: 'H Sound', examples: ['hat', 'hot', 'happy', 'home'] }
+            ],
+            'r': [
+                { file: 'r-rid.mp3', type: 'R Sound', examples: ['rid', 'red', 'run', 'car'] }
+            ],
+            'm': [
+                { file: 'm-mug.mp3', type: 'M Sound', examples: ['mug', 'mat', 'come', 'ham'] }
+            ],
+            'd': [
+                { file: 'd-dip.mp3', type: 'D Sound', examples: ['dip', 'dog', 'bad', 'red'] }
+            ],
+
+            // Group 3: g, o, u, l, f, b
+            'g': [
+                { file: 'sound_g.mp3', type: 'Hard G', examples: ['go', 'big', 'dog', 'get'] },
+                { file: 'j-gem-giant-gym.mp3', type: 'Soft G', examples: ['gem', 'giant', 'gym'] }
+            ],
+            'o': [
+                { file: 'o-octopus.mp3', type: 'Short O', examples: ['octopus', 'hot', 'box', 'top'] },
+                { file: 'o-rope.mp3', type: 'Long O', examples: ['rope', 'home', 'note', 'hope'] }
+            ],
+            'u': [
+                { file: 'u-up.mp3', type: 'Short U', examples: ['up', 'cut', 'nut', 'but'] },
+                { file: 'u-use-cue.mp3', type: 'Long U', examples: ['use', 'cue', 'cute', 'mute'] },
+                { file: 'u-lute-glue.mp3', type: 'U as OO', examples: ['lute', 'glue', 'blue', 'true'] }
+            ],
+            'l': [
+                { file: 'l-lip.mp3', type: 'L Sound', examples: ['lip', 'leg', 'ball', 'fall'] }
+            ],
+            'f': [
+                { file: 'f-fun.mp3', type: 'F Sound', examples: ['fun', 'fish', 'off', 'leaf'] }
+            ],
+            'b': [
+                { file: 'b-bat.mp3', type: 'B Sound', examples: ['bat', 'big', 'cub', 'web'] }
+            ],
+
+            // Group 4: ai, j, oa, ie, ee, or
+            'ai': [
+                { file: 'air-pair-share.mp3', type: 'AI Sound', examples: ['pair', 'share', 'fair', 'hair'] }
+            ],
+            'j': [
+                { file: 'j-jog.mp3', type: 'J Sound', examples: ['jog', 'jump', 'jam', 'joy'] }
+            ],
+            'oa': [
+                { file: 'o-rope.mp3', type: 'OA Sound', examples: ['boat', 'coat', 'road', 'soap'] }
+            ],
+            'ie': [
+                { file: 'i-kite.mp3', type: 'IE Sound', examples: ['pie', 'tie', 'die', 'lie'] }
+            ],
+            'ee': [
+                { file: 'e-team.mp3', type: 'EE Sound', examples: ['tree', 'free', 'bee', 'see'] }
+            ],
+            'or': [
+                { file: 'or-fork.mp3', type: 'OR Sound', examples: ['fork', 'corn', 'born', 'short'] }
+            ],
+
+            // Group 5: z, w, ng, v, oo
+            'z': [
+                { file: 'z-zip-buzz.mp3', type: 'Z Sound', examples: ['zip', 'buzz', 'zero', 'maze'] }
+            ],
+            'w': [
+                { file: 'w-will.mp3', type: 'W Sound', examples: ['will', 'win', 'water', 'way'] },
+                { file: 'wr-wrist.mp3', type: 'Silent W', examples: ['wrist', 'write', 'wrong'] }
+            ],
+            'ng': [
+                { file: 'ng-ring.mp3', type: 'NG Sound', examples: ['ring', 'sing', 'long', 'thing'] }
+            ],
+            'v': [
+                { file: 'v-van.mp3', type: 'V Sound', examples: ['van', 'very', 'love', 'give'] }
+            ],
+            'oo': [
+                { file: 'oo-book-bush.mp3', type: 'Short OO', examples: ['book', 'bush', 'look', 'cook'] },
+                { file: 'oo-boot-new.mp3', type: 'Long OO', examples: ['boot', 'new', 'moon', 'cool'] }
+            ],
+
+            // Group 6: y, x, ch, sh, th
+            'y': [
+                { file: 'y-yes.mp3', type: 'Y Sound', examples: ['yes', 'you', 'year', 'young'] }
+            ],
+            'x': [
+                { file: 'x-mix-rocks.mp3', type: 'X Sound', examples: ['mix', 'rocks', 'box', 'fox'] }
+            ],
+            'ch': [
+                { file: 'ch-chick.mp3', type: 'CH Sound', examples: ['chick', 'chair', 'much', 'teach'] }
+            ],
+            'sh': [
+                { file: 'sh-ship.mp3', type: 'SH Sound', examples: ['ship', 'shoe', 'fish', 'wash'] }
+            ],
+            'th': [
+                { file: 'th-thin.mp3', type: 'Voiceless TH', examples: ['thin', 'think', 'three', 'math'] },
+                { file: 'th-the.mp3', type: 'Voiced TH', examples: ['the', 'this', 'that', 'mother'] }
+            ],
+
+            // Group 7: qu, ou, oi, ue, er, ar
+            'qu': [
+                { file: 'qu-quest.mp3', type: 'QU Sound', examples: ['quest', 'quick', 'queen', 'quiet'] }
+            ],
+            'ou': [
+                { file: 'ou-how-out.mp3', type: 'OU Sound', examples: ['how', 'out', 'house', 'mouse'] }
+            ],
+            'oi': [
+                { file: 'oi-soil-toy.mp3', type: 'OI Sound', examples: ['soil', 'toy', 'coin', 'voice'] }
+            ],
+            'ue': [
+                { file: 'ure-lure.mp3', type: 'UE Sound', examples: ['lure', 'sure', 'cure', 'pure'] }
+            ],
+            'er': [
+                { file: 'er-herd-bird-turn.mp3', type: 'ER Sound', examples: ['herd', 'bird', 'turn', 'her'] }
+            ],
+            'ar': [
+                { file: 'ar-jar.mp3', type: 'AR Sound', examples: ['jar', 'car', 'star', 'hard'] }
+            ]
+        };
+
+        const jollyPhonicsGroups = {
+            1: ['s', 'a', 't', 'i', 'p', 'n'],
+            2: ['c', 'k', 'e', 'h', 'r', 'm', 'd'],
+            3: ['g', 'o', 'u', 'l', 'f', 'b'],
+            4: ['ai', 'j', 'oa', 'ie', 'ee', 'or'],
+            5: ['z', 'w', 'ng', 'v', 'oo'],
+            6: ['y', 'x', 'ch', 'sh', 'th'],
+            7: ['qu', 'ou', 'oi', 'ue', 'er', 'ar']
+        };
+
+        function showSounds(groupNumber) {
+            document.getElementById('groupSelector').style.display = 'none';
+            document.getElementById('soundLearning').style.display = 'block';
+            document.getElementById('currentGroupTitle').textContent = `Group ${groupNumber} Sounds`;
+            
+            const letters = jollyPhonicsGroups[groupNumber];
+            const soundGrid = document.getElementById('soundGrid');
+            soundGrid.innerHTML = '';
+
+            letters.forEach(letter => {
+                if (soundLibrary[letter]) {
+                    soundLibrary[letter].forEach(sound => {
+                        const soundCard = createSoundCard(letter, sound);
+                        soundGrid.appendChild(soundCard);
+                    });
+                }
+            });
+        }
+
+        function createSoundCard(letter, sound) {
+            const card = document.createElement('div');
+            card.className = 'sound-card';
+            
+            card.innerHTML = `
+                <div class="letter-display">${letter}</div>
+                <div class="sound-info">
+                    <div class="sound-type">${sound.type}</div>
+                    <div class="example-words">Examples: ${sound.examples.join(', ')}</div>
+                </div>
+                <button class="play-btn" onclick="playSound('${sound.file}')">
+                    🔊 Play Sound
+                </button>
+                <div class="examples-section">
+                    ${sound.examples.map(word => 
+                        `<span class="word-example" onclick="playWordExample('${word}')">${word}</span>`
+                    ).join('')}
+                </div>
+            `;
+            
+            return card;
+        }
+
+        function playSound(filename) {
+            const audio = new Audio(`jolly phonics sounds/${filename}`);
+            audio.play().catch(e => {
+                console.error('Error playing sound:', e);
+                alert('Sorry, could not play the sound file.');
+            });
+        }
+
+        function playWordExample(word) {
+            // Try to play from our word dictionary - check multiple naming patterns
+            // Try the most common patterns first (direct filenames)
+            const usAudioDirect = new Audio(`US/${word}.mp3`);
+            const ukAudio = new Audio(`UK/${word}.mp3`);
+            const usAudio = new Audio(`US/${word}_us.mp3`);
+            const ukAudioGB = new Audio(`UK/${word}_gb.mp3`);
+            
+            // Try US direct first (most common for our downloads)
+            usAudioDirect.play().catch(() => {
+                // Try UK version
+                ukAudio.play().catch(() => {
+                    // Try US with _us suffix
+                    usAudio.play().catch(() => {
+                        // Try UK with _gb suffix
+                        ukAudioGB.play().catch(() => {
+                            console.log(`No audio found for word: ${word}`);
+                            // Show a message to user
+                            alert(`Audio not available for "${word}". You can download it from the dictionary page.`);
+                        });
+                    });
+                });
+            });
+        }
+
+        function showGroupSelector() {
+            document.getElementById('groupSelector').style.display = 'block';
+            document.getElementById('soundLearning').style.display = 'none';
+        }
+
+        // Initialize the page
+        window.addEventListener('load', function() {
+            console.log('Sound Teacher loaded successfully!');
+        });
+    </script>
+</body>
+</html>
