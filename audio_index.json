@@ -1,8 +1,8 @@
 {
-  "last_updated": "2025-09-01T15:48:56.563426",
-  "total_files": 38,
+  "last_updated": "2025-09-01T15:54:02.665595",
+  "total_files": 40,
   "uk_files": 21,
-  "us_files": 17,
+  "us_files": 19,
   "files": [
     {
       "word": "ban",
@@ -185,6 +185,12 @@
       "path": "UK/rest_gb.mp3"
     },
     {
+      "word": "snake",
+      "accent": "us",
+      "filename": "snake.mp3",
+      "path": "US/snake.mp3"
+    },
+    {
       "word": "stamp",
       "accent": "us",
       "filename": "stamp.mp3",
@@ -195,6 +201,12 @@
       "accent": "us",
       "filename": "sting.mp3",
       "path": "US/sting.mp3"
+    },
+    {
+      "word": "sun",
+      "accent": "us",
+      "filename": "sun.mp3",
+      "path": "US/sun.mp3"
     },
     {
       "word": "task",
