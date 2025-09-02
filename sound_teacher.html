@@ -233,36 +233,36 @@
         /* Audio playing effects */
         .playing-audio {
             animation: pulse-glow 2.5s infinite;
-            transform: scale(1.05);
+            transform: scale(1.02);
             position: relative;
             z-index: 10;
         }
 
         .playing-sound-btn {
-            animation: rainbow-pulse 3s infinite;
-            transform: scale(1.1);
-            box-shadow: 0 0 20px rgba(0, 123, 255, 0.8);
+            animation: rainbow-pulse 4s infinite;
+            transform: scale(1.05);
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
         }
 
         @keyframes pulse-glow {
             0% {
-                box-shadow: 0 0 5px rgba(255, 215, 0, 0.7);
+                box-shadow: 0 0 2px rgba(255, 215, 0, 0.3);
                 background: linear-gradient(45deg, #007bff, #28a745);
             }
             25% {
-                box-shadow: 0 0 15px rgba(255, 215, 0, 0.9);
+                box-shadow: 0 0 4px rgba(255, 215, 0, 0.4);
                 background: linear-gradient(45deg, #28a745, #ffc107);
             }
             50% {
-                box-shadow: 0 0 25px rgba(255, 215, 0, 1);
+                box-shadow: 0 0 6px rgba(255, 215, 0, 0.5);
                 background: linear-gradient(45deg, #ffc107, #dc3545);
             }
             75% {
-                box-shadow: 0 0 15px rgba(255, 215, 0, 0.9);
+                box-shadow: 0 0 4px rgba(255, 215, 0, 0.4);
                 background: linear-gradient(45deg, #dc3545, #6f42c1);
             }
             100% {
-                box-shadow: 0 0 5px rgba(255, 215, 0, 0.7);
+                box-shadow: 0 0 2px rgba(255, 215, 0, 0.3);
                 background: linear-gradient(45deg, #6f42c1, #007bff);
             }
         }
@@ -270,29 +270,29 @@
         @keyframes rainbow-pulse {
             0% {
                 background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-                box-shadow: 0 0 10px rgba(255, 107, 107, 0.8);
+                box-shadow: 0 0 3px rgba(255, 107, 107, 0.4);
             }
             25% {
                 background: linear-gradient(45deg, #4ecdc4, #45b7d1);
-                box-shadow: 0 0 15px rgba(78, 205, 196, 0.8);
+                box-shadow: 0 0 4px rgba(78, 205, 196, 0.4);
             }
             50% {
                 background: linear-gradient(45deg, #45b7d1, #96ceb4);
-                box-shadow: 0 0 20px rgba(69, 183, 209, 0.8);
+                box-shadow: 0 0 5px rgba(69, 183, 209, 0.4);
             }
             75% {
                 background: linear-gradient(45deg, #96ceb4, #feca57);
-                box-shadow: 0 0 15px rgba(150, 206, 180, 0.8);
+                box-shadow: 0 0 4px rgba(150, 206, 180, 0.4);
             }
             100% {
                 background: linear-gradient(45deg, #feca57, #ff6b6b);
-                box-shadow: 0 0 10px rgba(254, 202, 87, 0.8);
+                box-shadow: 0 0 3px rgba(254, 202, 87, 0.4);
             }
         }
 
         /* Attention grabbing effect */
         .attention-grab {
-            animation: attention-bounce 0.8s ease-in-out;
+            animation: attention-bounce 1.2s ease-in-out;
         }
 
         @keyframes attention-bounce {
@@ -300,16 +300,16 @@
                 transform: translateY(0) scale(1);
             }
             10% {
-                transform: translateY(-10px) scale(1.1);
+                transform: translateY(-3px) scale(1.02);
             }
             30% {
-                transform: translateY(-15px) scale(1.15);
+                transform: translateY(-5px) scale(1.03);
             }
             40% {
-                transform: translateY(-5px) scale(1.05);
+                transform: translateY(-2px) scale(1.01);
             }
             60% {
-                transform: translateY(-8px) scale(1.08);
+                transform: translateY(-3px) scale(1.02);
             }
         }
 
