@@ -72,56 +72,6 @@
             margin-bottom: 30px;
         }
 
-        .add-word-form {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-        }
-
-        .add-word-form input, .add-word-form select, .add-word-form button {
-            padding: 12px;
-            border: 2px solid #e1e5e9;
-            border-radius: 8px;
-            font-size: 16px;
-        }
-
-        .add-word-form input {
-            flex: 1;
-            min-width: 200px;
-        }
-
-        .add-word-form select {
-            min-width: 120px;
-        }
-
-        .add-word-form button {
-            background: #667eea;
-            color: white;
-            border: none;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .add-word-form button:hover {
-            background: #5a6fd8;
-        }
-
-        .search-btn {
-            background: #52c41a !important;
-            min-width: 200px;
-        }
-
-        .search-btn:hover {
-            background: #45a614 !important;
-        }
-
-        .add-existing-form {
-            margin-top: 15px;
-            padding-top: 15px;
-            border-top: 1px solid #e1e5e9;
-        }
-
         /* Modal styles */
         .modal {
             position: fixed;
@@ -554,25 +504,48 @@
                 margin: 3px;
                 font-size: 14px;
             }
-            
-            .add-word-form {
-                flex-direction: column;
-            }
 
             .search-filter {
                 flex-direction: column;
+                gap: 15px;
             }
 
             .filter-buttons {
-                justify-content: center;
-                gap: 8px;
+                position: relative;
             }
-            
+
+            .filter-buttons.show-filters .filter-btn {
+                display: block;
+            }
+
             .filter-btn {
-                padding: 8px 12px;
+                display: none;
+                width: 100%;
+                margin: 3px 0;
+                padding: 12px;
                 font-size: 14px;
-                flex: 0 0 auto;
-                min-width: fit-content;
+                text-align: center;
+                border-radius: 8px;
+                background: white;
+                border: 2px solid #e1e5e9;
+            }
+
+            .filter-btn.active {
+                display: block;
+                background: #667eea;
+                color: white;
+                border-color: #667eea;
+            }
+
+            .filter-btn:first-child {
+                display: block; /* Always show "All" option */
+            }
+
+            .rescan-btn, .clear-cache-btn {
+                width: 100%;
+                margin: 5px 0;
+                padding: 12px;
+                font-size: 14px;
             }
 
             .words-grid {
@@ -594,19 +567,20 @@
                 font-size: 1.8em;
             }
             
-            .filter-buttons {
-                gap: 5px;
-            }
-            
             .filter-btn {
-                padding: 6px 10px;
-                font-size: 12px;
-                border-radius: 6px;
+                padding: 10px;
+                font-size: 13px;
+                margin: 2px 0;
             }
             
             .search-box {
                 font-size: 16px;
                 padding: 10px;
+            }
+            
+            .rescan-btn, .clear-cache-btn {
+                padding: 10px;
+                font-size: 13px;
             }
         }
     </style>
@@ -640,20 +614,6 @@
         </div>
 
         <div class="controls">
-            <div class="add-word-form">
-                <input type="text" id="word-input" placeholder="Enter a word to search/download (e.g., hello)" />
-                <button onclick="searchWord()" class="search-btn">🔍 Search & Download</button>
-            </div>
-
-            <div class="add-existing-form" style="display: none;">
-                <input type="text" id="existing-word-input" placeholder="Add existing word to dictionary" />
-                <select id="accent-select">
-                    <option value="us">🇺🇸 US Accent</option>
-                    <option value="uk">🇬🇧 UK Accent</option>
-                </select>
-                <button onclick="addWord()">Add to Dictionary</button>
-            </div>
-
             <div class="search-filter">
                 <input type="text" class="search-box" id="search-input" placeholder="Search words..." oninput="filterWords()" />
                 <div class="filter-buttons">
@@ -674,19 +634,6 @@
                     <button class="clear-cache-btn" onclick="clearCacheAndReload()">
                         🗑️ Clear Cache
                     </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Search Results Modal -->
-        <div id="search-modal" class="modal" style="display: none;">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3 id="search-word-title">Search Results</h3>
-                    <button class="close-btn" onclick="closeSearchModal()">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <div id="search-results"></div>
                 </div>
             </div>
         </div>
@@ -1307,6 +1254,84 @@
                 closeSearchModal();
             }
         });
+
+        // Mobile filter functionality
+        function initMobileFilters() {
+            const filterContainer = document.querySelector('.filter-buttons');
+            if (!filterContainer) return;
+
+            // Create a toggle button for mobile
+            let toggleBtn = filterContainer.querySelector('.mobile-filter-toggle');
+            if (!toggleBtn && window.innerWidth <= 768) {
+                toggleBtn = document.createElement('div');
+                toggleBtn.className = 'mobile-filter-toggle';
+                toggleBtn.innerHTML = '📱 Tap to select filter <span class="toggle-arrow">▼</span>';
+                toggleBtn.style.cssText = `
+                    background: #667eea;
+                    color: white;
+                    padding: 12px;
+                    border-radius: 8px;
+                    text-align: center;
+                    cursor: pointer;
+                    margin-bottom: 10px;
+                    font-weight: bold;
+                    user-select: none;
+                `;
+                filterContainer.insertBefore(toggleBtn, filterContainer.firstChild);
+            }
+
+            // Add click handler for mobile filter toggle
+            if (toggleBtn) {
+                toggleBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const isOpen = filterContainer.classList.contains('show-filters');
+                    
+                    if (isOpen) {
+                        filterContainer.classList.remove('show-filters');
+                        this.querySelector('.toggle-arrow').textContent = '▼';
+                        this.innerHTML = '📱 Tap to select filter <span class="toggle-arrow">▼</span>';
+                    } else {
+                        filterContainer.classList.add('show-filters');
+                        this.querySelector('.toggle-arrow').textContent = '▲';
+                        this.innerHTML = '📱 Tap to close filters <span class="toggle-arrow">▲</span>';
+                    }
+                });
+            }
+
+            // Auto-hide filters when one is selected on mobile
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    if (window.innerWidth <= 768) {
+                        setTimeout(() => {
+                            filterContainer.classList.remove('show-filters');
+                            const toggleBtn = filterContainer.querySelector('.mobile-filter-toggle');
+                            if (toggleBtn) {
+                                toggleBtn.querySelector('.toggle-arrow').textContent = '▼';
+                                toggleBtn.innerHTML = '📱 Tap to select filter <span class="toggle-arrow">▼</span>';
+                            }
+                        }, 300); // Small delay to see the selection
+                    }
+                });
+            });
+
+            // Close filters when clicking outside
+            document.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768 && !filterContainer.contains(e.target)) {
+                    filterContainer.classList.remove('show-filters');
+                    const toggleBtn = filterContainer.querySelector('.mobile-filter-toggle');
+                    if (toggleBtn) {
+                        toggleBtn.querySelector('.toggle-arrow').textContent = '▼';
+                        toggleBtn.innerHTML = '📱 Tap to select filter <span class="toggle-arrow">▼</span>';
+                    }
+                }
+            });
+        }
+
+        // Initialize mobile filters when page loads
+        window.addEventListener('load', initMobileFilters);
+        window.addEventListener('resize', initMobileFilters);
     </script>
 </body>
 </html>

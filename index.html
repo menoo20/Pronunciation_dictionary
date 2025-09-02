@@ -561,18 +561,45 @@
 
             .search-filter {
                 flex-direction: column;
+                gap: 15px;
             }
 
             .filter-buttons {
-                justify-content: center;
-                gap: 8px;
+                position: relative;
             }
-            
+
+            .filter-buttons.show-filters .filter-btn {
+                display: block;
+            }
+
             .filter-btn {
-                padding: 8px 12px;
+                display: none;
+                width: 100%;
+                margin: 3px 0;
+                padding: 12px;
                 font-size: 14px;
-                flex: 0 0 auto;
-                min-width: fit-content;
+                text-align: center;
+                border-radius: 8px;
+                background: white;
+                border: 2px solid #e1e5e9;
+            }
+
+            .filter-btn.active {
+                display: block;
+                background: #667eea;
+                color: white;
+                border-color: #667eea;
+            }
+
+            .filter-btn:first-child {
+                display: block; /* Always show "All" option */
+            }
+
+            .rescan-btn, .clear-cache-btn {
+                width: 100%;
+                margin: 5px 0;
+                padding: 12px;
+                font-size: 14px;
             }
 
             .words-grid {
@@ -594,19 +621,20 @@
                 font-size: 1.8em;
             }
             
-            .filter-buttons {
-                gap: 5px;
-            }
-            
             .filter-btn {
-                padding: 6px 10px;
-                font-size: 12px;
-                border-radius: 6px;
+                padding: 10px;
+                font-size: 13px;
+                margin: 2px 0;
             }
             
             .search-box {
                 font-size: 16px;
                 padding: 10px;
+            }
+            
+            .rescan-btn, .clear-cache-btn {
+                padding: 10px;
+                font-size: 13px;
             }
         }
     </style>
@@ -1307,6 +1335,84 @@
                 closeSearchModal();
             }
         });
+
+        // Mobile filter functionality
+        function initMobileFilters() {
+            const filterContainer = document.querySelector('.filter-buttons');
+            if (!filterContainer) return;
+
+            // Create a toggle button for mobile
+            let toggleBtn = filterContainer.querySelector('.mobile-filter-toggle');
+            if (!toggleBtn && window.innerWidth <= 768) {
+                toggleBtn = document.createElement('div');
+                toggleBtn.className = 'mobile-filter-toggle';
+                toggleBtn.innerHTML = '📱 Tap to select filter <span class="toggle-arrow">▼</span>';
+                toggleBtn.style.cssText = `
+                    background: #667eea;
+                    color: white;
+                    padding: 12px;
+                    border-radius: 8px;
+                    text-align: center;
+                    cursor: pointer;
+                    margin-bottom: 10px;
+                    font-weight: bold;
+                    user-select: none;
+                `;
+                filterContainer.insertBefore(toggleBtn, filterContainer.firstChild);
+            }
+
+            // Add click handler for mobile filter toggle
+            if (toggleBtn) {
+                toggleBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const isOpen = filterContainer.classList.contains('show-filters');
+                    
+                    if (isOpen) {
+                        filterContainer.classList.remove('show-filters');
+                        this.querySelector('.toggle-arrow').textContent = '▼';
+                        this.innerHTML = '📱 Tap to select filter <span class="toggle-arrow">▼</span>';
+                    } else {
+                        filterContainer.classList.add('show-filters');
+                        this.querySelector('.toggle-arrow').textContent = '▲';
+                        this.innerHTML = '📱 Tap to close filters <span class="toggle-arrow">▲</span>';
+                    }
+                });
+            }
+
+            // Auto-hide filters when one is selected on mobile
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    if (window.innerWidth <= 768) {
+                        setTimeout(() => {
+                            filterContainer.classList.remove('show-filters');
+                            const toggleBtn = filterContainer.querySelector('.mobile-filter-toggle');
+                            if (toggleBtn) {
+                                toggleBtn.querySelector('.toggle-arrow').textContent = '▼';
+                                toggleBtn.innerHTML = '📱 Tap to select filter <span class="toggle-arrow">▼</span>';
+                            }
+                        }, 300); // Small delay to see the selection
+                    }
+                });
+            });
+
+            // Close filters when clicking outside
+            document.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768 && !filterContainer.contains(e.target)) {
+                    filterContainer.classList.remove('show-filters');
+                    const toggleBtn = filterContainer.querySelector('.mobile-filter-toggle');
+                    if (toggleBtn) {
+                        toggleBtn.querySelector('.toggle-arrow').textContent = '▼';
+                        toggleBtn.innerHTML = '📱 Tap to select filter <span class="toggle-arrow">▼</span>';
+                    }
+                }
+            });
+        }
+
+        // Initialize mobile filters when page loads
+        window.addEventListener('load', initMobileFilters);
+        window.addEventListener('resize', initMobileFilters);
     </script>
 </body>
 </html>

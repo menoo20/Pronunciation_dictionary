@@ -1,8 +1,8 @@
 {
-  "last_updated": "2025-09-02T20:59:36.023991",
-  "total_files": 350,
+  "last_updated": "2025-09-02T21:52:29.595668",
+  "total_files": 349,
   "uk_files": 22,
-  "us_files": 328,
+  "us_files": 327,
   "files": [
     {
       "word": "ant",
@@ -975,12 +975,6 @@
       "accent": "us",
       "filename": "lute.mp3",
       "path": "US/lute.mp3"
-    },
-    {
-      "word": "main",
-      "accent": "us",
-      "filename": "main.mp3",
-      "path": "US/main.mp3"
     },
     {
       "word": "market",
