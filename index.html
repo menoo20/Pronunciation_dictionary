@@ -279,6 +279,7 @@
         .filter-buttons {
             display: flex;
             gap: 5px;
+            flex-wrap: wrap;
         }
 
         .filter-btn {
@@ -540,6 +541,20 @@
         }
 
         @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .nav-btn {
+                padding: 8px 16px;
+                margin: 3px;
+                font-size: 14px;
+            }
+            
             .add-word-form {
                 flex-direction: column;
             }
@@ -550,6 +565,14 @@
 
             .filter-buttons {
                 justify-content: center;
+                gap: 8px;
+            }
+            
+            .filter-btn {
+                padding: 8px 12px;
+                font-size: 14px;
+                flex: 0 0 auto;
+                min-width: fit-content;
             }
 
             .words-grid {
@@ -559,6 +582,31 @@
             .stats {
                 flex-direction: column;
                 gap: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .filter-buttons {
+                gap: 5px;
+            }
+            
+            .filter-btn {
+                padding: 6px 10px;
+                font-size: 12px;
+                border-radius: 6px;
+            }
+            
+            .search-box {
+                font-size: 16px;
+                padding: 10px;
             }
         }
     </style>
