@@ -1,8 +1,8 @@
 {
-  "last_updated": "2025-09-02T20:23:48.779401",
-  "total_files": 304,
+  "last_updated": "2025-09-02T20:28:48.665452",
+  "total_files": 305,
   "uk_files": 22,
-  "us_files": 282,
+  "us_files": 283,
   "files": [
     {
       "word": "ant",
@@ -711,6 +711,12 @@
       "accent": "uk",
       "filename": "hug.mp3",
       "path": "UK/hug.mp3"
+    },
+    {
+      "word": "igloo",
+      "accent": "us",
+      "filename": "igloo.mp3",
+      "path": "US/igloo.mp3"
     },
     {
       "word": "jam",
