@@ -1,8 +1,8 @@
 {
-  "last_updated": "2025-09-02T20:28:48.665452",
-  "total_files": 305,
+  "last_updated": "2025-09-02T20:34:52.952029",
+  "total_files": 350,
   "uk_files": 22,
-  "us_files": 283,
+  "us_files": 328,
   "files": [
     {
       "word": "ant",
@@ -89,6 +89,18 @@
       "path": "US/bike.mp3"
     },
     {
+      "word": "bird",
+      "accent": "us",
+      "filename": "bird.mp3",
+      "path": "US/bird.mp3"
+    },
+    {
+      "word": "bit",
+      "accent": "us",
+      "filename": "bit.mp3",
+      "path": "US/bit.mp3"
+    },
+    {
       "word": "blank",
       "accent": "uk",
       "filename": "blank.mp3",
@@ -119,6 +131,12 @@
       "path": "US/book.mp3"
     },
     {
+      "word": "boot",
+      "accent": "us",
+      "filename": "boot.mp3",
+      "path": "US/boot.mp3"
+    },
+    {
       "word": "born",
       "accent": "us",
       "filename": "born.mp3",
@@ -143,6 +161,12 @@
       "path": "US/brand_us.mp3"
     },
     {
+      "word": "bush",
+      "accent": "us",
+      "filename": "bush.mp3",
+      "path": "US/bush.mp3"
+    },
+    {
       "word": "but",
       "accent": "us",
       "filename": "but.mp3",
@@ -165,6 +189,12 @@
       "accent": "us",
       "filename": "camp_us.mp3",
       "path": "US/camp_us.mp3"
+    },
+    {
+      "word": "can",
+      "accent": "us",
+      "filename": "can.mp3",
+      "path": "US/can.mp3"
     },
     {
       "word": "car",
@@ -225,6 +255,12 @@
       "accent": "us",
       "filename": "chest.mp3",
       "path": "US/chest.mp3"
+    },
+    {
+      "word": "chick",
+      "accent": "us",
+      "filename": "chick.mp3",
+      "path": "US/chick.mp3"
     },
     {
       "word": "child",
@@ -335,6 +371,12 @@
       "path": "UK/cup.mp3"
     },
     {
+      "word": "cure",
+      "accent": "us",
+      "filename": "cure.mp3",
+      "path": "US/cure.mp3"
+    },
+    {
       "word": "cut",
       "accent": "us",
       "filename": "cut.mp3",
@@ -405,6 +447,12 @@
       "accent": "us",
       "filename": "elephant.mp3",
       "path": "US/elephant.mp3"
+    },
+    {
+      "word": "fair",
+      "accent": "us",
+      "filename": "fair.mp3",
+      "path": "US/fair.mp3"
     },
     {
       "word": "fall",
@@ -479,6 +527,12 @@
       "path": "US/for.mp3"
     },
     {
+      "word": "fork",
+      "accent": "us",
+      "filename": "fork.mp3",
+      "path": "US/fork.mp3"
+    },
+    {
       "word": "fort",
       "accent": "us",
       "filename": "fort.mp3",
@@ -517,6 +571,12 @@
     {
       "word": "fun",
       "accent": "us",
+      "filename": "fun.mp3",
+      "path": "US/fun.mp3"
+    },
+    {
+      "word": "fun",
+      "accent": "us",
       "filename": "fun_us.mp3",
       "path": "US/fun_us.mp3"
     },
@@ -537,6 +597,12 @@
       "accent": "us",
       "filename": "gem.mp3",
       "path": "US/gem.mp3"
+    },
+    {
+      "word": "get",
+      "accent": "us",
+      "filename": "get.mp3",
+      "path": "US/get.mp3"
     },
     {
       "word": "get",
@@ -599,6 +665,12 @@
       "path": "US/gym.mp3"
     },
     {
+      "word": "hair",
+      "accent": "us",
+      "filename": "hair.mp3",
+      "path": "US/hair.mp3"
+    },
+    {
       "word": "ham",
       "accent": "us",
       "filename": "ham.mp3",
@@ -653,6 +725,12 @@
       "path": "US/herb.mp3"
     },
     {
+      "word": "herd",
+      "accent": "us",
+      "filename": "herd.mp3",
+      "path": "US/herd.mp3"
+    },
+    {
       "word": "hint",
       "accent": "uk",
       "filename": "hint_gb.mp3",
@@ -663,6 +741,12 @@
       "accent": "us",
       "filename": "his.mp3",
       "path": "US/his.mp3"
+    },
+    {
+      "word": "hit",
+      "accent": "us",
+      "filename": "hit.mp3",
+      "path": "US/hit.mp3"
     },
     {
       "word": "home",
@@ -693,6 +777,12 @@
       "accent": "us",
       "filename": "house.mp3",
       "path": "US/house.mp3"
+    },
+    {
+      "word": "how",
+      "accent": "us",
+      "filename": "how.mp3",
+      "path": "US/how.mp3"
     },
     {
       "word": "hub",
@@ -791,10 +881,28 @@
       "path": "US/kit.mp3"
     },
     {
+      "word": "kite",
+      "accent": "us",
+      "filename": "kite.mp3",
+      "path": "US/kite.mp3"
+    },
+    {
       "word": "knee",
       "accent": "us",
       "filename": "knee.mp3",
       "path": "US/knee.mp3"
+    },
+    {
+      "word": "knife",
+      "accent": "us",
+      "filename": "knife.mp3",
+      "path": "US/knife.mp3"
+    },
+    {
+      "word": "know",
+      "accent": "us",
+      "filename": "know.mp3",
+      "path": "US/know.mp3"
     },
     {
       "word": "leaf",
@@ -857,6 +965,12 @@
       "path": "US/love.mp3"
     },
     {
+      "word": "lure",
+      "accent": "us",
+      "filename": "lure.mp3",
+      "path": "US/lure.mp3"
+    },
+    {
       "word": "lute",
       "accent": "us",
       "filename": "lute.mp3",
@@ -893,6 +1007,12 @@
       "path": "US/max.mp3"
     },
     {
+      "word": "maze",
+      "accent": "us",
+      "filename": "maze.mp3",
+      "path": "US/maze.mp3"
+    },
+    {
       "word": "mess",
       "accent": "uk",
       "filename": "mess.mp3",
@@ -921,6 +1041,12 @@
       "accent": "us",
       "filename": "moon.mp3",
       "path": "US/moon.mp3"
+    },
+    {
+      "word": "mother",
+      "accent": "us",
+      "filename": "mother.mp3",
+      "path": "US/mother.mp3"
     },
     {
       "word": "mouse",
@@ -959,6 +1085,12 @@
       "path": "US/name.mp3"
     },
     {
+      "word": "nap",
+      "accent": "us",
+      "filename": "nap.mp3",
+      "path": "US/nap.mp3"
+    },
+    {
       "word": "nest",
       "accent": "us",
       "filename": "nest_us.mp3",
@@ -969,6 +1101,12 @@
       "accent": "uk",
       "filename": "net.mp3",
       "path": "UK/net.mp3"
+    },
+    {
+      "word": "new",
+      "accent": "us",
+      "filename": "new.mp3",
+      "path": "US/new.mp3"
     },
     {
       "word": "noise",
@@ -993,6 +1131,12 @@
       "accent": "uk",
       "filename": "nut_gb.mp3",
       "path": "UK/nut_gb.mp3"
+    },
+    {
+      "word": "nut",
+      "accent": "us",
+      "filename": "nut.mp3",
+      "path": "US/nut.mp3"
     },
     {
       "word": "octopus",
@@ -1031,6 +1175,12 @@
       "path": "US/pain.mp3"
     },
     {
+      "word": "pair",
+      "accent": "us",
+      "filename": "pair.mp3",
+      "path": "US/pair.mp3"
+    },
+    {
       "word": "pan",
       "accent": "us",
       "filename": "pan.mp3",
@@ -1059,6 +1209,12 @@
       "accent": "us",
       "filename": "perch.mp3",
       "path": "US/perch.mp3"
+    },
+    {
+      "word": "pick",
+      "accent": "us",
+      "filename": "pick.mp3",
+      "path": "US/pick.mp3"
     },
     {
       "word": "pie",
@@ -1103,6 +1259,12 @@
       "path": "US/pool.mp3"
     },
     {
+      "word": "pop",
+      "accent": "us",
+      "filename": "pop.mp3",
+      "path": "US/pop.mp3"
+    },
+    {
       "word": "pull",
       "accent": "uk",
       "filename": "pull.mp3",
@@ -1119,6 +1281,12 @@
       "accent": "us",
       "filename": "pun.mp3",
       "path": "US/pun.mp3"
+    },
+    {
+      "word": "pure",
+      "accent": "us",
+      "filename": "pure.mp3",
+      "path": "US/pure.mp3"
     },
     {
       "word": "push",
@@ -1143,6 +1311,12 @@
       "accent": "us",
       "filename": "queen.mp3",
       "path": "US/queen.mp3"
+    },
+    {
+      "word": "quest",
+      "accent": "us",
+      "filename": "quest.mp3",
+      "path": "US/quest.mp3"
     },
     {
       "word": "quick",
@@ -1221,6 +1395,12 @@
       "accent": "us",
       "filename": "roam.mp3",
       "path": "US/roam.mp3"
+    },
+    {
+      "word": "rocks",
+      "accent": "us",
+      "filename": "rocks.mp3",
+      "path": "US/rocks.mp3"
     },
     {
       "word": "room",
@@ -1307,6 +1487,12 @@
       "path": "US/short.mp3"
     },
     {
+      "word": "sign",
+      "accent": "us",
+      "filename": "sign.mp3",
+      "path": "US/sign.mp3"
+    },
+    {
       "word": "sing",
       "accent": "us",
       "filename": "sing.mp3",
@@ -1341,6 +1527,12 @@
       "accent": "us",
       "filename": "soap.mp3",
       "path": "US/soap.mp3"
+    },
+    {
+      "word": "soil",
+      "accent": "us",
+      "filename": "soil.mp3",
+      "path": "US/soil.mp3"
     },
     {
       "word": "song",
@@ -1409,6 +1601,12 @@
       "path": "US/sun.mp3"
     },
     {
+      "word": "sure",
+      "accent": "us",
+      "filename": "sure.mp3",
+      "path": "US/sure.mp3"
+    },
+    {
       "word": "tap",
       "accent": "us",
       "filename": "tap.mp3",
@@ -1425,6 +1623,12 @@
       "accent": "us",
       "filename": "tax.mp3",
       "path": "US/tax.mp3"
+    },
+    {
+      "word": "teach",
+      "accent": "us",
+      "filename": "teach.mp3",
+      "path": "US/teach.mp3"
     },
     {
       "word": "team",
@@ -1457,10 +1661,22 @@
       "path": "US/thank.mp3"
     },
     {
+      "word": "that",
+      "accent": "us",
+      "filename": "that.mp3",
+      "path": "US/that.mp3"
+    },
+    {
       "word": "thaw",
       "accent": "us",
       "filename": "thaw.mp3",
       "path": "US/thaw.mp3"
+    },
+    {
+      "word": "the",
+      "accent": "us",
+      "filename": "the.mp3",
+      "path": "US/the.mp3"
     },
     {
       "word": "thick",
@@ -1475,10 +1691,22 @@
       "path": "US/thin.mp3"
     },
     {
+      "word": "thing",
+      "accent": "us",
+      "filename": "thing.mp3",
+      "path": "US/thing.mp3"
+    },
+    {
       "word": "think",
       "accent": "us",
       "filename": "think.mp3",
       "path": "US/think.mp3"
+    },
+    {
+      "word": "this",
+      "accent": "us",
+      "filename": "this.mp3",
+      "path": "US/this.mp3"
     },
     {
       "word": "three",
@@ -1547,6 +1775,12 @@
       "path": "US/torn.mp3"
     },
     {
+      "word": "toy",
+      "accent": "us",
+      "filename": "toy.mp3",
+      "path": "US/toy.mp3"
+    },
+    {
       "word": "train",
       "accent": "us",
       "filename": "train.mp3",
@@ -1581,6 +1815,12 @@
       "accent": "us",
       "filename": "tuck.mp3",
       "path": "US/tuck.mp3"
+    },
+    {
+      "word": "turn",
+      "accent": "us",
+      "filename": "turn.mp3",
+      "path": "US/turn.mp3"
     },
     {
       "word": "up",
@@ -1655,6 +1895,18 @@
       "path": "US/wall.mp3"
     },
     {
+      "word": "wash",
+      "accent": "us",
+      "filename": "wash.mp3",
+      "path": "US/wash.mp3"
+    },
+    {
+      "word": "water",
+      "accent": "us",
+      "filename": "water.mp3",
+      "path": "US/water.mp3"
+    },
+    {
       "word": "wax",
       "accent": "us",
       "filename": "wax.mp3",
@@ -1689,6 +1941,12 @@
       "accent": "us",
       "filename": "wig.mp3",
       "path": "US/wig.mp3"
+    },
+    {
+      "word": "will",
+      "accent": "us",
+      "filename": "will.mp3",
+      "path": "US/will.mp3"
     },
     {
       "word": "win",
@@ -1743,6 +2001,18 @@
       "accent": "us",
       "filename": "wow.mp3",
       "path": "US/wow.mp3"
+    },
+    {
+      "word": "wrist",
+      "accent": "us",
+      "filename": "wrist.mp3",
+      "path": "US/wrist.mp3"
+    },
+    {
+      "word": "write",
+      "accent": "us",
+      "filename": "write.mp3",
+      "path": "US/write.mp3"
     },
     {
       "word": "wrong",
