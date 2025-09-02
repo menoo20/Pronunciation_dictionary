@@ -230,6 +230,89 @@
             transform: scale(1.05);
         }
 
+        /* Audio playing effects */
+        .playing-audio {
+            animation: pulse-glow 2.5s infinite;
+            transform: scale(1.05);
+            position: relative;
+            z-index: 10;
+        }
+
+        .playing-sound-btn {
+            animation: rainbow-pulse 3s infinite;
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(0, 123, 255, 0.8);
+        }
+
+        @keyframes pulse-glow {
+            0% {
+                box-shadow: 0 0 5px rgba(255, 215, 0, 0.7);
+                background: linear-gradient(45deg, #007bff, #28a745);
+            }
+            25% {
+                box-shadow: 0 0 15px rgba(255, 215, 0, 0.9);
+                background: linear-gradient(45deg, #28a745, #ffc107);
+            }
+            50% {
+                box-shadow: 0 0 25px rgba(255, 215, 0, 1);
+                background: linear-gradient(45deg, #ffc107, #dc3545);
+            }
+            75% {
+                box-shadow: 0 0 15px rgba(255, 215, 0, 0.9);
+                background: linear-gradient(45deg, #dc3545, #6f42c1);
+            }
+            100% {
+                box-shadow: 0 0 5px rgba(255, 215, 0, 0.7);
+                background: linear-gradient(45deg, #6f42c1, #007bff);
+            }
+        }
+
+        @keyframes rainbow-pulse {
+            0% {
+                background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+                box-shadow: 0 0 10px rgba(255, 107, 107, 0.8);
+            }
+            25% {
+                background: linear-gradient(45deg, #4ecdc4, #45b7d1);
+                box-shadow: 0 0 15px rgba(78, 205, 196, 0.8);
+            }
+            50% {
+                background: linear-gradient(45deg, #45b7d1, #96ceb4);
+                box-shadow: 0 0 20px rgba(69, 183, 209, 0.8);
+            }
+            75% {
+                background: linear-gradient(45deg, #96ceb4, #feca57);
+                box-shadow: 0 0 15px rgba(150, 206, 180, 0.8);
+            }
+            100% {
+                background: linear-gradient(45deg, #feca57, #ff6b6b);
+                box-shadow: 0 0 10px rgba(254, 202, 87, 0.8);
+            }
+        }
+
+        /* Attention grabbing effect */
+        .attention-grab {
+            animation: attention-bounce 0.8s ease-in-out;
+        }
+
+        @keyframes attention-bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) scale(1);
+            }
+            10% {
+                transform: translateY(-10px) scale(1.1);
+            }
+            30% {
+                transform: translateY(-15px) scale(1.15);
+            }
+            40% {
+                transform: translateY(-5px) scale(1.05);
+            }
+            60% {
+                transform: translateY(-8px) scale(1.08);
+            }
+        }
+
         @media (max-width: 768px) {
             .header h1 {
                 font-size: 2em;
@@ -518,36 +601,103 @@
         }
 
         function playSound(filename) {
+            const button = event.target;
+            
+            // Add visual effect to the button
+            button.classList.add('playing-sound-btn');
+            button.classList.add('attention-grab');
+            
             const audio = new Audio(`jolly phonics sounds/${filename}`);
-            audio.play().catch(e => {
+            
+            // Remove effects when audio ends or fails
+            audio.onended = () => {
+                button.classList.remove('playing-sound-btn', 'attention-grab');
+            };
+            
+            audio.onerror = () => {
+                button.classList.remove('playing-sound-btn', 'attention-grab');
+            };
+            
+            audio.play().then(() => {
+                console.log(`✅ Successfully playing sound: ${filename}`);
+            }).catch(e => {
                 console.error('Error playing sound:', e);
+                button.classList.remove('playing-sound-btn', 'attention-grab');
                 alert('Sorry, could not play the sound file.');
             });
         }
 
         function playWordExample(word) {
-            // Try to play from our word dictionary - check multiple naming patterns
-            // Try the most common patterns first (direct filenames)
-            const usAudioDirect = new Audio(`US/${word}.mp3`);
-            const ukAudio = new Audio(`UK/${word}.mp3`);
-            const usAudio = new Audio(`US/${word}_us.mp3`);
-            const ukAudioGB = new Audio(`UK/${word}_gb.mp3`);
+            console.log(`Trying to play word: ${word}`);
             
-            // Try US direct first (most common for our downloads)
-            usAudioDirect.play().catch(() => {
-                // Try UK version
-                ukAudio.play().catch(() => {
-                    // Try US with _us suffix
-                    usAudio.play().catch(() => {
-                        // Try UK with _gb suffix
-                        ukAudioGB.play().catch(() => {
-                            console.log(`No audio found for word: ${word}`);
-                            // Show a message to user
-                            alert(`Audio not available for "${word}". You can download it from the dictionary page.`);
-                        });
+            // Find the clicked element and add visual effects
+            const clickedElement = event.target;
+            clickedElement.classList.add('playing-audio');
+            clickedElement.classList.add('attention-grab');
+            
+            // Try a more compatible approach with preloading
+            const audio = document.createElement('audio');
+            audio.preload = 'auto';
+            audio.controls = false;
+            
+            // Add cache busting timestamp
+            const timestamp = new Date().getTime();
+            
+            // Try different file paths in order
+            const audioSources = [
+                `US/${word}.mp3?t=${timestamp}`,
+                `UK/${word}.mp3?t=${timestamp}`,
+                `US/${word}_us.mp3?t=${timestamp}`,
+                `UK/${word}_gb.mp3?t=${timestamp}`
+            ];
+            
+            let currentIndex = 0;
+            
+            // Function to remove visual effects
+            function removeEffects() {
+                clickedElement.classList.remove('playing-audio', 'attention-grab');
+            }
+            
+            // Add event listeners for when audio ends or fails
+            audio.onended = removeEffects;
+            audio.onerror = removeEffects;
+            
+            function tryNextSource() {
+                if (currentIndex >= audioSources.length) {
+                    console.log(`❌ All attempts failed for word: ${word}`);
+                    removeEffects(); // Remove visual effects on failure
+                    alert(`Audio not available for "${word}". You can download it from the dictionary page.`);
+                    return;
+                }
+                
+                const currentSource = audioSources[currentIndex];
+                console.log(`Attempting to play: ${currentSource}`);
+                
+                audio.src = currentSource;
+                
+                audio.onloadeddata = () => {
+                    console.log(`✅ Audio loaded successfully: ${currentSource}`);
+                    audio.play().then(() => {
+                        console.log(`✅ Successfully playing: ${currentSource}`);
+                    }).catch((error) => {
+                        console.log(`❌ Play failed for ${currentSource}:`, error);
+                        currentIndex++;
+                        tryNextSource();
                     });
-                });
-            });
+                };
+                
+                audio.onerror = (error) => {
+                    console.log(`❌ Loading failed for ${currentSource}:`, error);
+                    currentIndex++;
+                    tryNextSource();
+                };
+                
+                // Force load attempt
+                audio.load();
+            }
+            
+            // Start trying sources
+            tryNextSource();
         }
 
         function showGroupSelector() {
