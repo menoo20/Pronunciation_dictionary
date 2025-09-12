@@ -107,21 +107,6 @@
             background: #5a6fd8;
         }
 
-        .search-btn {
-            background: #52c41a !important;
-            min-width: 200px;
-        }
-
-        .search-btn:hover {
-            background: #45a614 !important;
-        }
-
-        .add-existing-form {
-            margin-top: 15px;
-            padding-top: 15px;
-            border-top: 1px solid #e1e5e9;
-        }
-
         /* Modal styles */
         .modal {
             position: fixed;
@@ -701,20 +686,6 @@
         </div>
 
         <div class="controls">
-            <div class="add-word-form">
-                <input type="text" id="word-input" placeholder="Enter a word to search/download (e.g., hello)" />
-                <button onclick="searchWord()" class="search-btn">🔍 Search & Download</button>
-            </div>
-
-            <div class="add-existing-form" style="display: none;">
-                <input type="text" id="existing-word-input" placeholder="Add existing word to dictionary" />
-                <select id="accent-select">
-                    <option value="us">🇺🇸 US Accent</option>
-                    <option value="uk">🇬🇧 UK Accent</option>
-                </select>
-                <button onclick="addWord()">Add to Dictionary</button>
-            </div>
-
             <div class="search-filter">
                 <input type="text" class="search-box" id="search-input" placeholder="Search words..." oninput="filterWords()" />
                 <div class="filter-buttons">
@@ -735,19 +706,6 @@
                     <button class="clear-cache-btn" onclick="clearCacheAndReload()">
                         🗑️ Clear Cache
                     </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Search Results Modal -->
-        <div id="search-modal" class="modal" style="display: none;">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3 id="search-word-title">Search Results</h3>
-                    <button class="close-btn" onclick="closeSearchModal()">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <div id="search-results"></div>
                 </div>
             </div>
         </div>
@@ -892,195 +850,6 @@
 
         // API base URL - change this if using different server
         const API_BASE_URL = 'http://localhost:5000/api';
-
-        // Search for word and show download options
-        async function searchWord() {
-            const wordInput = document.getElementById('word-input');
-            const word = wordInput.value.trim().toLowerCase();
-
-            if (!word) {
-                showNotification('Please enter a word to search!', 'error');
-                return;
-            }
-
-            // Show search modal
-            document.getElementById('search-word-title').textContent = `Search Results for "${word}"`;
-            document.getElementById('search-modal').style.display = 'flex';
-            document.getElementById('search-results').innerHTML = '<div class="loading">🔍 Checking audio availability...</div>';
-
-            try {
-                const response = await fetch(`${API_BASE_URL}/check-audio/${word}`);
-                const data = await response.json();
-
-                if (data.total_available === 0) {
-                    document.getElementById('search-results').innerHTML = `
-                        <div style="text-align: center; padding: 30px; color: #666;">
-                            <h4>No pronunciations found</h4>
-                            <p>Sorry, no audio pronunciations are available for "${word}".</p>
-                            <p>Oxford Dictionary may not have this word or pronunciation files.</p>
-                        </div>
-                    `;
-                    return;
-                }
-
-                // Display available pronunciations
-                let resultsHTML = '';
-                
-                if (data.available.us.available) {
-                    resultsHTML += createSearchResultItem(word, 'us', 'US (American)', true);
-                }
-                
-                if (data.available.uk.available) {
-                    resultsHTML += createSearchResultItem(word, 'uk', 'UK (British)', true);
-                }
-
-                document.getElementById('search-results').innerHTML = resultsHTML;
-
-            } catch (error) {
-                console.error('Search error:', error);
-                document.getElementById('search-results').innerHTML = `
-                    <div style="text-align: center; padding: 30px; color: #ff4757;">
-                        <h4>Search Error</h4>
-                        <p>Could not check audio availability. Please make sure the Flask server is running.</p>
-                        <p>Run: <code>python flask_server.py</code></p>
-                    </div>
-                `;
-            }
-        }
-
-        // Create search result item HTML
-        function createSearchResultItem(word, accent, accentName, available) {
-            const isAlreadyInDictionary = words.some(w => w.word === word && w.accent === accent);
-            const buttonText = isAlreadyInDictionary ? 'Already in Dictionary' : 'Download & Add';
-            const buttonDisabled = isAlreadyInDictionary ? 'disabled' : '';
-            
-            return `
-                <div class="search-result-item">
-                    <div class="search-result-info">
-                        <div class="search-result-word">${word}</div>
-                        <div class="search-result-accent">${accentName} pronunciation</div>
-                    </div>
-                    <div>
-                        <span class="status-badge status-available">Available</span>
-                        <button class="download-btn" ${buttonDisabled} onclick="downloadAndAdd('${word}', '${accent}', this)">
-                            ${buttonText}
-                        </button>
-                    </div>
-                </div>
-            `;
-        }
-
-        // Download audio and add to dictionary
-        async function downloadAndAdd(word, accent, buttonElement) {
-            const originalText = buttonElement.textContent;
-            buttonElement.textContent = 'Downloading...';
-            buttonElement.disabled = true;
-
-            try {
-                const response = await fetch(`${API_BASE_URL}/download-audio`, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        word: word,
-                        accent: accent
-                    })
-                });
-
-                const data = await response.json();
-
-                if (data.success) {
-                    // Refresh the audio index
-                    await loadAvailableAudioFiles();
-                    
-                    // Add to dictionary automatically
-                    const newWord = {
-                        id: Date.now(),
-                        word: word,
-                        accent: accent,
-                        dateAdded: new Date().toLocaleDateString(),
-                        audioPath: data.file_path
-                    };
-
-                    words.push(newWord);
-                    saveWords();
-                    renderWords();
-                    updateStats();
-
-                    buttonElement.textContent = 'Downloaded!';
-                    showNotification(`Successfully downloaded and added "${word}" (${accent.toUpperCase()})!`, 'success');
-                    
-                    // Close modal after successful download
-                    setTimeout(() => {
-                        closeSearchModal();
-                    }, 1500);
-
-                } else {
-                    buttonElement.textContent = originalText;
-                    buttonElement.disabled = false;
-                    showNotification(data.error || 'Download failed', 'error');
-                }
-
-            } catch (error) {
-                console.error('Download error:', error);
-                buttonElement.textContent = originalText;
-                buttonElement.disabled = false;
-                showNotification('Download failed. Please check the server connection.', 'error');
-            }
-        }
-
-        // Close search modal
-        function closeSearchModal() {
-            document.getElementById('search-modal').style.display = 'none';
-            document.getElementById('word-input').value = '';
-        }
-        function addWord() {
-            const wordInput = document.getElementById('word-input');
-            const accentSelect = document.getElementById('accent-select');
-            
-            const word = wordInput.value.trim().toLowerCase();
-            const accent = accentSelect.value;
-
-            if (!word) {
-                showNotification('Please enter a word!', 'error');
-                return;
-            }
-
-            // Check if word already exists with this accent in our dictionary
-            const exists = words.some(w => w.word === word && w.accent === accent);
-            if (exists) {
-                showNotification('This word with this accent already exists in your dictionary!', 'error');
-                return;
-            }
-
-            // Check if audio file exists in our available files
-            const audioFile = availableAudioFiles.find(f => f.word === word && f.accent === accent);
-            
-            if (audioFile) {
-                const newWord = {
-                    id: Date.now(),
-                    word: word,
-                    accent: accent,
-                    dateAdded: new Date().toLocaleDateString(),
-                    audioPath: audioFile.path
-                };
-
-                words.push(newWord);
-                saveWords();
-                renderWords();
-                updateStats();
-                
-                wordInput.value = '';
-                showNotification(`Added "${word}" (${accent.toUpperCase()}) to your dictionary!`, 'success');
-            } else {
-                showNotification(
-                    `Audio file not found for "${word}" (${accent.toUpperCase()}).\n` +
-                    `Please download it first using: python oxford_audio_downloader.py ${word} ${accent}`, 
-                    'error'
-                );
-            }
-        }
 
         // Check if audio file exists
         async function checkAudioFile(word, accent) {
@@ -1308,27 +1077,6 @@
                 setTimeout(() => document.body.removeChild(notification), 300);
             }, 3000);
         }
-
-        // Handle Enter key in input
-        document.getElementById('word-input').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                searchWord();
-            }
-        });
-
-        // Handle Escape key to close modal
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeSearchModal();
-            }
-        });
-
-        // Close modal when clicking outside
-        document.getElementById('search-modal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeSearchModal();
-            }
-        });
 
     </script>
 </body>
