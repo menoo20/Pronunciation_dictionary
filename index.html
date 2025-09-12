@@ -506,13 +506,28 @@
 
         .empty-state {
             text-align: center;
-            padding: 60px 20px;
-            color: #666;
+            padding: 80px 20px;
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            margin: 40px auto;
+            max-width: 600px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .empty-state h3 {
-            font-size: 1.5em;
-            margin-bottom: 10px;
+            font-size: 2.2em;
+            margin-bottom: 15px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .empty-state p {
+            font-size: 1.1em;
+            opacity: 0.9;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.5;
         }
 
         .notification {
@@ -603,6 +618,15 @@
                 flex-direction: column;
                 gap: 15px;
             }
+
+            .empty-state {
+                padding: 50px 15px;
+                margin: 20px auto;
+            }
+
+            .empty-state h3 {
+                font-size: 1.8em;
+            }
         }
 
         @media (max-width: 480px) {
@@ -631,6 +655,19 @@
             .rescan-btn, .clear-cache-btn {
                 padding: 10px;
                 font-size: 13px;
+            }
+
+            .empty-state {
+                padding: 40px 10px;
+                margin: 15px auto;
+            }
+
+            .empty-state h3 {
+                font-size: 1.5em;
+            }
+
+            .empty-state p {
+                font-size: 1em;
             }
         }
     </style>
