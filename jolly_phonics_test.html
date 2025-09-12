@@ -262,6 +262,15 @@
             background: #5a67d8;
         }
 
+        .btn-success {
+            background: #28a745;
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #218838;
+        }
+
         .btn-secondary {
             background: #6c757d;
             color: white;
@@ -450,6 +459,19 @@
                 height: 50px;
                 font-size: 1.2em;
             }
+
+            .controls {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                margin: 0;
+            }
         }
     </style>
 </head>
@@ -520,6 +542,7 @@
             
             <div class="controls">
                 <button class="btn btn-primary" onclick="restartTest()">Try Again</button>
+                <button class="btn btn-success" onclick="chooseAnotherGroup()">📋 Choose Another Group</button>
                 <button class="btn btn-secondary" onclick="goHome()">Back to Dictionary</button>
             </div>
         </div>
@@ -842,6 +865,20 @@
         function restartTest() {
             document.getElementById('resultContainer').style.display = 'none';
             startTest(currentGroup);
+        }
+
+        function chooseAnotherGroup() {
+            // Hide results and show group selector
+            document.getElementById('resultContainer').style.display = 'none';
+            document.getElementById('testContainer').style.display = 'none';
+            document.getElementById('groupSelector').style.display = 'block';
+            
+            // Reset test state
+            currentGroup = null;
+            currentTest = [];
+            currentQuestion = 0;
+            score = 0;
+            mistakes = [];
         }
 
         function goHome() {
