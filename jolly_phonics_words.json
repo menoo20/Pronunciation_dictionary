@@ -2513,6 +2513,39 @@
           }
         ]
       }
+    },
+    "8": {
+      "letters": [
+        "a-e",
+        "i-e",
+        "o-e",
+        "u-e",
+        "e-e"
+      ],
+      "word_count": 0,
+      "words": {}
+    },
+    "9": {
+      "letters": [
+        "ai/ay",
+        "ee/ea",
+        "igh/ie",
+        "oa/ow",
+        "oo/ue"
+      ],
+      "word_count": 0,
+      "words": {}
+    },
+    "10": {
+      "letters": [
+        "ph/f",
+        "c/k",
+        "c/s",
+        "ge/j",
+        "gn/n"
+      ],
+      "word_count": 0,
+      "words": {}
     }
   },
   "generated_at": "2025-08-27",

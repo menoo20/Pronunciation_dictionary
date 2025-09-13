@@ -628,6 +628,9 @@
                     <button class="filter-btn" onclick="setGroupFilter(5)">Group 5</button>
                     <button class="filter-btn" onclick="setGroupFilter(6)">Group 6</button>
                     <button class="filter-btn" onclick="setGroupFilter(7)">Group 7</button>
+                    <button class="filter-btn" onclick="setGroupFilter(8)">Group 8</button>
+                    <button class="filter-btn" onclick="setGroupFilter(9)">Group 9</button>
+                    <button class="filter-btn" onclick="setGroupFilter(10)">Group 10</button>
                     <button class="rescan-btn" id="rescan-btn" onclick="rescanAudioFiles()">
                         🔄 Rescan Audio Files
                     </button>
@@ -703,9 +706,20 @@
             7: ['qu', 'ou', 'oi', 'ue', 'er', 'ar']
         };
 
+        // Advanced groups recognition (fallback heuristics for when index lacks group info)
+        const advancedGroups = {
+            8: ['a_e','e_e','i_e','o_e','u_e'], // split digraphs
+            9: ['ai','ay','aigh','eigh','ea','ee','ie','oa','oe','ow','ew','ue','ui','oo','ou','ough','au','aw'], // alt vowels
+            10: ['ph','gh','wh','wr','kn','gn','mb','eigh'] // alt consonants/common patterns
+        };
+
         // Function to determine which Jolly Phonics group a word belongs to
-        function getWordGroup(word) {
+        function getWordGroup(word, fileMeta) {
             const wordLower = word.toLowerCase();
+            // If we have explicit group info from index (advanced), prefer it
+            if (fileMeta && typeof fileMeta.group === 'number') {
+                return fileMeta.group;
+            }
             
             // Check for digraphs first (longer combinations)
             for (let group = 1; group <= 7; group++) {
@@ -722,6 +736,15 @@
                 const letters = jollyPhonicsGroups[group];
                 for (let letter of letters) {
                     if (letter.length === 1 && wordLower.includes(letter)) {
+                        return group;
+                    }
+                }
+            }
+
+            // Try advanced groups heuristics last
+            for (let group of [8,9,10]) {
+                for (let pat of advancedGroups[group]) {
+                    if (wordLower.includes(pat.replace('_','')) || wordLower.includes(pat)) {
                         return group;
                     }
                 }
@@ -1162,7 +1185,10 @@
 
             // Apply group filter
             if (currentGroupFilter !== 'all') {
-                filteredWords = filteredWords.filter(w => getWordGroup(w.word) === currentGroupFilter);
+                filteredWords = filteredWords.filter(w => {
+                    const meta = availableAudioFiles.find(f => f.path === w.audioPath || (f.word === w.word && f.accent === w.accent));
+                    return getWordGroup(w.word, meta) === currentGroupFilter;
+                });
             }
 
             // Apply search filter
@@ -1181,7 +1207,8 @@
             }
 
             container.innerHTML = filteredWords.map(word => {
-                const group = getWordGroup(word.word);
+                const meta = availableAudioFiles.find(f => f.path === word.audioPath || (f.word === word.word && f.accent === word.accent));
+                const group = getWordGroup(word.word, meta);
                 return `
                 <div class="word-card">
                     <div class="word-header">
@@ -1202,6 +1229,34 @@
                     </div>
                 </div>
             `}).join('');
+        }
+        // Sync new files from the scanned index into the dictionary
+        function syncDictionaryWithIndex() {
+            if (!Array.isArray(availableAudioFiles) || availableAudioFiles.length === 0) return;
+            // Find files that are not already in dictionary by exact audioPath
+            const missing = availableAudioFiles.filter(f => !words.some(w => w.audioPath === f.path));
+            if (missing.length === 0) return;
+
+            const shouldSync = confirm(
+                `Found ${missing.length} new audio files (including advanced groups).\n\n` +
+                `Would you like to add them to your dictionary now?`
+            );
+
+            if (!shouldSync) return;
+
+            const now = new Date().toLocaleDateString();
+            const startId = Date.now();
+            const toAdd = missing.map((file, i) => ({
+                id: startId + i,
+                word: String(file.word || '').toLowerCase(),
+                accent: file.accent === 'uk' ? 'uk' : 'us',
+                dateAdded: now,
+                audioPath: file.path
+            }));
+
+            words = words.concat(toAdd);
+            saveWords();
+            showNotification(`Added ${toAdd.length} new files to your dictionary.`, 'success');
         }
 
         // Update statistics

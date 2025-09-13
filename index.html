@@ -107,6 +107,21 @@
             background: #5a6fd8;
         }
 
+        .search-btn {
+            background: #52c41a !important;
+            min-width: 200px;
+        }
+
+        .search-btn:hover {
+            background: #45a614 !important;
+        }
+
+        .add-existing-form {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #e1e5e9;
+        }
+
         /* Modal styles */
         .modal {
             position: fixed;
@@ -686,6 +701,20 @@
         </div>
 
         <div class="controls">
+            <div class="add-word-form">
+                <input type="text" id="word-input" placeholder="Enter a word to search/download (e.g., hello)" />
+                <button onclick="searchWord()" class="search-btn">🔍 Search & Download</button>
+            </div>
+
+            <div class="add-existing-form" style="display: none;">
+                <input type="text" id="existing-word-input" placeholder="Add existing word to dictionary" />
+                <select id="accent-select">
+                    <option value="us">🇺🇸 US Accent</option>
+                    <option value="uk">🇬🇧 UK Accent</option>
+                </select>
+                <button onclick="addWord()">Add to Dictionary</button>
+            </div>
+
             <div class="search-filter">
                 <input type="text" class="search-box" id="search-input" placeholder="Search words..." oninput="filterWords()" />
                 <div class="filter-buttons">
@@ -700,12 +729,28 @@
                     <button class="filter-btn" onclick="setGroupFilter(5)">Group 5</button>
                     <button class="filter-btn" onclick="setGroupFilter(6)">Group 6</button>
                     <button class="filter-btn" onclick="setGroupFilter(7)">Group 7</button>
+                    <button class="filter-btn" onclick="setGroupFilter(8)">Group 8</button>
+                    <button class="filter-btn" onclick="setGroupFilter(9)">Group 9</button>
+                    <button class="filter-btn" onclick="setGroupFilter(10)">Group 10</button>
                     <button class="rescan-btn" id="rescan-btn" onclick="rescanAudioFiles()">
                         🔄 Rescan Audio Files
                     </button>
                     <button class="clear-cache-btn" onclick="clearCacheAndReload()">
                         🗑️ Clear Cache
                     </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search Results Modal -->
+        <div id="search-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="search-word-title">Search Results</h3>
+                    <button class="close-btn" onclick="closeSearchModal()">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div id="search-results"></div>
                 </div>
             </div>
         </div>
@@ -736,9 +781,20 @@
             7: ['qu', 'ou', 'oi', 'ue', 'er', 'ar']
         };
 
+        // Advanced groups recognition (fallback heuristics for when index lacks group info)
+        const advancedGroups = {
+            8: ['a_e','e_e','i_e','o_e','u_e'], // split digraphs
+            9: ['ai','ay','aigh','eigh','ea','ee','ie','oa','oe','ow','ew','ue','ui','oo','ou','ough','au','aw'], // alt vowels
+            10: ['ph','gh','wh','wr','kn','gn','mb','eigh'] // alt consonants/common patterns
+        };
+
         // Function to determine which Jolly Phonics group a word belongs to
-        function getWordGroup(word) {
+        function getWordGroup(word, fileMeta) {
             const wordLower = word.toLowerCase();
+            // If we have explicit group info from index (advanced), prefer it
+            if (fileMeta && typeof fileMeta.group === 'number') {
+                return fileMeta.group;
+            }
             
             // Check for digraphs first (longer combinations)
             for (let group = 1; group <= 7; group++) {
@@ -755,6 +811,15 @@
                 const letters = jollyPhonicsGroups[group];
                 for (let letter of letters) {
                     if (letter.length === 1 && wordLower.includes(letter)) {
+                        return group;
+                    }
+                }
+            }
+
+            // Try advanced groups heuristics last
+            for (let group of [8,9,10]) {
+                for (let pat of advancedGroups[group]) {
+                    if (wordLower.includes(pat.replace('_','')) || wordLower.includes(pat)) {
                         return group;
                     }
                 }
@@ -795,6 +860,8 @@
                 if (words.length === 0 && availableAudioFiles.length > 0) {
                     autoPopulateDictionary();
                 } else {
+                    // If there are new files not in the dictionary, offer to sync them in
+                    syncDictionaryWithIndex();
                     renderWords();
                     updateStats();
                 }
@@ -811,6 +878,7 @@
                     if (words.length === 0 && availableAudioFiles.length > 0) {
                         autoPopulateDictionary();
                     } else {
+                        syncDictionaryWithIndex();
                         renderWords();
                         updateStats();
                     }
@@ -821,6 +889,35 @@
                     updateStats();
                 }
             }
+        }
+
+        // Sync new files from the scanned index into the dictionary
+        function syncDictionaryWithIndex() {
+            if (!Array.isArray(availableAudioFiles) || availableAudioFiles.length === 0) return;
+            // Find files that are not already in dictionary by exact audioPath
+            const missing = availableAudioFiles.filter(f => !words.some(w => w.audioPath === f.path));
+            if (missing.length === 0) return;
+
+            const shouldSync = confirm(
+                `Found ${missing.length} new audio files (including advanced groups).\n\n` +
+                `Would you like to add them to your dictionary now?`
+            );
+
+            if (!shouldSync) return;
+
+            const now = new Date().toLocaleDateString();
+            const startId = Date.now();
+            const toAdd = missing.map((file, i) => ({
+                id: startId + i,
+                word: String(file.word || '').toLowerCase(),
+                accent: file.accent === 'uk' ? 'uk' : 'us',
+                dateAdded: now,
+                audioPath: file.path
+            }));
+
+            words = words.concat(toAdd);
+            saveWords();
+            showNotification(`Added ${toAdd.length} new files to your dictionary.`, 'success');
         }
 
         // Auto-populate dictionary with all available audio files
@@ -850,6 +947,195 @@
 
         // API base URL - change this if using different server
         const API_BASE_URL = 'http://localhost:5000/api';
+
+        // Search for word and show download options
+        async function searchWord() {
+            const wordInput = document.getElementById('word-input');
+            const word = wordInput.value.trim().toLowerCase();
+
+            if (!word) {
+                showNotification('Please enter a word to search!', 'error');
+                return;
+            }
+
+            // Show search modal
+            document.getElementById('search-word-title').textContent = `Search Results for "${word}"`;
+            document.getElementById('search-modal').style.display = 'flex';
+            document.getElementById('search-results').innerHTML = '<div class="loading">🔍 Checking audio availability...</div>';
+
+            try {
+                const response = await fetch(`${API_BASE_URL}/check-audio/${word}`);
+                const data = await response.json();
+
+                if (data.total_available === 0) {
+                    document.getElementById('search-results').innerHTML = `
+                        <div style="text-align: center; padding: 30px; color: #666;">
+                            <h4>No pronunciations found</h4>
+                            <p>Sorry, no audio pronunciations are available for "${word}".</p>
+                            <p>Oxford Dictionary may not have this word or pronunciation files.</p>
+                        </div>
+                    `;
+                    return;
+                }
+
+                // Display available pronunciations
+                let resultsHTML = '';
+                
+                if (data.available.us.available) {
+                    resultsHTML += createSearchResultItem(word, 'us', 'US (American)', true);
+                }
+                
+                if (data.available.uk.available) {
+                    resultsHTML += createSearchResultItem(word, 'uk', 'UK (British)', true);
+                }
+
+                document.getElementById('search-results').innerHTML = resultsHTML;
+
+            } catch (error) {
+                console.error('Search error:', error);
+                document.getElementById('search-results').innerHTML = `
+                    <div style="text-align: center; padding: 30px; color: #ff4757;">
+                        <h4>Search Error</h4>
+                        <p>Could not check audio availability. Please make sure the Flask server is running.</p>
+                        <p>Run: <code>python flask_server.py</code></p>
+                    </div>
+                `;
+            }
+        }
+
+        // Create search result item HTML
+        function createSearchResultItem(word, accent, accentName, available) {
+            const isAlreadyInDictionary = words.some(w => w.word === word && w.accent === accent);
+            const buttonText = isAlreadyInDictionary ? 'Already in Dictionary' : 'Download & Add';
+            const buttonDisabled = isAlreadyInDictionary ? 'disabled' : '';
+            
+            return `
+                <div class="search-result-item">
+                    <div class="search-result-info">
+                        <div class="search-result-word">${word}</div>
+                        <div class="search-result-accent">${accentName} pronunciation</div>
+                    </div>
+                    <div>
+                        <span class="status-badge status-available">Available</span>
+                        <button class="download-btn" ${buttonDisabled} onclick="downloadAndAdd('${word}', '${accent}', this)">
+                            ${buttonText}
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Download audio and add to dictionary
+        async function downloadAndAdd(word, accent, buttonElement) {
+            const originalText = buttonElement.textContent;
+            buttonElement.textContent = 'Downloading...';
+            buttonElement.disabled = true;
+
+            try {
+                const response = await fetch(`${API_BASE_URL}/download-audio`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        word: word,
+                        accent: accent
+                    })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    // Refresh the audio index
+                    await loadAvailableAudioFiles();
+                    
+                    // Add to dictionary automatically
+                    const newWord = {
+                        id: Date.now(),
+                        word: word,
+                        accent: accent,
+                        dateAdded: new Date().toLocaleDateString(),
+                        audioPath: data.file_path
+                    };
+
+                    words.push(newWord);
+                    saveWords();
+                    renderWords();
+                    updateStats();
+
+                    buttonElement.textContent = 'Downloaded!';
+                    showNotification(`Successfully downloaded and added "${word}" (${accent.toUpperCase()})!`, 'success');
+                    
+                    // Close modal after successful download
+                    setTimeout(() => {
+                        closeSearchModal();
+                    }, 1500);
+
+                } else {
+                    buttonElement.textContent = originalText;
+                    buttonElement.disabled = false;
+                    showNotification(data.error || 'Download failed', 'error');
+                }
+
+            } catch (error) {
+                console.error('Download error:', error);
+                buttonElement.textContent = originalText;
+                buttonElement.disabled = false;
+                showNotification('Download failed. Please check the server connection.', 'error');
+            }
+        }
+
+        // Close search modal
+        function closeSearchModal() {
+            document.getElementById('search-modal').style.display = 'none';
+            document.getElementById('word-input').value = '';
+        }
+        function addWord() {
+            const wordInput = document.getElementById('word-input');
+            const accentSelect = document.getElementById('accent-select');
+            
+            const word = wordInput.value.trim().toLowerCase();
+            const accent = accentSelect.value;
+
+            if (!word) {
+                showNotification('Please enter a word!', 'error');
+                return;
+            }
+
+            // Check if word already exists with this accent in our dictionary
+            const exists = words.some(w => w.word === word && w.accent === accent);
+            if (exists) {
+                showNotification('This word with this accent already exists in your dictionary!', 'error');
+                return;
+            }
+
+            // Check if audio file exists in our available files
+            const audioFile = availableAudioFiles.find(f => f.word === word && f.accent === accent);
+            
+            if (audioFile) {
+                const newWord = {
+                    id: Date.now(),
+                    word: word,
+                    accent: accent,
+                    dateAdded: new Date().toLocaleDateString(),
+                    audioPath: audioFile.path
+                };
+
+                words.push(newWord);
+                saveWords();
+                renderWords();
+                updateStats();
+                
+                wordInput.value = '';
+                showNotification(`Added "${word}" (${accent.toUpperCase()}) to your dictionary!`, 'success');
+            } else {
+                showNotification(
+                    `Audio file not found for "${word}" (${accent.toUpperCase()}).\n` +
+                    `Please download it first using: python oxford_audio_downloader.py ${word} ${accent}`, 
+                    'error'
+                );
+            }
+        }
 
         // Check if audio file exists
         async function checkAudioFile(word, accent) {
@@ -1006,7 +1292,10 @@
 
             // Apply group filter
             if (currentGroupFilter !== 'all') {
-                filteredWords = filteredWords.filter(w => getWordGroup(w.word) === currentGroupFilter);
+                filteredWords = filteredWords.filter(w => {
+                    const meta = availableAudioFiles.find(f => f.path === w.audioPath || (f.word === w.word && f.accent === w.accent));
+                    return getWordGroup(w.word, meta) === currentGroupFilter;
+                });
             }
 
             // Apply search filter
@@ -1025,7 +1314,8 @@
             }
 
             container.innerHTML = filteredWords.map(word => {
-                const group = getWordGroup(word.word);
+                const meta = availableAudioFiles.find(f => f.path === word.audioPath || (f.word === word.word && f.accent === word.accent));
+                const group = getWordGroup(word.word, meta);
                 return `
                 <div class="word-card">
                     <div class="word-header">
@@ -1077,6 +1367,27 @@
                 setTimeout(() => document.body.removeChild(notification), 300);
             }, 3000);
         }
+
+        // Handle Enter key in input
+        document.getElementById('word-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchWord();
+            }
+        });
+
+        // Handle Escape key to close modal
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeSearchModal();
+            }
+        });
+
+        // Close modal when clicking outside
+        document.getElementById('search-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeSearchModal();
+            }
+        });
 
     </script>
 </body>

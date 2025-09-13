@@ -101,6 +101,15 @@
             box-shadow: 0 15px 30px rgba(0,0,0,0.2);
         }
 
+        .group-card.advanced-group {
+            background: linear-gradient(135deg, #a55eea, #8b5cf6);
+            border-left: 5px solid #7c3aed;
+        }
+
+        .group-card.advanced-group:hover {
+            background: linear-gradient(135deg, #9f4de5, #8048e8);
+        }
+
         .group-card h3 {
             font-size: 1.8em;
             margin-bottom: 15px;
@@ -142,11 +151,16 @@
         }
 
         .letter-display {
-            font-size: 4em;
+            /* Scale down on smaller cards/titles and allow wrapping to avoid overflow */
+            font-size: clamp(1.6rem, 6vw, 4rem);
             font-weight: bold;
             color: #ff6b6b;
             margin-bottom: 15px;
             text-transform: uppercase;
+            max-width: 100%;
+            white-space: normal;
+            word-break: break-word;
+            overflow-wrap: anywhere;
         }
 
         .sound-info {
@@ -382,6 +396,21 @@
                     <div class="group-letters">qu, ou, oi, ue, er, ar</div>
                     <p>Complex vowel combinations</p>
                 </div>
+                <div class="group-card advanced-group" onclick="showSounds(8)">
+                    <h3>Group 8</h3>
+                    <div class="group-letters">a-e, i-e, o-e, u-e, e-e</div>
+                    <p>Split Digraphs (Magic E)</p>
+                </div>
+                <div class="group-card advanced-group" onclick="showSounds(9)">
+                    <h3>Group 9</h3>
+                    <div class="group-letters">Alternative Vowel Spellings</div>
+                    <p>Multiple ways to spell vowel sounds</p>
+                </div>
+                <div class="group-card advanced-group" onclick="showSounds(10)">
+                    <h3>Group 10</h3>
+                    <div class="group-letters">Alternative Consonant Spellings</div>
+                    <p>Multiple ways to spell consonant sounds</p>
+                </div>
             </div>
         </div>
 
@@ -545,6 +574,54 @@
             ],
             'ar': [
                 { file: 'ar-jar.mp3', type: 'AR Sound', examples: ['jar', 'car', 'star', 'hard'] }
+            ],
+
+            // Group 8: Split Digraphs (Magic E)
+            'a-e': [
+                { file: 'cake_us.mp3', type: 'Long A (a-e)', examples: ['cake', 'make', 'take', 'name'], folder: 'advanced_phonics_sounds/split_digraphs' }
+            ],
+            'i-e': [
+                { file: 'bike_us.mp3', type: 'Long I (i-e)', examples: ['bike', 'like', 'time', 'line'], folder: 'advanced_phonics_sounds/split_digraphs' }
+            ],
+            'o-e': [
+                { file: 'home_us.mp3', type: 'Long O (o-e)', examples: ['bone', 'home', 'hope', 'rope'], folder: 'advanced_phonics_sounds/split_digraphs' }
+            ],
+            'u-e': [
+                { file: 'tube_us.mp3', type: 'Long U (u-e)', examples: ['tube', 'cube', 'huge', 'cute'], folder: 'advanced_phonics_sounds/split_digraphs' }
+            ],
+            'e-e': [
+                { file: 'these_us.mp3', type: 'Long E (e-e)', examples: ['these', 'theme', 'scene', 'complete'], folder: 'advanced_phonics_sounds/split_digraphs' }
+            ],
+
+            // Group 9: Alternative Vowel Spellings
+            'long_a_alt': [
+                { file: 'rain_us.mp3', type: 'Long A Alternatives', examples: ['rain (ai)', 'play (ay)', 'eight (eigh)', 'they (ey)'], folder: 'advanced_phonics_sounds/alternative_vowels' }
+            ],
+            'long_e_alt': [
+                { file: 'sea_us.mp3', type: 'Long E Alternatives', examples: ['sea (ea)', 'see (ee)', 'field (ie)', 'key (ey)'], folder: 'advanced_phonics_sounds/alternative_vowels' }
+            ],
+            'long_i_alt': [
+                { file: 'light_us.mp3', type: 'Long I Alternatives', examples: ['light (igh)', 'my (y)', 'tie (ie)', 'find (i)'], folder: 'advanced_phonics_sounds/alternative_vowels' }
+            ],
+            'long_o_alt': [
+                { file: 'boat_us.mp3', type: 'Long O Alternatives', examples: ['boat (oa)', 'show (ow)', 'go (o)', 'toe (oe)'], folder: 'advanced_phonics_sounds/alternative_vowels' }
+            ],
+            'long_u_alt': [
+                { file: 'blue_us.mp3', type: 'Long U Alternatives', examples: ['blue (ue)', 'new (ew)', 'moon (oo)', 'soup (ou)'], folder: 'advanced_phonics_sounds/alternative_vowels' }
+            ],
+
+            // Group 10: Alternative Consonant Spellings
+            'f_alt': [
+                { file: 'phone_us.mp3', type: 'F Sound Alternatives', examples: ['fish (f)', 'off (ff)', 'phone (ph)', 'laugh (gh)'], folder: 'advanced_phonics_sounds/alternative_consonants' }
+            ],
+            'k_alt': [
+                { file: 'cat_us.mp3', type: 'K Sound Alternatives', examples: ['kit (k)', 'cat (c)', 'back (ck)', 'school (ch)'], folder: 'advanced_phonics_sounds/alternative_consonants' }
+            ],
+            's_alt': [
+                { file: 'cent_us.mp3', type: 'S Sound Alternatives', examples: ['sit (s)', 'pass (ss)', 'cent (c)', 'scene (sc)'], folder: 'advanced_phonics_sounds/alternative_consonants' }
+            ],
+            'j_alt': [
+                { file: 'gem_us.mp3', type: 'J Sound Alternatives', examples: ['jam (j)', 'gem (g)', 'age (ge)', 'badge (dge)'], folder: 'advanced_phonics_sounds/alternative_consonants' }
             ]
         };
 
@@ -555,13 +632,25 @@
             4: ['ai', 'j', 'oa', 'ie', 'ee', 'or'],
             5: ['z', 'w', 'ng', 'v', 'oo'],
             6: ['y', 'x', 'ch', 'sh', 'th'],
-            7: ['qu', 'ou', 'oi', 'ue', 'er', 'ar']
+            7: ['qu', 'ou', 'oi', 'ue', 'er', 'ar'],
+            8: ['a-e', 'i-e', 'o-e', 'u-e', 'e-e'],
+            9: ['long_a_alt', 'long_e_alt', 'long_i_alt', 'long_o_alt', 'long_u_alt'],
+            10: ['f_alt', 'k_alt', 's_alt', 'j_alt']
         };
 
         function showSounds(groupNumber) {
             document.getElementById('groupSelector').style.display = 'none';
             document.getElementById('soundLearning').style.display = 'block';
-            document.getElementById('currentGroupTitle').textContent = `Group ${groupNumber} Sounds`;
+            
+            // Custom titles for advanced groups
+            const groupTitles = {
+                8: 'Split Digraphs (Magic E)',
+                9: 'Alternative Vowel Spellings',
+                10: 'Alternative Consonant Spellings'
+            };
+            
+            const title = groupTitles[groupNumber] || `Group ${groupNumber} Sounds`;
+            document.getElementById('currentGroupTitle').textContent = title;
             
             const letters = jollyPhonicsGroups[groupNumber];
             const soundGrid = document.getElementById('soundGrid');
@@ -581,18 +670,21 @@
             const card = document.createElement('div');
             card.className = 'sound-card';
             
+            const folder = sound.folder || 'jolly phonics sounds';
+            const displayLetter = getDisplayLabel(letter);
+            
             card.innerHTML = `
-                <div class="letter-display">${letter}</div>
+                <div class="letter-display">${displayLetter}</div>
                 <div class="sound-info">
                     <div class="sound-type">${sound.type}</div>
                     <div class="example-words">Examples: ${sound.examples.join(', ')}</div>
                 </div>
-                <button class="play-btn" onclick="playSound('${sound.file}')">
+                <button class="play-btn" onclick="playSound('${sound.file}', '${folder}')">
                     🔊 Play Sound
                 </button>
                 <div class="examples-section">
                     ${sound.examples.map(word => 
-                        `<span class="word-example" onclick="playWordExample('${word}')">${word}</span>`
+                        `<span class="word-example" onclick="playWordExample('${word}', '${folder}')">${word}</span>`
                     ).join('')}
                 </div>
             `;
@@ -600,14 +692,30 @@
             return card;
         }
 
-        function playSound(filename) {
+        // Map internal keys to friendly display labels to avoid long identifiers like LONG_A_ALT
+        function getDisplayLabel(letterKey) {
+            const map = {
+                'long_a_alt': 'Long A',
+                'long_e_alt': 'Long E',
+                'long_i_alt': 'Long I',
+                'long_o_alt': 'Long O',
+                'long_u_alt': 'Long U',
+                'f_alt': 'F',
+                'k_alt': 'K',
+                's_alt': 'S',
+                'j_alt': 'J'
+            };
+            return map[letterKey] || letterKey.toUpperCase();
+        }
+
+        function playSound(filename, folder = 'jolly phonics sounds') {
             const button = event.target;
             
             // Add visual effect to the button
             button.classList.add('playing-sound-btn');
             button.classList.add('attention-grab');
             
-            const audio = new Audio(`jolly phonics sounds/${filename}`);
+            const audio = new Audio(`${folder}/${filename}`);
             
             // Remove effects when audio ends or fails
             audio.onended = () => {
@@ -627,8 +735,8 @@
             });
         }
 
-        function playWordExample(word) {
-            console.log(`Trying to play word: ${word}`);
+        function playWordExample(word, folder = '') {
+            console.log(`Trying to play word: ${word} ${folder ? `(folder: ${folder})` : ''}`);
             
             // Find the clicked element and add visual effects
             const clickedElement = event.target;
@@ -643,13 +751,33 @@
             // Add cache busting timestamp
             const timestamp = new Date().getTime();
             
+            // Sanitize example label to get the base word (strip parentheses and extra text)
+            const baseWord = String(word)
+                .toLowerCase()
+                .replace(/\(.*?\)/g, '')  // remove (pattern)
+                .replace(/[^a-z\-\s]/gi, '') // keep letters, hyphen, spaces
+                .trim()
+                .split(/\s+/)[0]; // first token only
+            
             // Try different file paths in order
-            const audioSources = [
-                `US/${word}.mp3?t=${timestamp}`,
-                `UK/${word}.mp3?t=${timestamp}`,
-                `US/${word}_us.mp3?t=${timestamp}`,
-                `UK/${word}_gb.mp3?t=${timestamp}`
-            ];
+            const audioSources = [];
+
+            // If this example belongs to an advanced folder, prefer those files first
+            if (folder && folder.startsWith('advanced_phonics_sounds')) {
+                audioSources.push(
+                    `${folder}/${baseWord}_us.mp3?t=${timestamp}`,
+                    `${folder}/${baseWord}_uk.mp3?t=${timestamp}`,
+                    `${folder}/${baseWord}.mp3?t=${timestamp}`
+                );
+            }
+
+            // Fallback to main dictionary folders (US/UK)
+            audioSources.push(
+                `US/${baseWord}.mp3?t=${timestamp}`,
+                `UK/${baseWord}.mp3?t=${timestamp}`,
+                `US/${baseWord}_us.mp3?t=${timestamp}`,
+                `UK/${baseWord}_gb.mp3?t=${timestamp}`
+            );
             
             let currentIndex = 0;
             

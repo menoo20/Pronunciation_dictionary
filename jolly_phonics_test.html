@@ -116,6 +116,31 @@
             cursor: not-allowed;
         }
 
+        .group-card.advanced-group {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-color: #667eea;
+        }
+
+        .group-card.advanced-group .group-number {
+            color: #fff;
+        }
+
+        .group-card.advanced-group .group-letters {
+            color: #e8f4f8;
+        }
+
+        .group-card.advanced-group .group-description {
+            color: #f0f8ff;
+            font-style: italic;
+        }
+
+        .group-card.advanced-group:hover {
+            background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        }
+
         .group-number {
             font-size: 2em;
             font-weight: bold;
@@ -128,6 +153,12 @@
             font-weight: bold;
             margin-bottom: 10px;
             color: #333;
+        }
+
+        .group-description {
+            font-size: 0.9em;
+            margin-bottom: 8px;
+            color: #666;
         }
 
         .group-words-count {
@@ -574,6 +605,7 @@
             const grid = document.getElementById('groupsGrid');
             grid.innerHTML = '';
 
+            // Render Groups 1-7 (Basic Jolly Phonics)
             for (let i = 1; i <= 7; i++) {
                 const groupData = jollyPhonicData.groups[i.toString()];
                 const card = document.createElement('div');
@@ -581,15 +613,44 @@
                 const wordCount = groupData ? groupData.word_count : 0;
                 const isAvailable = wordCount >= 3; // Need at least 3 words for a test
                 
-                    card.className = `group-card ${isAvailable ? 'available' : 'unavailable'}`;
-                    card.innerHTML = `
-                        <div class="group-number">Group ${i}</div>
-                        <div class="group-letters">${groupData ? groupData.letters.join(', ') : ''}</div>
-                        <div class="group-words-count">${wordCount} words available</div>
-                    `;
+                card.className = `group-card ${isAvailable ? 'available' : 'unavailable'}`;
+                card.innerHTML = `
+                    <div class="group-number">Group ${i}</div>
+                    <div class="group-letters">${groupData ? groupData.letters.join(', ') : ''}</div>
+                    <div class="group-words-count">${wordCount} words available</div>
+                `;
 
                 if (isAvailable) {
                     card.onclick = () => startTest(i);
+                }
+
+                grid.appendChild(card);
+            }
+
+            // Render Groups 8-10 (Advanced Phonics)
+            const advancedGroups = {
+                8: { name: 'Split Digraphs', letters: ['a-e', 'i-e', 'o-e', 'u-e', 'e-e'], description: 'Magic E patterns' },
+                9: { name: 'Alternative Vowels', letters: ['ai/ay', 'ee/ea', 'igh/ie', 'oa/ow', 'oo/ue'], description: 'Different vowel spellings' },
+                10: { name: 'Alternative Consonants', letters: ['ph/f', 'c/k', 'c/s', 'ge/j', 'gn/n'], description: 'Different consonant spellings' }
+            };
+
+            for (let i = 8; i <= 10; i++) {
+                const groupInfo = advancedGroups[i];
+                const card = document.createElement('div');
+                
+                // For now, assume these groups are available when we implement them
+                const isAvailable = true; // Will be updated when we have data
+                
+                card.className = `group-card advanced-group ${isAvailable ? 'available' : 'unavailable'}`;
+                card.innerHTML = `
+                    <div class="group-number">Group ${i}</div>
+                    <div class="group-letters">${groupInfo.letters.join(', ')}</div>
+                    <div class="group-description">${groupInfo.description}</div>
+                    <div class="group-words-count">Advanced Phonics</div>
+                `;
+
+                if (isAvailable) {
+                    card.onclick = () => startAdvancedTest(i);
                 }
 
                 grid.appendChild(card);
@@ -629,6 +690,72 @@
             document.getElementById('testTitle').textContent = `Group ${groupNumber} Test`;
             
             loadQuestion();
+        }
+
+        function startAdvancedTest(groupNumber) {
+            currentGroup = groupNumber;
+            
+            // Load advanced phonics words from our config
+            const advancedGroups = {
+                8: 'split_digraphs',
+                9: 'alternative_vowels', 
+                10: 'alternative_consonants'
+            };
+            
+            const groupType = advancedGroups[groupNumber];
+            
+            // Load words from our advanced phonics configuration
+            const testWords = getAdvancedTestWords(groupType);
+            
+            currentTest = testWords.map(word => {
+                const baseWord = String(word).toLowerCase().trim();
+                // build a list of candidate paths to try later in playWord()
+                const folder = `advanced_phonics_sounds/${groupType}`;
+                const candidates = [
+                    `${folder}/${baseWord}_us.mp3`,
+                    `${folder}/${baseWord}_uk.mp3`,
+                    `${folder}/${baseWord}.mp3`,
+                    `US/${baseWord}.mp3`,
+                    `UK/${baseWord}.mp3`,
+                    `US/${baseWord}_us.mp3`,
+                    `UK/${baseWord}_gb.mp3`
+                ];
+                return {
+                    word: baseWord,
+                    audioPath: candidates[0],
+                    audioCandidates: candidates,
+                    letters: baseWord.split('')
+                };
+            });
+
+            // Reset test state
+            currentQuestion = 0;
+            score = 0;
+            mistakes = []; // Reset mistakes for new test
+            
+            // Show test interface
+            document.getElementById('groupSelector').style.display = 'none';
+            document.getElementById('testContainer').style.display = 'block';
+            document.querySelector('.back-btn').style.display = 'block';
+            
+            // Update title
+            const groupNames = {8: 'Split Digraphs', 9: 'Alternative Vowels', 10: 'Alternative Consonants'};
+            document.getElementById('testTitle').textContent = `Group ${groupNumber}: ${groupNames[groupNumber]} Test`;
+            
+            loadQuestion();
+        }
+
+        function getAdvancedTestWords(groupType) {
+            // Sample words for each advanced group - in production this would come from the config
+            const wordSets = {
+                'split_digraphs': ['cake', 'bike', 'home', 'cute', 'these', 'make', 'like', 'bone', 'tune', 'complete'],
+                'alternative_vowels': ['rain', 'play', 'tree', 'sea', 'night', 'pie', 'boat', 'snow', 'moon', 'blue'],
+                'alternative_consonants': ['phone', 'graph', 'cat', 'kite', 'city', 'ice', 'page', 'cage', 'sign', 'gnome']
+            };
+            
+            const words = wordSets[groupType] || [];
+            // Shuffle and take up to 10 words
+            return words.sort(() => 0.5 - Math.random()).slice(0, Math.min(10, words.length));
         }
 
         function loadQuestion() {
@@ -711,11 +838,37 @@
                 currentAudio.pause();
             }
 
-            currentAudio = new Audio(currentWord.audioPath);
-            currentAudio.play().catch(error => {
-                console.error('Audio playback failed:', error);
-                alert('Could not play audio. Make sure the audio file exists.');
-            });
+            // Try multiple candidate sources for robustness (esp. advanced groups)
+            const sources = currentWord.audioCandidates && currentWord.audioCandidates.length
+                ? [...currentWord.audioCandidates]
+                : [currentWord.audioPath];
+
+            const audio = document.createElement('audio');
+            audio.preload = 'auto';
+
+            let idx = 0;
+            function tryNext() {
+                if (idx >= sources.length) {
+                    console.error('Audio playback failed: no source found');
+                    alert('Could not play audio. Make sure the audio file exists.');
+                    return;
+                }
+                const src = sources[idx];
+                audio.src = `${src}?t=${Date.now()}`;
+                audio.onloadeddata = () => {
+                    audio.play().catch(() => {
+                        idx++;
+                        tryNext();
+                    });
+                };
+                audio.onerror = () => {
+                    idx++;
+                    tryNext();
+                };
+                audio.load();
+            }
+            currentAudio = audio;
+            tryNext();
 
             // Disable play button briefly to prevent spam
             const playBtn = document.getElementById('playButton');
@@ -855,11 +1008,32 @@
                 currentAudio.pause();
             }
             
-            currentAudio = new Audio(audioPath);
-            currentAudio.play().catch(error => {
-                console.error('Audio playback failed:', error);
-                alert('Could not play audio. Make sure the audio file exists.');
-            });
+            // Also try multiple fallbacks if the stored path fails
+            const base = audioPath.replace(/\?.*$/, '');
+            const candidates = [
+                base,
+                base.replace(/_us\.mp3$/, '_uk.mp3'),
+                base.replace(/_uk\.mp3$/, '_us.mp3'),
+                base.replace(/advanced_phonics_sounds\/[^/]+\//, 'US/'),
+                base.replace(/advanced_phonics_sounds\/[^/]+\//, 'UK/')
+            ];
+            const audio = document.createElement('audio');
+            audio.preload = 'auto';
+            let i = 0;
+            function tryNext() {
+                if (i >= candidates.length) {
+                    console.error('Audio playback failed: no source found');
+                    alert('Could not play audio. Make sure the audio file exists.');
+                    return;
+                }
+                const src = `${candidates[i]}?t=${Date.now()}`;
+                audio.src = src;
+                audio.onloadeddata = () => audio.play().catch(() => { i++; tryNext(); });
+                audio.onerror = () => { i++; tryNext(); };
+                audio.load();
+            }
+            currentAudio = audio;
+            tryNext();
         }
 
         function restartTest() {
