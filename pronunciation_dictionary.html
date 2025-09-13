@@ -753,17 +753,66 @@
             return 1; // Default to group 1 if no match found
         }
 
-        // Initialize
+        // Initialize with automatic cache detection
         document.addEventListener('DOMContentLoaded', function() {
+            // Check if this is a new version by comparing timestamps
+            checkForUpdates();
             loadAvailableAudioFiles();
         });
+
+        // Check for updates using build version from audio index
+        async function checkForUpdates() {
+            try {
+                // Get the current build version from the audio index
+                const response = await fetch(`audio_index.json?check=${Date.now()}`, {
+                    cache: 'no-cache'
+                });
+                const data = await response.json();
+                const currentBuildVersion = data.build_version || 0;
+                const storedBuildVersion = parseInt(localStorage.getItem('buildVersion') || '0');
+                
+                if (storedBuildVersion > 0 && storedBuildVersion !== currentBuildVersion) {
+                    console.log(`🔄 Site update detected! Old: ${storedBuildVersion}, New: ${currentBuildVersion}`);
+                    
+                    // Clear all cached data
+                    localStorage.removeItem('pronunciationDictionary');
+                    localStorage.removeItem('audioCacheVersion');
+                    
+                    // Clear browser cache for this domain
+                    if ('caches' in window) {
+                        caches.keys().then(cacheNames => {
+                            cacheNames.forEach(cacheName => {
+                                caches.delete(cacheName);
+                            });
+                        });
+                    }
+                    
+                    // Show update notification
+                    showNotification('✨ New content available! Loading fresh data...', 'success');
+                }
+                
+                // Store current build version
+                localStorage.setItem('buildVersion', currentBuildVersion.toString());
+                
+            } catch (error) {
+                console.log('Could not check for updates:', error);
+            }
+        }
 
         // Load available audio files from the static JSON file
         async function loadAvailableAudioFiles() {
             try {
+                // Generate cache-busting timestamp based on page load time
+                const cacheVersion = Date.now();
+                
                 // Load the static index file with cache-busting (no API calls for GitHub Pages)
-                const response = await fetch(`audio_index.json?t=${Date.now()}`, {
-                    cache: 'no-cache'
+                const response = await fetch(`audio_index.json?v=${cacheVersion}`, {
+                    cache: 'no-cache',
+                    headers: {
+                        'Cache-Control': 'no-cache, no-store, must-revalidate',
+                        'Pragma': 'no-cache',
+                        'Expires': '0'
+                    }
                 });
                 const indexData = await response.json();
                 availableAudioFiles = indexData.files || [];
@@ -779,8 +828,12 @@
                 }
                 availableAudioFiles = uniqueFiles;
                 
+                // Store cache version in localStorage for future reference
+                localStorage.setItem('audioCacheVersion', cacheVersion.toString());
+                
                 // Show scan results
                 console.log(`📁 Found ${indexData.total_files} audio files (UK: ${indexData.uk_files}, US: ${indexData.us_files})`);
+                console.log(`🔄 Cache version: ${cacheVersion}`);
                 
                 // Auto-populate dictionary if it's empty
                 if (words.length === 0 && availableAudioFiles.length > 0) {
@@ -1029,7 +1082,7 @@
             }
         }
 
-        // Play audio
+        // Play audio with automatic cache-busting
         function playAudio(word, accent) {
             // Find the word in our dictionary first (to get the correct audio path)
             const dictionaryWord = words.find(w => w.word === word && w.accent === accent);
@@ -1043,10 +1096,19 @@
                 audioPath = `${folderName}/${word}.mp3`;
             }
             
-            const audio = new Audio(audioPath);
+            // Add cache-busting to audio files
+            const cacheVersion = localStorage.getItem('audioCacheVersion') || Date.now();
+            const cacheBustedPath = `${audioPath}?v=${cacheVersion}`;
+            
+            const audio = new Audio(cacheBustedPath);
             audio.play().catch(error => {
                 console.error('Audio playback error:', error);
-                showNotification(`Could not play audio for "${word}". File may be missing: ${audioPath}`, 'error');
+                // Try without cache-busting as fallback
+                const fallbackAudio = new Audio(audioPath);
+                fallbackAudio.play().catch(fallbackError => {
+                    console.error('Fallback audio playback error:', fallbackError);
+                    showNotification(`Could not play audio for "${word}". File may be missing: ${audioPath}`, 'error');
+                });
             });
         }
 
