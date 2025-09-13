@@ -758,25 +758,26 @@
             loadAvailableAudioFiles();
         });
 
-        // Load available audio files from the API
+        // Load available audio files from the static JSON file
         async function loadAvailableAudioFiles() {
             try {
-                // First, refresh the index on the server to get latest file count
-                const refreshResponse = await fetch(`${API_BASE_URL}/refresh-index?t=${Date.now()}`, { 
-                    method: 'POST',
+                // Load the static index file with cache-busting (no API calls for GitHub Pages)
+                const response = await fetch(`audio_index.json?t=${Date.now()}`, {
                     cache: 'no-cache'
-                });
-                
-                // Then load the updated index with cache-busting
-                const response = await fetch(`${API_BASE_URL}/audio-index?t=${Date.now()}`, {
-                    cache: 'no-cache',
-                    headers: {
-                        'Cache-Control': 'no-cache',
-                        'Pragma': 'no-cache'
-                    }
                 });
                 const indexData = await response.json();
                 availableAudioFiles = indexData.files || [];
+                
+                // Remove duplicates based on path (same file shouldn't appear twice)
+                const uniqueFiles = [];
+                const seenPaths = new Set();
+                for (const file of availableAudioFiles) {
+                    if (!seenPaths.has(file.path)) {
+                        seenPaths.add(file.path);
+                        uniqueFiles.push(file);
+                    }
+                }
+                availableAudioFiles = uniqueFiles;
                 
                 // Show scan results
                 console.log(`📁 Found ${indexData.total_files} audio files (UK: ${indexData.uk_files}, US: ${indexData.us_files})`);
@@ -785,31 +786,16 @@
                 if (words.length === 0 && availableAudioFiles.length > 0) {
                     autoPopulateDictionary();
                 } else {
+                    // If there are new files not in the dictionary, offer to sync them in
+                    syncDictionaryWithIndex();
                     renderWords();
                     updateStats();
                 }
             } catch (error) {
-                console.error('Could not load audio index from API:', error);
-                // Fallback to direct file access with cache-busting
-                try {
-                    const response = await fetch(`audio_index.json?t=${Date.now()}`, {
-                        cache: 'no-cache'
-                    });
-                    const indexData = await response.json();
-                    availableAudioFiles = indexData.files || [];
-                    
-                    if (words.length === 0 && availableAudioFiles.length > 0) {
-                        autoPopulateDictionary();
-                    } else {
-                        renderWords();
-                        updateStats();
-                    }
-                } catch (fallbackError) {
-                    console.error('Could not load audio index:', fallbackError);
-                    showNotification('Could not load audio files. Make sure the server is running.', 'error');
-                    renderWords();
-                    updateStats();
-                }
+                console.error('Could not load audio index:', error);
+                showNotification('Could not load audio files.', 'error');
+                renderWords();
+                updateStats();
             }
         }
 
@@ -1106,7 +1092,7 @@
             }
         }
 
-        // Rescan audio files
+        // Rescan audio files (for static version, just reload the index)
         async function rescanAudioFiles() {
             const rescanBtn = document.getElementById('rescan-btn');
             const originalText = rescanBtn.innerHTML;
@@ -1114,17 +1100,17 @@
             try {
                 // Disable button and show loading state
                 rescanBtn.disabled = true;
-                rescanBtn.innerHTML = '🔄 Scanning...';
+                rescanBtn.innerHTML = '🔄 Loading...';
                 
-                // Force refresh of audio files
+                // Reload audio files from static index
                 await loadAvailableAudioFiles();
                 
                 // Show success notification
-                showNotification('Audio files rescanned successfully!', 'success');
+                showNotification('Audio files reloaded successfully!', 'success');
                 
             } catch (error) {
-                console.error('Rescan error:', error);
-                showNotification('Failed to rescan audio files. Make sure the server is running.', 'error');
+                console.error('Reload error:', error);
+                showNotification('Failed to reload audio files.', 'error');
             } finally {
                 // Re-enable button and restore text
                 rescanBtn.disabled = false;
