@@ -879,7 +879,7 @@
             return words.sort(() => 0.5 - Math.random()).slice(0, Math.min(10, words.length));
         }
 
-        function buildGapForWord(word, groupNumber) {
+    function buildGapForWord(word, groupNumber) {
             // Try to hide a grapheme from the current group's letters; prefer multi-letter first
             const letters = getGroupLetters(groupNumber)
                 .slice()
@@ -891,12 +891,39 @@
             for (const t of letters) candidates.push(...expand(t));
             // de-dup and sort by length desc again
             candidates = Array.from(new Set(candidates)).sort((a,b)=>b.length-a.length);
+
+            // Special handling for split digraphs (magic E): look for pattern like a_e, i_e, o_e, u_e, e_e
+            const splitDigraphs = ['a_e','e_e','i_e','o_e','u_e'];
             let idx = -1, missing = '', len = 0;
-            for (const pat of candidates) {
-                if (!pat) continue;
-                const i = lower.indexOf(pat);
-                if (i !== -1) {
-                    idx = i; missing = pat; len = pat.length; break;
+            for (const sd of splitDigraphs) {
+                // Find pattern: letter, any consonant, e at end
+                // e.g., bike: b i k e, idx=1, missing=i_e
+                // e.g., make: m a k e, idx=1, missing=a_e
+                const v = sd[0];
+                if (lower.length >= 4 && lower.endsWith('e')) {
+                    // Look for v _ _ e pattern
+                    for (let i = 0; i < lower.length - 2; i++) {
+                        if (lower[i] === v && lower[lower.length-1] === 'e') {
+                            // Confirm the pattern is v + consonant + e at the end
+                            if (i+2 === lower.length-1) {
+                                idx = i;
+                                missing = v + '_e';
+                                len = 2; // gap both vowel and e
+                                break;
+                            }
+                        }
+                    }
+                }
+                if (idx !== -1) break;
+            }
+            // If not split digraph, proceed as before
+            if (idx === -1) {
+                for (const pat of candidates) {
+                    if (!pat) continue;
+                    const i = lower.indexOf(pat);
+                    if (i !== -1) {
+                        idx = i; missing = pat; len = pat.length; break;
+                    }
                 }
             }
             // fallback: hide a random single letter
@@ -944,20 +971,52 @@
                 // Build a boxy masked grid rendering
                 const grid = document.createElement('div');
                 grid.className = 'masked-grid';
-                // Render boxes up to start
-                for (let i = 0; i < question.word.length; i++) {
-                    if (i === gap.start) {
-                        const gb = document.createElement('div');
-                        gb.className = 'gap-box';
-                        gb.title = 'Fill this gap';
-                        grid.appendChild(gb);
-                        i += gap.length - 1; // skip hidden segment
-                        continue;
+                
+                // Special handling for split digraphs (a_e, i_e, etc.)
+                if (/^[aeiou]_e$/.test(gap.missing)) {
+                    // For split digraphs, show: consonant(s) + gap + consonant(s) + gap
+                    // e.g., "cake" with missing "a_e" shows: C _ K _
+                    for (let i = 0; i < question.word.length; i++) {
+                        if (i === gap.start) {
+                            // Gap for the vowel
+                            const gb1 = document.createElement('div');
+                            gb1.className = 'gap-box';
+                            gb1.title = 'Fill this gap';
+                            grid.appendChild(gb1);
+                        } else if (i === question.word.length - 1 && question.word[i] === 'e') {
+                            // Gap for the final 'e'
+                            const gb2 = document.createElement('div');
+                            gb2.className = 'gap-box';
+                            gb2.title = 'Fill this gap';
+                            grid.appendChild(gb2);
+                        } else {
+                            const fb = document.createElement('div');
+                            fb.className = 'fixed-box';
+                            fb.textContent = question.word[i].toUpperCase();
+                            grid.appendChild(fb);
+                        }
                     }
-                    const fb = document.createElement('div');
-                    fb.className = 'fixed-box';
-                    fb.textContent = question.word[i].toUpperCase();
-                    grid.appendChild(fb);
+                } else {
+                    // Regular gap handling for non-split digraphs
+                    let i = 0;
+                    while (i < question.word.length) {
+                        if (i === gap.start) {
+                            // Render one gap box per missing letter
+                            for (let j = 0; j < gap.length; j++) {
+                                const gb = document.createElement('div');
+                                gb.className = 'gap-box';
+                                gb.title = 'Fill this gap';
+                                grid.appendChild(gb);
+                            }
+                            i += gap.length;
+                            continue;
+                        }
+                        const fb = document.createElement('div');
+                        fb.className = 'fixed-box';
+                        fb.textContent = question.word[i].toUpperCase();
+                        grid.appendChild(fb);
+                        i++;
+                    }
                 }
                 const gapInput = document.createElement('input');
                 gapInput.type = 'text';
@@ -1094,8 +1153,15 @@
                 }
             } else {
                 const gapInput = document.getElementById('gapInput');
-                const userGap = (gapInput?.value || '').toLowerCase().trim();
-                const correctGap = (currentWord.gap?.missing || '').toLowerCase();
+                let userGap = (gapInput?.value || '').toLowerCase().trim();
+                let correctGap = (currentWord.gap?.missing || '').toLowerCase();
+                // For split digraphs, accept both i_e and ie (user may not type the underscore)
+                if (/^[aeiou]_e$/.test(correctGap)) {
+                    // Accept with or without underscore
+                    if (userGap === correctGap || userGap === correctGap.replace('_','')) {
+                        userGap = correctGap; // normalize for review
+                    }
+                }
                 const isCorrect = userGap === correctGap;
                 gapInput.disabled = true;
                 if (isCorrect) {
