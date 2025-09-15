@@ -1,5 +1,1040 @@
 {
   "groups": {
+    "3": {
+      "letters": [
+        "g",
+        "o",
+        "u",
+        "l",
+        "f",
+        "b"
+      ],
+      "word_count": 78,
+      "words": {
+        "age": [
+          {
+            "word": "age",
+            "accent": "uk",
+            "filename": "age_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/age_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "age",
+            "accent": "us",
+            "filename": "age_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/age_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "back": [
+          {
+            "word": "back",
+            "accent": "us",
+            "filename": "back.mp3",
+            "path": "US/back.mp3"
+          },
+          {
+            "word": "back",
+            "accent": "uk",
+            "filename": "back_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/back_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "bad": [
+          {
+            "word": "bad",
+            "accent": "us",
+            "filename": "bad.mp3",
+            "path": "US/bad.mp3"
+          }
+        ],
+        "badge": [
+          {
+            "word": "badge",
+            "accent": "uk",
+            "filename": "badge_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/badge_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "badge",
+            "accent": "us",
+            "filename": "badge_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/badge_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "ban": [
+          {
+            "word": "ban",
+            "accent": "us",
+            "filename": "ban_us.mp3",
+            "path": "US/ban_us.mp3"
+          }
+        ],
+        "band": [
+          {
+            "word": "band",
+            "accent": "us",
+            "filename": "band_us.mp3",
+            "path": "US/band_us.mp3"
+          }
+        ],
+        "bat": [
+          {
+            "word": "bat",
+            "accent": "us",
+            "filename": "bat.mp3",
+            "path": "US/bat.mp3"
+          }
+        ],
+        "bed": [
+          {
+            "word": "bed",
+            "accent": "us",
+            "filename": "bed.mp3",
+            "path": "US/bed.mp3"
+          }
+        ],
+        "behind": [
+          {
+            "word": "behind",
+            "accent": "uk",
+            "filename": "behind_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/behind_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          },
+          {
+            "word": "behind",
+            "accent": "us",
+            "filename": "behind_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/behind_us.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          }
+        ],
+        "big": [
+          {
+            "word": "big",
+            "accent": "us",
+            "filename": "big.mp3",
+            "path": "US/big.mp3"
+          }
+        ],
+        "bit": [
+          {
+            "word": "bit",
+            "accent": "us",
+            "filename": "bit.mp3",
+            "path": "US/bit.mp3"
+          }
+        ],
+        "blank": [
+          {
+            "word": "blank",
+            "accent": "uk",
+            "filename": "blank.mp3",
+            "path": "UK/blank.mp3"
+          }
+        ],
+        "blind": [
+          {
+            "word": "blind",
+            "accent": "uk",
+            "filename": "blind_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/blind_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          },
+          {
+            "word": "blind",
+            "accent": "us",
+            "filename": "blind_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/blind_us.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          }
+        ],
+        "blink": [
+          {
+            "word": "blink",
+            "accent": "us",
+            "filename": "blink.mp3",
+            "path": "US/blink.mp3"
+          }
+        ],
+        "bold": [
+          {
+            "word": "bold",
+            "accent": "uk",
+            "filename": "bold_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/bold_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          },
+          {
+            "word": "bold",
+            "accent": "us",
+            "filename": "bold_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/bold_us.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          }
+        ],
+        "brand": [
+          {
+            "word": "brand",
+            "accent": "us",
+            "filename": "brand_us.mp3",
+            "path": "US/brand_us.mp3"
+          }
+        ],
+        "bridge": [
+          {
+            "word": "bridge",
+            "accent": "uk",
+            "filename": "bridge_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/bridge_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "bridge",
+            "accent": "us",
+            "filename": "bridge_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/bridge_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "but": [
+          {
+            "word": "but",
+            "accent": "us",
+            "filename": "but.mp3",
+            "path": "US/but.mp3"
+          }
+        ],
+        "cold": [
+          {
+            "word": "cold",
+            "accent": "uk",
+            "filename": "cold_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/cold_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          },
+          {
+            "word": "cold",
+            "accent": "us",
+            "filename": "cold_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/cold_us.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          }
+        ],
+        "cub": [
+          {
+            "word": "cub",
+            "accent": "us",
+            "filename": "cub.mp3",
+            "path": "US/cub.mp3"
+          }
+        ],
+        "cup": [
+          {
+            "word": "cup",
+            "accent": "uk",
+            "filename": "cup.mp3",
+            "path": "UK/cup.mp3"
+          },
+          {
+            "word": "cup",
+            "accent": "us",
+            "filename": "cup_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/cup_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "cut": [
+          {
+            "word": "cut",
+            "accent": "us",
+            "filename": "cut.mp3",
+            "path": "US/cut.mp3"
+          },
+          {
+            "word": "cut",
+            "accent": "uk",
+            "filename": "cut_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/cut_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "dog": [
+          {
+            "word": "dog",
+            "accent": "us",
+            "filename": "dog.mp3",
+            "path": "US/dog.mp3"
+          }
+        ],
+        "dogs": [
+          {
+            "word": "dogs",
+            "accent": "us",
+            "filename": "dogs.mp3",
+            "path": "US/dogs.mp3"
+          }
+        ],
+        "duck": [
+          {
+            "word": "duck",
+            "accent": "uk",
+            "filename": "duck_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/duck_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "duck",
+            "accent": "us",
+            "filename": "duck_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/duck_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "edge": [
+          {
+            "word": "edge",
+            "accent": "uk",
+            "filename": "edge_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/edge_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "edge",
+            "accent": "us",
+            "filename": "edge_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/edge_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "fast": [
+          {
+            "word": "fast",
+            "accent": "uk",
+            "filename": "fast_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/fast_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "fast",
+            "accent": "us",
+            "filename": "fast_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/fast_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "fence": [
+          {
+            "word": "fence",
+            "accent": "uk",
+            "filename": "fence_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/fence_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "fence",
+            "accent": "us",
+            "filename": "fence_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/fence_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "find": [
+          {
+            "word": "find",
+            "accent": "uk",
+            "filename": "find_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/find_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          },
+          {
+            "word": "find",
+            "accent": "us",
+            "filename": "find_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/find_us.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          }
+        ],
+        "fist": [
+          {
+            "word": "fist",
+            "accent": "uk",
+            "filename": "fist_gb.mp3",
+            "path": "UK/fist_gb.mp3"
+          }
+        ],
+        "fridge": [
+          {
+            "word": "fridge",
+            "accent": "uk",
+            "filename": "fridge_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/fridge_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "fridge",
+            "accent": "us",
+            "filename": "fridge_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/fridge_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "frog": [
+          {
+            "word": "frog",
+            "accent": "uk",
+            "filename": "frog_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/frog_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "frog",
+            "accent": "us",
+            "filename": "frog_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/frog_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "fudge": [
+          {
+            "word": "fudge",
+            "accent": "uk",
+            "filename": "fudge_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/fudge_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "fudge",
+            "accent": "us",
+            "filename": "fudge_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/fudge_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "fun": [
+          {
+            "word": "fun",
+            "accent": "us",
+            "filename": "fun.mp3",
+            "path": "US/fun.mp3"
+          },
+          {
+            "word": "fun",
+            "accent": "uk",
+            "filename": "fun_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/fun_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "gem": [
+          {
+            "word": "gem",
+            "accent": "us",
+            "filename": "gem.mp3",
+            "path": "US/gem.mp3"
+          },
+          {
+            "word": "gem",
+            "accent": "uk",
+            "filename": "gem_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/gem_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "gentle": [
+          {
+            "word": "gentle",
+            "accent": "uk",
+            "filename": "gentle_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/gentle_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "gentle",
+            "accent": "us",
+            "filename": "gentle_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/gentle_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "get": [
+          {
+            "word": "get",
+            "accent": "us",
+            "filename": "get.mp3",
+            "path": "US/get.mp3"
+          }
+        ],
+        "giant": [
+          {
+            "word": "giant",
+            "accent": "us",
+            "filename": "giant.mp3",
+            "path": "US/giant.mp3"
+          },
+          {
+            "word": "giant",
+            "accent": "uk",
+            "filename": "giant_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/giant_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "go": [
+          {
+            "word": "go",
+            "accent": "us",
+            "filename": "go.mp3",
+            "path": "US/go.mp3"
+          },
+          {
+            "word": "go",
+            "accent": "uk",
+            "filename": "go_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/go_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          }
+        ],
+        "graph": [
+          {
+            "word": "graph",
+            "accent": "uk",
+            "filename": "graph_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/graph_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "graph",
+            "accent": "us",
+            "filename": "graph_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/graph_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "hedge": [
+          {
+            "word": "hedge",
+            "accent": "uk",
+            "filename": "hedge_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/hedge_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "hedge",
+            "accent": "us",
+            "filename": "hedge_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/hedge_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "hold": [
+          {
+            "word": "hold",
+            "accent": "uk",
+            "filename": "hold_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/hold_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          },
+          {
+            "word": "hold",
+            "accent": "us",
+            "filename": "hold_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/hold_us.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          }
+        ],
+        "hot": [
+          {
+            "word": "hot",
+            "accent": "us",
+            "filename": "hot.mp3",
+            "path": "US/hot.mp3"
+          }
+        ],
+        "hub": [
+          {
+            "word": "hub",
+            "accent": "us",
+            "filename": "hub_us.mp3",
+            "path": "US/hub_us.mp3"
+          }
+        ],
+        "hug": [
+          {
+            "word": "hug",
+            "accent": "uk",
+            "filename": "hug.mp3",
+            "path": "UK/hug.mp3"
+          }
+        ],
+        "ledge": [
+          {
+            "word": "ledge",
+            "accent": "uk",
+            "filename": "ledge_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/ledge_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "ledge",
+            "accent": "us",
+            "filename": "ledge_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/ledge_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "leg": [
+          {
+            "word": "leg",
+            "accent": "us",
+            "filename": "leg.mp3",
+            "path": "US/leg.mp3"
+          }
+        ],
+        "lip": [
+          {
+            "word": "lip",
+            "accent": "us",
+            "filename": "lip.mp3",
+            "path": "US/lip.mp3"
+          }
+        ],
+        "lock": [
+          {
+            "word": "lock",
+            "accent": "uk",
+            "filename": "lock_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/lock_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "lock",
+            "accent": "us",
+            "filename": "lock_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/lock_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "log": [
+          {
+            "word": "log",
+            "accent": "uk",
+            "filename": "log_gb.mp3",
+            "path": "UK/log_gb.mp3"
+          }
+        ],
+        "magic": [
+          {
+            "word": "magic",
+            "accent": "uk",
+            "filename": "magic_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/magic_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "magic",
+            "accent": "us",
+            "filename": "magic_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/magic_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "mug": [
+          {
+            "word": "mug",
+            "accent": "us",
+            "filename": "mug.mp3",
+            "path": "US/mug.mp3"
+          }
+        ],
+        "muscle": [
+          {
+            "word": "muscle",
+            "accent": "uk",
+            "filename": "muscle_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/muscle_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "muscle",
+            "accent": "us",
+            "filename": "muscle_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/muscle_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "no": [
+          {
+            "word": "no",
+            "accent": "uk",
+            "filename": "no_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/no_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          },
+          {
+            "word": "no",
+            "accent": "us",
+            "filename": "no_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/no_us.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          }
+        ],
+        "not": [
+          {
+            "word": "not",
+            "accent": "us",
+            "filename": "not.mp3",
+            "path": "US/not.mp3"
+          }
+        ],
+        "nudge": [
+          {
+            "word": "nudge",
+            "accent": "uk",
+            "filename": "nudge_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/nudge_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "nudge",
+            "accent": "us",
+            "filename": "nudge_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/nudge_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "nut": [
+          {
+            "word": "nut",
+            "accent": "uk",
+            "filename": "nut_gb.mp3",
+            "path": "UK/nut_gb.mp3"
+          },
+          {
+            "word": "nut",
+            "accent": "us",
+            "filename": "nut.mp3",
+            "path": "US/nut.mp3"
+          }
+        ],
+        "old": [
+          {
+            "word": "old",
+            "accent": "uk",
+            "filename": "old_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/old_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          },
+          {
+            "word": "old",
+            "accent": "us",
+            "filename": "old_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/old_us.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          }
+        ],
+        "photo": [
+          {
+            "word": "photo",
+            "accent": "uk",
+            "filename": "photo_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/photo_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "photo",
+            "accent": "us",
+            "filename": "photo_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/photo_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "plug": [
+          {
+            "word": "plug",
+            "accent": "us",
+            "filename": "plug.mp3",
+            "path": "US/plug.mp3"
+          }
+        ],
+        "pop": [
+          {
+            "word": "pop",
+            "accent": "us",
+            "filename": "pop.mp3",
+            "path": "US/pop.mp3"
+          }
+        ],
+        "pump": [
+          {
+            "word": "pump",
+            "accent": "uk",
+            "filename": "pump_gb.mp3",
+            "path": "UK/pump_gb.mp3"
+          }
+        ],
+        "pun": [
+          {
+            "word": "pun",
+            "accent": "us",
+            "filename": "pun.mp3",
+            "path": "US/pun.mp3"
+          }
+        ],
+        "rock": [
+          {
+            "word": "rock",
+            "accent": "uk",
+            "filename": "rock_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/rock_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "rock",
+            "accent": "us",
+            "filename": "rock_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/rock_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "rocks": [
+          {
+            "word": "rocks",
+            "accent": "us",
+            "filename": "rocks.mp3",
+            "path": "US/rocks.mp3"
+          }
+        ],
+        "run": [
+          {
+            "word": "run",
+            "accent": "us",
+            "filename": "run.mp3",
+            "path": "US/run.mp3"
+          }
+        ],
+        "runs": [
+          {
+            "word": "runs",
+            "accent": "us",
+            "filename": "runs.mp3",
+            "path": "US/runs.mp3"
+          }
+        ],
+        "sign": [
+          {
+            "word": "sign",
+            "accent": "us",
+            "filename": "sign.mp3",
+            "path": "US/sign.mp3"
+          }
+        ],
+        "so": [
+          {
+            "word": "so",
+            "accent": "uk",
+            "filename": "so_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/so_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          },
+          {
+            "word": "so",
+            "accent": "us",
+            "filename": "so_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/so_us.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          }
+        ],
+        "soft": [
+          {
+            "word": "soft",
+            "accent": "uk",
+            "filename": "soft_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/soft_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "soft",
+            "accent": "us",
+            "filename": "soft_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/soft_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "sun": [
+          {
+            "word": "sun",
+            "accent": "us",
+            "filename": "sun.mp3",
+            "path": "US/sun.mp3"
+          },
+          {
+            "word": "sun",
+            "accent": "uk",
+            "filename": "sun_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/sun_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "told": [
+          {
+            "word": "told",
+            "accent": "uk",
+            "filename": "told_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/told_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          },
+          {
+            "word": "told",
+            "accent": "us",
+            "filename": "told_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/told_us.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          }
+        ],
+        "top": [
+          {
+            "word": "top",
+            "accent": "us",
+            "filename": "top.mp3",
+            "path": "US/top.mp3"
+          }
+        ],
+        "truck": [
+          {
+            "word": "truck",
+            "accent": "uk",
+            "filename": "truck_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/truck_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "truck",
+            "accent": "us",
+            "filename": "truck_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/truck_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "trunk": [
+          {
+            "word": "trunk",
+            "accent": "uk",
+            "filename": "trunk.mp3",
+            "path": "UK/trunk.mp3"
+          }
+        ],
+        "tuck": [
+          {
+            "word": "tuck",
+            "accent": "us",
+            "filename": "tuck.mp3",
+            "path": "US/tuck.mp3"
+          }
+        ],
+        "up": [
+          {
+            "word": "up",
+            "accent": "us",
+            "filename": "up.mp3",
+            "path": "US/up.mp3"
+          }
+        ],
+        "use": [
+          {
+            "word": "use",
+            "accent": "us",
+            "filename": "use.mp3",
+            "path": "US/use.mp3"
+          },
+          {
+            "word": "use",
+            "accent": "uk",
+            "filename": "use_uk.mp3",
+            "path": "advanced_phonics_sounds/split_digraphs/use_uk.mp3",
+            "group": 8,
+            "category": "split_digraphs"
+          }
+        ]
+      }
+    },
     "1": {
       "letters": [
         "s",
@@ -57,6 +1092,14 @@
             "accent": "us",
             "filename": "sit.mp3",
             "path": "US/sit.mp3"
+          },
+          {
+            "word": "sit",
+            "accent": "uk",
+            "filename": "sit_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/sit_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
           }
         ],
         "tap": [
@@ -77,657 +1120,6 @@
         ]
       }
     },
-    "2": {
-      "letters": [
-        "c",
-        "k",
-        "e",
-        "h",
-        "r",
-        "m",
-        "d"
-      ],
-      "word_count": 29,
-      "words": {
-        "ask": [
-          {
-            "word": "ask",
-            "accent": "us",
-            "filename": "ask.mp3",
-            "path": "US/ask.mp3"
-          }
-        ],
-        "camp": [
-          {
-            "word": "camp",
-            "accent": "us",
-            "filename": "camp_us.mp3",
-            "path": "US/camp_us.mp3"
-          }
-        ],
-        "can": [
-          {
-            "word": "can",
-            "accent": "us",
-            "filename": "can.mp3",
-            "path": "US/can.mp3"
-          }
-        ],
-        "cat": [
-          {
-            "word": "cat",
-            "accent": "us",
-            "filename": "cat.mp3",
-            "path": "US/cat.mp3"
-          }
-        ],
-        "cent": [
-          {
-            "word": "cent",
-            "accent": "us",
-            "filename": "cent.mp3",
-            "path": "US/cent.mp3"
-          }
-        ],
-        "crank": [
-          {
-            "word": "crank",
-            "accent": "us",
-            "filename": "crank.mp3",
-            "path": "US/crank.mp3"
-          }
-        ],
-        "dip": [
-          {
-            "word": "dip",
-            "accent": "us",
-            "filename": "dip.mp3",
-            "path": "US/dip.mp3"
-          }
-        ],
-        "drink": [
-          {
-            "word": "drink",
-            "accent": "us",
-            "filename": "drink.mp3",
-            "path": "US/drink.mp3"
-          }
-        ],
-        "ham": [
-          {
-            "word": "ham",
-            "accent": "us",
-            "filename": "ham.mp3",
-            "path": "US/ham.mp3"
-          }
-        ],
-        "hand": [
-          {
-            "word": "hand",
-            "accent": "uk",
-            "filename": "hand_gb.mp3",
-            "path": "UK/hand_gb.mp3"
-          }
-        ],
-        "has": [
-          {
-            "word": "has",
-            "accent": "us",
-            "filename": "has.mp3",
-            "path": "US/has.mp3"
-          }
-        ],
-        "hat": [
-          {
-            "word": "hat",
-            "accent": "us",
-            "filename": "hat.mp3",
-            "path": "US/hat.mp3"
-          }
-        ],
-        "hen": [
-          {
-            "word": "hen",
-            "accent": "uk",
-            "filename": "hen.mp3",
-            "path": "UK/hen.mp3"
-          }
-        ],
-        "hint": [
-          {
-            "word": "hint",
-            "accent": "uk",
-            "filename": "hint_gb.mp3",
-            "path": "UK/hint_gb.mp3"
-          }
-        ],
-        "his": [
-          {
-            "word": "his",
-            "accent": "us",
-            "filename": "his.mp3",
-            "path": "US/his.mp3"
-          }
-        ],
-        "hit": [
-          {
-            "word": "hit",
-            "accent": "us",
-            "filename": "hit.mp3",
-            "path": "US/hit.mp3"
-          }
-        ],
-        "kit": [
-          {
-            "word": "kit",
-            "accent": "us",
-            "filename": "kit.mp3",
-            "path": "US/kit.mp3"
-          }
-        ],
-        "mat": [
-          {
-            "word": "mat",
-            "accent": "us",
-            "filename": "mat.mp3",
-            "path": "US/mat.mp3"
-          }
-        ],
-        "mink": [
-          {
-            "word": "mink",
-            "accent": "uk",
-            "filename": "mink.mp3",
-            "path": "UK/mink.mp3"
-          }
-        ],
-        "nest": [
-          {
-            "word": "nest",
-            "accent": "us",
-            "filename": "nest_us.mp3",
-            "path": "US/nest_us.mp3"
-          }
-        ],
-        "net": [
-          {
-            "word": "net",
-            "accent": "uk",
-            "filename": "net.mp3",
-            "path": "UK/net.mp3"
-          }
-        ],
-        "pen": [
-          {
-            "word": "pen",
-            "accent": "us",
-            "filename": "pen_us.mp3",
-            "path": "US/pen_us.mp3"
-          }
-        ],
-        "pick": [
-          {
-            "word": "pick",
-            "accent": "us",
-            "filename": "pick.mp3",
-            "path": "US/pick.mp3"
-          }
-        ],
-        "red": [
-          {
-            "word": "red",
-            "accent": "us",
-            "filename": "red.mp3",
-            "path": "US/red.mp3"
-          }
-        ],
-        "rest": [
-          {
-            "word": "rest",
-            "accent": "uk",
-            "filename": "rest_gb.mp3",
-            "path": "UK/rest_gb.mp3"
-          }
-        ],
-        "rid": [
-          {
-            "word": "rid",
-            "accent": "us",
-            "filename": "rid.mp3",
-            "path": "US/rid.mp3"
-          }
-        ],
-        "stamp": [
-          {
-            "word": "stamp",
-            "accent": "us",
-            "filename": "stamp.mp3",
-            "path": "US/stamp.mp3"
-          }
-        ],
-        "task": [
-          {
-            "word": "task",
-            "accent": "us",
-            "filename": "task_us.mp3",
-            "path": "US/task_us.mp3"
-          }
-        ],
-        "test": [
-          {
-            "word": "test",
-            "accent": "uk",
-            "filename": "test.mp3",
-            "path": "UK/test.mp3"
-          },
-          {
-            "word": "test",
-            "accent": "us",
-            "filename": "test.mp3",
-            "path": "US/test.mp3"
-          }
-        ]
-      }
-    },
-    "3": {
-      "letters": [
-        "g",
-        "o",
-        "u",
-        "l",
-        "f",
-        "b"
-      ],
-      "word_count": 46,
-      "words": {
-        "back": [
-          {
-            "word": "back",
-            "accent": "us",
-            "filename": "back.mp3",
-            "path": "US/back.mp3"
-          }
-        ],
-        "bad": [
-          {
-            "word": "bad",
-            "accent": "us",
-            "filename": "bad.mp3",
-            "path": "US/bad.mp3"
-          }
-        ],
-        "ban": [
-          {
-            "word": "ban",
-            "accent": "us",
-            "filename": "ban_us.mp3",
-            "path": "US/ban_us.mp3"
-          }
-        ],
-        "band": [
-          {
-            "word": "band",
-            "accent": "us",
-            "filename": "band_us.mp3",
-            "path": "US/band_us.mp3"
-          }
-        ],
-        "bat": [
-          {
-            "word": "bat",
-            "accent": "us",
-            "filename": "bat.mp3",
-            "path": "US/bat.mp3"
-          }
-        ],
-        "bed": [
-          {
-            "word": "bed",
-            "accent": "us",
-            "filename": "bed.mp3",
-            "path": "US/bed.mp3"
-          }
-        ],
-        "big": [
-          {
-            "word": "big",
-            "accent": "us",
-            "filename": "big.mp3",
-            "path": "US/big.mp3"
-          }
-        ],
-        "bit": [
-          {
-            "word": "bit",
-            "accent": "us",
-            "filename": "bit.mp3",
-            "path": "US/bit.mp3"
-          }
-        ],
-        "blank": [
-          {
-            "word": "blank",
-            "accent": "uk",
-            "filename": "blank.mp3",
-            "path": "UK/blank.mp3"
-          }
-        ],
-        "blink": [
-          {
-            "word": "blink",
-            "accent": "us",
-            "filename": "blink.mp3",
-            "path": "US/blink.mp3"
-          }
-        ],
-        "brand": [
-          {
-            "word": "brand",
-            "accent": "us",
-            "filename": "brand_us.mp3",
-            "path": "US/brand_us.mp3"
-          }
-        ],
-        "but": [
-          {
-            "word": "but",
-            "accent": "us",
-            "filename": "but.mp3",
-            "path": "US/but.mp3"
-          }
-        ],
-        "cub": [
-          {
-            "word": "cub",
-            "accent": "us",
-            "filename": "cub.mp3",
-            "path": "US/cub.mp3"
-          }
-        ],
-        "cup": [
-          {
-            "word": "cup",
-            "accent": "uk",
-            "filename": "cup.mp3",
-            "path": "UK/cup.mp3"
-          }
-        ],
-        "cut": [
-          {
-            "word": "cut",
-            "accent": "us",
-            "filename": "cut.mp3",
-            "path": "US/cut.mp3"
-          }
-        ],
-        "dog": [
-          {
-            "word": "dog",
-            "accent": "us",
-            "filename": "dog.mp3",
-            "path": "US/dog.mp3"
-          }
-        ],
-        "dogs": [
-          {
-            "word": "dogs",
-            "accent": "us",
-            "filename": "dogs.mp3",
-            "path": "US/dogs.mp3"
-          }
-        ],
-        "fist": [
-          {
-            "word": "fist",
-            "accent": "uk",
-            "filename": "fist_gb.mp3",
-            "path": "UK/fist_gb.mp3"
-          }
-        ],
-        "fun": [
-          {
-            "word": "fun",
-            "accent": "us",
-            "filename": "fun.mp3",
-            "path": "US/fun.mp3"
-          },
-          {
-            "word": "fun",
-            "accent": "us",
-            "filename": "fun_us.mp3",
-            "path": "US/fun_us.mp3"
-          }
-        ],
-        "gem": [
-          {
-            "word": "gem",
-            "accent": "us",
-            "filename": "gem.mp3",
-            "path": "US/gem.mp3"
-          }
-        ],
-        "get": [
-          {
-            "word": "get",
-            "accent": "us",
-            "filename": "get.mp3",
-            "path": "US/get.mp3"
-          },
-          {
-            "word": "get",
-            "accent": "us",
-            "filename": "get_us.mp3",
-            "path": "US/get_us.mp3"
-          }
-        ],
-        "giant": [
-          {
-            "word": "giant",
-            "accent": "us",
-            "filename": "giant.mp3",
-            "path": "US/giant.mp3"
-          }
-        ],
-        "go": [
-          {
-            "word": "go",
-            "accent": "us",
-            "filename": "go.mp3",
-            "path": "US/go.mp3"
-          }
-        ],
-        "hot": [
-          {
-            "word": "hot",
-            "accent": "us",
-            "filename": "hot.mp3",
-            "path": "US/hot.mp3"
-          }
-        ],
-        "hub": [
-          {
-            "word": "hub",
-            "accent": "us",
-            "filename": "hub_us.mp3",
-            "path": "US/hub_us.mp3"
-          }
-        ],
-        "hug": [
-          {
-            "word": "hug",
-            "accent": "uk",
-            "filename": "hug.mp3",
-            "path": "UK/hug.mp3"
-          }
-        ],
-        "leg": [
-          {
-            "word": "leg",
-            "accent": "us",
-            "filename": "leg.mp3",
-            "path": "US/leg.mp3"
-          }
-        ],
-        "lip": [
-          {
-            "word": "lip",
-            "accent": "us",
-            "filename": "lip.mp3",
-            "path": "US/lip.mp3"
-          }
-        ],
-        "log": [
-          {
-            "word": "log",
-            "accent": "uk",
-            "filename": "log_gb.mp3",
-            "path": "UK/log_gb.mp3"
-          }
-        ],
-        "mug": [
-          {
-            "word": "mug",
-            "accent": "us",
-            "filename": "mug.mp3",
-            "path": "US/mug.mp3"
-          }
-        ],
-        "not": [
-          {
-            "word": "not",
-            "accent": "us",
-            "filename": "not.mp3",
-            "path": "US/not.mp3"
-          }
-        ],
-        "nut": [
-          {
-            "word": "nut",
-            "accent": "uk",
-            "filename": "nut_gb.mp3",
-            "path": "UK/nut_gb.mp3"
-          },
-          {
-            "word": "nut",
-            "accent": "us",
-            "filename": "nut.mp3",
-            "path": "US/nut.mp3"
-          }
-        ],
-        "plug": [
-          {
-            "word": "plug",
-            "accent": "us",
-            "filename": "plug.mp3",
-            "path": "US/plug.mp3"
-          }
-        ],
-        "pop": [
-          {
-            "word": "pop",
-            "accent": "us",
-            "filename": "pop.mp3",
-            "path": "US/pop.mp3"
-          }
-        ],
-        "pump": [
-          {
-            "word": "pump",
-            "accent": "uk",
-            "filename": "pump_gb.mp3",
-            "path": "UK/pump_gb.mp3"
-          }
-        ],
-        "pun": [
-          {
-            "word": "pun",
-            "accent": "us",
-            "filename": "pun.mp3",
-            "path": "US/pun.mp3"
-          }
-        ],
-        "rocks": [
-          {
-            "word": "rocks",
-            "accent": "us",
-            "filename": "rocks.mp3",
-            "path": "US/rocks.mp3"
-          }
-        ],
-        "run": [
-          {
-            "word": "run",
-            "accent": "us",
-            "filename": "run.mp3",
-            "path": "US/run.mp3"
-          }
-        ],
-        "runs": [
-          {
-            "word": "runs",
-            "accent": "us",
-            "filename": "runs.mp3",
-            "path": "US/runs.mp3"
-          }
-        ],
-        "sign": [
-          {
-            "word": "sign",
-            "accent": "us",
-            "filename": "sign.mp3",
-            "path": "US/sign.mp3"
-          }
-        ],
-        "sun": [
-          {
-            "word": "sun",
-            "accent": "us",
-            "filename": "sun.mp3",
-            "path": "US/sun.mp3"
-          }
-        ],
-        "top": [
-          {
-            "word": "top",
-            "accent": "us",
-            "filename": "top.mp3",
-            "path": "US/top.mp3"
-          }
-        ],
-        "trunk": [
-          {
-            "word": "trunk",
-            "accent": "uk",
-            "filename": "trunk.mp3",
-            "path": "UK/trunk.mp3"
-          }
-        ],
-        "tuck": [
-          {
-            "word": "tuck",
-            "accent": "us",
-            "filename": "tuck.mp3",
-            "path": "US/tuck.mp3"
-          }
-        ],
-        "up": [
-          {
-            "word": "up",
-            "accent": "us",
-            "filename": "up.mp3",
-            "path": "US/up.mp3"
-          }
-        ],
-        "use": [
-          {
-            "word": "use",
-            "accent": "us",
-            "filename": "use.mp3",
-            "path": "US/use.mp3"
-          }
-        ]
-      }
-    },
     "7": {
       "letters": [
         "qu",
@@ -739,6 +1131,24 @@
       ],
       "word_count": 63,
       "words": {
+        "argue": [
+          {
+            "word": "argue",
+            "accent": "uk",
+            "filename": "argue_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/argue_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          },
+          {
+            "word": "argue",
+            "accent": "us",
+            "filename": "argue_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/argue_us.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          }
+        ],
         "bar": [
           {
             "word": "bar",
@@ -753,6 +1163,14 @@
             "accent": "us",
             "filename": "blue.mp3",
             "path": "US/blue.mp3"
+          },
+          {
+            "word": "blue",
+            "accent": "uk",
+            "filename": "blue_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/blue_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
         "car": [
@@ -761,6 +1179,14 @@
             "accent": "us",
             "filename": "car.mp3",
             "path": "US/car.mp3"
+          },
+          {
+            "word": "car",
+            "accent": "uk",
+            "filename": "car_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/car_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
           }
         ],
         "card": [
@@ -771,12 +1197,22 @@
             "path": "US/card.mp3"
           }
         ],
-        "choice": [
+        "character": [
           {
-            "word": "choice",
+            "word": "character",
+            "accent": "uk",
+            "filename": "character_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/character_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "character",
             "accent": "us",
-            "filename": "choice.mp3",
-            "path": "US/choice.mp3"
+            "filename": "character_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/character_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
           }
         ],
         "clerk": [
@@ -801,6 +1237,14 @@
             "accent": "us",
             "filename": "clue.mp3",
             "path": "US/clue.mp3"
+          },
+          {
+            "word": "clue",
+            "accent": "uk",
+            "filename": "clue_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/clue_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
         "coin": [
@@ -809,6 +1253,24 @@
             "accent": "us",
             "filename": "coin.mp3",
             "path": "US/coin.mp3"
+          }
+        ],
+        "cough": [
+          {
+            "word": "cough",
+            "accent": "uk",
+            "filename": "cough_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/cough_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "cough",
+            "accent": "us",
+            "filename": "cough_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/cough_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
           }
         ],
         "cue": [
@@ -825,6 +1287,32 @@
             "accent": "us",
             "filename": "due.mp3",
             "path": "US/due.mp3"
+          },
+          {
+            "word": "due",
+            "accent": "uk",
+            "filename": "due_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/due_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          }
+        ],
+        "enough": [
+          {
+            "word": "enough",
+            "accent": "uk",
+            "filename": "enough_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/enough_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "enough",
+            "accent": "us",
+            "filename": "enough_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/enough_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
           }
         ],
         "far": [
@@ -833,6 +1321,32 @@
             "accent": "us",
             "filename": "far.mp3",
             "path": "US/far.mp3"
+          },
+          {
+            "word": "far",
+            "accent": "uk",
+            "filename": "far_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/far_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "farm": [
+          {
+            "word": "farm",
+            "accent": "uk",
+            "filename": "farm_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/farm_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "farm",
+            "accent": "us",
+            "filename": "farm_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/farm_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
           }
         ],
         "fern": [
@@ -857,6 +1371,32 @@
             "accent": "us",
             "filename": "glue.mp3",
             "path": "US/glue.mp3"
+          },
+          {
+            "word": "glue",
+            "accent": "uk",
+            "filename": "glue_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/glue_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          }
+        ],
+        "group": [
+          {
+            "word": "group",
+            "accent": "uk",
+            "filename": "group_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/group_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          },
+          {
+            "word": "group",
+            "accent": "us",
+            "filename": "group_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/group_us.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
         "hard": [
@@ -921,6 +1461,14 @@
             "accent": "us",
             "filename": "join.mp3",
             "path": "US/join.mp3"
+          },
+          {
+            "word": "join",
+            "accent": "uk",
+            "filename": "join_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/join_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
           }
         ],
         "market": [
@@ -1011,76 +1559,40 @@
             "path": "US/point.mp3"
           }
         ],
-        "quack": [
+        "rescue": [
           {
-            "word": "quack",
+            "word": "rescue",
+            "accent": "uk",
+            "filename": "rescue_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/rescue_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          },
+          {
+            "word": "rescue",
             "accent": "us",
-            "filename": "quack.mp3",
-            "path": "US/quack.mp3"
+            "filename": "rescue_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/rescue_us.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
-        "quart": [
+        "rough": [
           {
-            "word": "quart",
-            "accent": "us",
-            "filename": "quart.mp3",
-            "path": "US/quart.mp3"
-          }
-        ],
-        "queen": [
+            "word": "rough",
+            "accent": "uk",
+            "filename": "rough_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/rough_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
           {
-            "word": "queen",
+            "word": "rough",
             "accent": "us",
-            "filename": "queen.mp3",
-            "path": "US/queen.mp3"
-          }
-        ],
-        "quest": [
-          {
-            "word": "quest",
-            "accent": "us",
-            "filename": "quest.mp3",
-            "path": "US/quest.mp3"
-          }
-        ],
-        "quick": [
-          {
-            "word": "quick",
-            "accent": "us",
-            "filename": "quick.mp3",
-            "path": "US/quick.mp3"
-          }
-        ],
-        "quiet": [
-          {
-            "word": "quiet",
-            "accent": "us",
-            "filename": "quiet.mp3",
-            "path": "US/quiet.mp3"
-          }
-        ],
-        "quit": [
-          {
-            "word": "quit",
-            "accent": "us",
-            "filename": "quit.mp3",
-            "path": "US/quit.mp3"
-          }
-        ],
-        "quiz": [
-          {
-            "word": "quiz",
-            "accent": "us",
-            "filename": "quiz.mp3",
-            "path": "US/quiz.mp3"
-          }
-        ],
-        "quote": [
-          {
-            "word": "quote",
-            "accent": "us",
-            "filename": "quote.mp3",
-            "path": "US/quote.mp3"
+            "filename": "rough_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/rough_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
           }
         ],
         "round": [
@@ -1089,14 +1601,6 @@
             "accent": "us",
             "filename": "round.mp3",
             "path": "US/round.mp3"
-          }
-        ],
-        "share": [
-          {
-            "word": "share",
-            "accent": "us",
-            "filename": "share.mp3",
-            "path": "US/share.mp3"
           }
         ],
         "shark": [
@@ -1123,6 +1627,24 @@
             "path": "US/sound.mp3"
           }
         ],
+        "soup": [
+          {
+            "word": "soup",
+            "accent": "uk",
+            "filename": "soup_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/soup_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          },
+          {
+            "word": "soup",
+            "accent": "us",
+            "filename": "soup_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/soup_us.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          }
+        ],
         "star": [
           {
             "word": "star",
@@ -1145,6 +1667,14 @@
             "accent": "us",
             "filename": "sue.mp3",
             "path": "US/sue.mp3"
+          },
+          {
+            "word": "sue",
+            "accent": "uk",
+            "filename": "sue_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/sue_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
         "term": [
@@ -1155,12 +1685,56 @@
             "path": "US/term.mp3"
           }
         ],
+        "through": [
+          {
+            "word": "through",
+            "accent": "uk",
+            "filename": "through_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/through_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          },
+          {
+            "word": "through",
+            "accent": "us",
+            "filename": "through_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/through_us.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          }
+        ],
+        "tough": [
+          {
+            "word": "tough",
+            "accent": "uk",
+            "filename": "tough_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/tough_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "tough",
+            "accent": "us",
+            "filename": "tough_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/tough_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
         "true": [
           {
             "word": "true",
             "accent": "us",
             "filename": "true.mp3",
             "path": "US/true.mp3"
+          },
+          {
+            "word": "true",
+            "accent": "uk",
+            "filename": "true_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/true_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
         "verb": [
@@ -1179,20 +1753,30 @@
             "path": "US/very.mp3"
           }
         ],
-        "voice": [
-          {
-            "word": "voice",
-            "accent": "us",
-            "filename": "voice.mp3",
-            "path": "US/voice.mp3"
-          }
-        ],
         "water": [
           {
             "word": "water",
             "accent": "us",
             "filename": "water.mp3",
             "path": "US/water.mp3"
+          }
+        ],
+        "wound": [
+          {
+            "word": "wound",
+            "accent": "uk",
+            "filename": "wound_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/wound_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          },
+          {
+            "word": "wound",
+            "accent": "us",
+            "filename": "wound_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/wound_us.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
         "yard": [
@@ -1203,20 +1787,20 @@
             "path": "US/yard.mp3"
           }
         ],
-        "year": [
-          {
-            "word": "year",
-            "accent": "us",
-            "filename": "year.mp3",
-            "path": "US/year.mp3"
-          }
-        ],
         "you": [
           {
             "word": "you",
             "accent": "us",
             "filename": "you.mp3",
             "path": "US/you.mp3"
+          },
+          {
+            "word": "you",
+            "accent": "uk",
+            "filename": "you_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/you_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
         "young": [
@@ -1235,12 +1819,484 @@
             "path": "US/your.mp3"
           }
         ],
+        "youth": [
+          {
+            "word": "youth",
+            "accent": "uk",
+            "filename": "youth_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/youth_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          },
+          {
+            "word": "youth",
+            "accent": "us",
+            "filename": "youth_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/youth_us.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          }
+        ],
         "zero": [
           {
             "word": "zero",
             "accent": "us",
             "filename": "zero.mp3",
             "path": "US/zero.mp3"
+          }
+        ]
+      }
+    },
+    "2": {
+      "letters": [
+        "c",
+        "k",
+        "e",
+        "h",
+        "r",
+        "m",
+        "d"
+      ],
+      "word_count": 38,
+      "words": {
+        "ask": [
+          {
+            "word": "ask",
+            "accent": "us",
+            "filename": "ask.mp3",
+            "path": "US/ask.mp3"
+          }
+        ],
+        "camp": [
+          {
+            "word": "camp",
+            "accent": "us",
+            "filename": "camp_us.mp3",
+            "path": "US/camp_us.mp3"
+          }
+        ],
+        "can": [
+          {
+            "word": "can",
+            "accent": "us",
+            "filename": "can.mp3",
+            "path": "US/can.mp3"
+          },
+          {
+            "word": "can",
+            "accent": "uk",
+            "filename": "can_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/can_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "cat": [
+          {
+            "word": "cat",
+            "accent": "us",
+            "filename": "cat.mp3",
+            "path": "US/cat.mp3"
+          },
+          {
+            "word": "cat",
+            "accent": "uk",
+            "filename": "cat_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/cat_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "cent": [
+          {
+            "word": "cent",
+            "accent": "us",
+            "filename": "cent.mp3",
+            "path": "US/cent.mp3"
+          },
+          {
+            "word": "cent",
+            "accent": "uk",
+            "filename": "cent_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/cent_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "crank": [
+          {
+            "word": "crank",
+            "accent": "us",
+            "filename": "crank.mp3",
+            "path": "US/crank.mp3"
+          }
+        ],
+        "dance": [
+          {
+            "word": "dance",
+            "accent": "uk",
+            "filename": "dance_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/dance_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "dance",
+            "accent": "us",
+            "filename": "dance_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/dance_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "dip": [
+          {
+            "word": "dip",
+            "accent": "us",
+            "filename": "dip.mp3",
+            "path": "US/dip.mp3"
+          }
+        ],
+        "drink": [
+          {
+            "word": "drink",
+            "accent": "us",
+            "filename": "drink.mp3",
+            "path": "US/drink.mp3"
+          }
+        ],
+        "ham": [
+          {
+            "word": "ham",
+            "accent": "us",
+            "filename": "ham.mp3",
+            "path": "US/ham.mp3"
+          }
+        ],
+        "hand": [
+          {
+            "word": "hand",
+            "accent": "uk",
+            "filename": "hand_gb.mp3",
+            "path": "UK/hand_gb.mp3"
+          }
+        ],
+        "has": [
+          {
+            "word": "has",
+            "accent": "us",
+            "filename": "has.mp3",
+            "path": "US/has.mp3"
+          }
+        ],
+        "hat": [
+          {
+            "word": "hat",
+            "accent": "us",
+            "filename": "hat.mp3",
+            "path": "US/hat.mp3"
+          }
+        ],
+        "hen": [
+          {
+            "word": "hen",
+            "accent": "uk",
+            "filename": "hen.mp3",
+            "path": "UK/hen.mp3"
+          }
+        ],
+        "hint": [
+          {
+            "word": "hint",
+            "accent": "uk",
+            "filename": "hint_gb.mp3",
+            "path": "UK/hint_gb.mp3"
+          }
+        ],
+        "his": [
+          {
+            "word": "his",
+            "accent": "us",
+            "filename": "his.mp3",
+            "path": "US/his.mp3"
+          }
+        ],
+        "hit": [
+          {
+            "word": "hit",
+            "accent": "us",
+            "filename": "hit.mp3",
+            "path": "US/hit.mp3"
+          }
+        ],
+        "kick": [
+          {
+            "word": "kick",
+            "accent": "uk",
+            "filename": "kick_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/kick_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "kick",
+            "accent": "us",
+            "filename": "kick_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/kick_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "kind": [
+          {
+            "word": "kind",
+            "accent": "uk",
+            "filename": "kind_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/kind_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          },
+          {
+            "word": "kind",
+            "accent": "us",
+            "filename": "kind_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/kind_us.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          }
+        ],
+        "kit": [
+          {
+            "word": "kit",
+            "accent": "us",
+            "filename": "kit.mp3",
+            "path": "US/kit.mp3"
+          },
+          {
+            "word": "kit",
+            "accent": "uk",
+            "filename": "kit_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/kit_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "mat": [
+          {
+            "word": "mat",
+            "accent": "us",
+            "filename": "mat.mp3",
+            "path": "US/mat.mp3"
+          }
+        ],
+        "mind": [
+          {
+            "word": "mind",
+            "accent": "uk",
+            "filename": "mind_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/mind_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          },
+          {
+            "word": "mind",
+            "accent": "us",
+            "filename": "mind_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/mind_us.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          }
+        ],
+        "mink": [
+          {
+            "word": "mink",
+            "accent": "uk",
+            "filename": "mink.mp3",
+            "path": "UK/mink.mp3"
+          }
+        ],
+        "nest": [
+          {
+            "word": "nest",
+            "accent": "us",
+            "filename": "nest_us.mp3",
+            "path": "US/nest_us.mp3"
+          }
+        ],
+        "net": [
+          {
+            "word": "net",
+            "accent": "uk",
+            "filename": "net.mp3",
+            "path": "UK/net.mp3"
+          }
+        ],
+        "pack": [
+          {
+            "word": "pack",
+            "accent": "uk",
+            "filename": "pack_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/pack_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "pack",
+            "accent": "us",
+            "filename": "pack_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/pack_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "pen": [
+          {
+            "word": "pen",
+            "accent": "us",
+            "filename": "pen_us.mp3",
+            "path": "US/pen_us.mp3"
+          }
+        ],
+        "pick": [
+          {
+            "word": "pick",
+            "accent": "us",
+            "filename": "pick.mp3",
+            "path": "US/pick.mp3"
+          },
+          {
+            "word": "pick",
+            "accent": "uk",
+            "filename": "pick_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/pick_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "prince": [
+          {
+            "word": "prince",
+            "accent": "uk",
+            "filename": "prince_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/prince_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "prince",
+            "accent": "us",
+            "filename": "prince_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/prince_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "red": [
+          {
+            "word": "red",
+            "accent": "us",
+            "filename": "red.mp3",
+            "path": "US/red.mp3"
+          }
+        ],
+        "rest": [
+          {
+            "word": "rest",
+            "accent": "uk",
+            "filename": "rest_gb.mp3",
+            "path": "UK/rest_gb.mp3"
+          }
+        ],
+        "rid": [
+          {
+            "word": "rid",
+            "accent": "us",
+            "filename": "rid.mp3",
+            "path": "US/rid.mp3"
+          }
+        ],
+        "sad": [
+          {
+            "word": "sad",
+            "accent": "uk",
+            "filename": "sad_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/sad_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "sad",
+            "accent": "us",
+            "filename": "sad_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/sad_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "scent": [
+          {
+            "word": "scent",
+            "accent": "uk",
+            "filename": "scent_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/scent_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "scent",
+            "accent": "us",
+            "filename": "scent_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/scent_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "sick": [
+          {
+            "word": "sick",
+            "accent": "uk",
+            "filename": "sick_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/sick_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "sick",
+            "accent": "us",
+            "filename": "sick_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/sick_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "stamp": [
+          {
+            "word": "stamp",
+            "accent": "us",
+            "filename": "stamp.mp3",
+            "path": "US/stamp.mp3"
+          }
+        ],
+        "task": [
+          {
+            "word": "task",
+            "accent": "us",
+            "filename": "task_us.mp3",
+            "path": "US/task_us.mp3"
+          }
+        ],
+        "test": [
+          {
+            "word": "test",
+            "accent": "uk",
+            "filename": "test.mp3",
+            "path": "UK/test.mp3"
+          },
+          {
+            "word": "test",
+            "accent": "us",
+            "filename": "test.mp3",
+            "path": "US/test.mp3"
           }
         ]
       }
@@ -1254,7 +2310,7 @@
         "ee",
         "or"
       ],
-      "word_count": 45,
+      "word_count": 59,
       "words": {
         "bee": [
           {
@@ -1270,6 +2326,14 @@
             "accent": "us",
             "filename": "boat.mp3",
             "path": "US/boat.mp3"
+          },
+          {
+            "word": "boat",
+            "accent": "uk",
+            "filename": "boat_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/boat_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
         "born": [
@@ -1286,6 +2350,32 @@
             "accent": "us",
             "filename": "brain.mp3",
             "path": "US/brain.mp3"
+          },
+          {
+            "word": "brain",
+            "accent": "uk",
+            "filename": "brain_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/brain_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          }
+        ],
+        "brief": [
+          {
+            "word": "brief",
+            "accent": "uk",
+            "filename": "brief_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/brief_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          },
+          {
+            "word": "brief",
+            "accent": "us",
+            "filename": "brief_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/brief_us.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
         "coat": [
@@ -1294,6 +2384,14 @@
             "accent": "us",
             "filename": "coat.mp3",
             "path": "US/coat.mp3"
+          },
+          {
+            "word": "coat",
+            "accent": "uk",
+            "filename": "coat_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/coat_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
         "corn": [
@@ -1312,12 +2410,56 @@
             "path": "US/cried.mp3"
           }
         ],
+        "cries": [
+          {
+            "word": "cries",
+            "accent": "uk",
+            "filename": "cries_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/cries_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          },
+          {
+            "word": "cries",
+            "accent": "us",
+            "filename": "cries_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/cries_us.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          }
+        ],
+        "deep": [
+          {
+            "word": "deep",
+            "accent": "uk",
+            "filename": "deep_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/deep_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          },
+          {
+            "word": "deep",
+            "accent": "us",
+            "filename": "deep_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/deep_us.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          }
+        ],
         "die": [
           {
             "word": "die",
             "accent": "us",
             "filename": "die.mp3",
             "path": "US/die.mp3"
+          },
+          {
+            "word": "die",
+            "accent": "uk",
+            "filename": "die_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/die_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
         "dried": [
@@ -1326,6 +2468,14 @@
             "accent": "us",
             "filename": "dried.mp3",
             "path": "US/dried.mp3"
+          },
+          {
+            "word": "dried",
+            "accent": "uk",
+            "filename": "dried_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/dried_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
         "feel": [
@@ -1334,6 +2484,60 @@
             "accent": "us",
             "filename": "feel.mp3",
             "path": "US/feel.mp3"
+          }
+        ],
+        "field": [
+          {
+            "word": "field",
+            "accent": "uk",
+            "filename": "field_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/field_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          },
+          {
+            "word": "field",
+            "accent": "us",
+            "filename": "field_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/field_us.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          }
+        ],
+        "flies": [
+          {
+            "word": "flies",
+            "accent": "uk",
+            "filename": "flies_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/flies_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          },
+          {
+            "word": "flies",
+            "accent": "us",
+            "filename": "flies_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/flies_us.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          }
+        ],
+        "foam": [
+          {
+            "word": "foam",
+            "accent": "uk",
+            "filename": "foam_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/foam_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          },
+          {
+            "word": "foam",
+            "accent": "us",
+            "filename": "foam_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/foam_us.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
         "for": [
@@ -1366,6 +2570,14 @@
             "accent": "us",
             "filename": "free.mp3",
             "path": "US/free.mp3"
+          },
+          {
+            "word": "free",
+            "accent": "uk",
+            "filename": "free_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/free_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
         "fried": [
@@ -1382,6 +2594,14 @@
             "accent": "us",
             "filename": "goat.mp3",
             "path": "US/goat.mp3"
+          },
+          {
+            "word": "goat",
+            "accent": "uk",
+            "filename": "goat_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/goat_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
         "green": [
@@ -1390,6 +2610,14 @@
             "accent": "us",
             "filename": "green.mp3",
             "path": "US/green.mp3"
+          },
+          {
+            "word": "green",
+            "accent": "uk",
+            "filename": "green_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/green_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
         "horn": [
@@ -1400,12 +2628,38 @@
             "path": "US/horn.mp3"
           }
         ],
+        "jacket": [
+          {
+            "word": "jacket",
+            "accent": "uk",
+            "filename": "jacket_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/jacket_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "jacket",
+            "accent": "us",
+            "filename": "jacket_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/jacket_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
         "jam": [
           {
             "word": "jam",
             "accent": "us",
             "filename": "jam.mp3",
             "path": "US/jam.mp3"
+          },
+          {
+            "word": "jam",
+            "accent": "uk",
+            "filename": "jam_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/jam_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
           }
         ],
         "jet": [
@@ -1424,12 +2678,22 @@
             "path": "US/jog.mp3"
           }
         ],
-        "joke": [
+        "judge": [
           {
-            "word": "joke",
+            "word": "judge",
+            "accent": "uk",
+            "filename": "judge_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/judge_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "judge",
             "accent": "us",
-            "filename": "joke.mp3",
-            "path": "US/joke.mp3"
+            "filename": "judge_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/judge_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
           }
         ],
         "jump": [
@@ -1438,6 +2702,32 @@
             "accent": "us",
             "filename": "jump.mp3",
             "path": "US/jump.mp3"
+          },
+          {
+            "word": "jump",
+            "accent": "uk",
+            "filename": "jump_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/jump_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "just": [
+          {
+            "word": "just",
+            "accent": "uk",
+            "filename": "just_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/just_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "just",
+            "accent": "us",
+            "filename": "just_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/just_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
           }
         ],
         "keep": [
@@ -1446,6 +2736,14 @@
             "accent": "us",
             "filename": "keep.mp3",
             "path": "US/keep.mp3"
+          },
+          {
+            "word": "keep",
+            "accent": "uk",
+            "filename": "keep_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/keep_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
         "knee": [
@@ -1454,6 +2752,14 @@
             "accent": "us",
             "filename": "knee.mp3",
             "path": "US/knee.mp3"
+          },
+          {
+            "word": "knee",
+            "accent": "uk",
+            "filename": "knee_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/knee_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
           }
         ],
         "lie": [
@@ -1462,6 +2768,14 @@
             "accent": "us",
             "filename": "lie.mp3",
             "path": "US/lie.mp3"
+          },
+          {
+            "word": "lie",
+            "accent": "uk",
+            "filename": "lie_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/lie_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
         "load": [
@@ -1470,6 +2784,50 @@
             "accent": "us",
             "filename": "load.mp3",
             "path": "US/load.mp3"
+          },
+          {
+            "word": "load",
+            "accent": "uk",
+            "filename": "load_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/load_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          }
+        ],
+        "main": [
+          {
+            "word": "main",
+            "accent": "uk",
+            "filename": "main_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/main_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          },
+          {
+            "word": "main",
+            "accent": "us",
+            "filename": "main_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/main_us.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          }
+        ],
+        "niece": [
+          {
+            "word": "niece",
+            "accent": "uk",
+            "filename": "niece_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/niece_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          },
+          {
+            "word": "niece",
+            "accent": "us",
+            "filename": "niece_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/niece_us.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
         "or": [
@@ -1486,6 +2844,14 @@
             "accent": "us",
             "filename": "pain.mp3",
             "path": "US/pain.mp3"
+          },
+          {
+            "word": "pain",
+            "accent": "uk",
+            "filename": "pain_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/pain_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
         "pie": [
@@ -1494,6 +2860,32 @@
             "accent": "us",
             "filename": "pie.mp3",
             "path": "US/pie.mp3"
+          },
+          {
+            "word": "pie",
+            "accent": "uk",
+            "filename": "pie_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/pie_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          }
+        ],
+        "piece": [
+          {
+            "word": "piece",
+            "accent": "uk",
+            "filename": "piece_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/piece_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          },
+          {
+            "word": "piece",
+            "accent": "us",
+            "filename": "piece_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/piece_us.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
         "plain": [
@@ -1502,6 +2894,14 @@
             "accent": "us",
             "filename": "plain.mp3",
             "path": "US/plain.mp3"
+          },
+          {
+            "word": "plain",
+            "accent": "uk",
+            "filename": "plain_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/plain_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
         "rain": [
@@ -1510,6 +2910,14 @@
             "accent": "us",
             "filename": "rain.mp3",
             "path": "US/rain.mp3"
+          },
+          {
+            "word": "rain",
+            "accent": "uk",
+            "filename": "rain_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/rain_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
         "road": [
@@ -1518,6 +2926,14 @@
             "accent": "us",
             "filename": "road.mp3",
             "path": "US/road.mp3"
+          },
+          {
+            "word": "road",
+            "accent": "uk",
+            "filename": "road_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/road_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
         "roam": [
@@ -1526,6 +2942,50 @@
             "accent": "us",
             "filename": "roam.mp3",
             "path": "US/roam.mp3"
+          },
+          {
+            "word": "roam",
+            "accent": "uk",
+            "filename": "roam_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/roam_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          }
+        ],
+        "science": [
+          {
+            "word": "science",
+            "accent": "uk",
+            "filename": "science_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/science_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "science",
+            "accent": "us",
+            "filename": "science_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/science_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "scissors": [
+          {
+            "word": "scissors",
+            "accent": "uk",
+            "filename": "scissors_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/scissors_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "scissors",
+            "accent": "us",
+            "filename": "scissors_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/scissors_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
           }
         ],
         "see": [
@@ -1534,6 +2994,32 @@
             "accent": "us",
             "filename": "see.mp3",
             "path": "US/see.mp3"
+          },
+          {
+            "word": "see",
+            "accent": "uk",
+            "filename": "see_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/see_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          }
+        ],
+        "sleep": [
+          {
+            "word": "sleep",
+            "accent": "uk",
+            "filename": "sleep_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/sleep_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          },
+          {
+            "word": "sleep",
+            "accent": "us",
+            "filename": "sleep_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/sleep_us.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
         "soap": [
@@ -1542,6 +3028,32 @@
             "accent": "us",
             "filename": "soap.mp3",
             "path": "US/soap.mp3"
+          },
+          {
+            "word": "soap",
+            "accent": "uk",
+            "filename": "soap_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/soap_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          }
+        ],
+        "sort": [
+          {
+            "word": "sort",
+            "accent": "uk",
+            "filename": "sort_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/sort_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "sort",
+            "accent": "us",
+            "filename": "sort_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/sort_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
           }
         ],
         "stain": [
@@ -1550,6 +3062,14 @@
             "accent": "us",
             "filename": "stain.mp3",
             "path": "US/stain.mp3"
+          },
+          {
+            "word": "stain",
+            "accent": "uk",
+            "filename": "stain_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/stain_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
         "tie": [
@@ -1558,6 +3078,14 @@
             "accent": "us",
             "filename": "tie.mp3",
             "path": "US/tie.mp3"
+          },
+          {
+            "word": "tie",
+            "accent": "uk",
+            "filename": "tie_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/tie_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
         "toad": [
@@ -1582,6 +3110,14 @@
             "accent": "us",
             "filename": "train.mp3",
             "path": "US/train.mp3"
+          },
+          {
+            "word": "train",
+            "accent": "uk",
+            "filename": "train_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/train_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
         "tree": [
@@ -1590,6 +3126,14 @@
             "accent": "us",
             "filename": "tree.mp3",
             "path": "US/tree.mp3"
+          },
+          {
+            "word": "tree",
+            "accent": "uk",
+            "filename": "tree_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/tree_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
         "tried": [
@@ -1600,20 +3144,22 @@
             "path": "US/tried.mp3"
           }
         ],
-        "wheel": [
+        "tries": [
           {
-            "word": "wheel",
-            "accent": "us",
-            "filename": "wheel.mp3",
-            "path": "US/wheel.mp3"
-          }
-        ],
-        "worn": [
+            "word": "tries",
+            "accent": "uk",
+            "filename": "tries_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/tries_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          },
           {
-            "word": "worn",
+            "word": "tries",
             "accent": "us",
-            "filename": "worn.mp3",
-            "path": "US/worn.mp3"
+            "filename": "tries_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/tries_us.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ]
       }
@@ -1626,7 +3172,7 @@
         "v",
         "oo"
       ],
-      "word_count": 58,
+      "word_count": 47,
       "words": {
         "book": [
           {
@@ -1666,6 +3212,14 @@
             "accent": "us",
             "filename": "cool.mp3",
             "path": "US/cool.mp3"
+          },
+          {
+            "word": "cool",
+            "accent": "uk",
+            "filename": "cool_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/cool_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
         "fizz": [
@@ -1682,6 +3236,14 @@
             "accent": "us",
             "filename": "food.mp3",
             "path": "US/food.mp3"
+          },
+          {
+            "word": "food",
+            "accent": "uk",
+            "filename": "food_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/food_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
         "foot": [
@@ -1692,28 +3254,12 @@
             "path": "US/foot.mp3"
           }
         ],
-        "give": [
-          {
-            "word": "give",
-            "accent": "us",
-            "filename": "give.mp3",
-            "path": "US/give.mp3"
-          }
-        ],
         "good": [
           {
             "word": "good",
             "accent": "us",
             "filename": "good.mp3",
             "path": "US/good.mp3"
-          }
-        ],
-        "how": [
-          {
-            "word": "how",
-            "accent": "us",
-            "filename": "how.mp3",
-            "path": "US/how.mp3"
           }
         ],
         "igloo": [
@@ -1730,14 +3276,14 @@
             "accent": "us",
             "filename": "king.mp3",
             "path": "US/king.mp3"
-          }
-        ],
-        "know": [
+          },
           {
-            "word": "know",
-            "accent": "us",
-            "filename": "know.mp3",
-            "path": "US/know.mp3"
+            "word": "king",
+            "accent": "uk",
+            "filename": "king_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/king_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
           }
         ],
         "long": [
@@ -1756,36 +3302,38 @@
             "path": "US/look.mp3"
           }
         ],
-        "love": [
-          {
-            "word": "love",
-            "accent": "us",
-            "filename": "love.mp3",
-            "path": "US/love.mp3"
-          }
-        ],
-        "maze": [
-          {
-            "word": "maze",
-            "accent": "us",
-            "filename": "maze.mp3",
-            "path": "US/maze.mp3"
-          }
-        ],
         "moon": [
           {
             "word": "moon",
             "accent": "us",
             "filename": "moon.mp3",
             "path": "US/moon.mp3"
+          },
+          {
+            "word": "moon",
+            "accent": "uk",
+            "filename": "moon_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/moon_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
-        "new": [
+        "noon": [
           {
-            "word": "new",
+            "word": "noon",
+            "accent": "uk",
+            "filename": "noon_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/noon_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          },
+          {
+            "word": "noon",
             "accent": "us",
-            "filename": "new.mp3",
-            "path": "US/new.mp3"
+            "filename": "noon_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/noon_us.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
         "pool": [
@@ -1794,6 +3342,14 @@
             "accent": "us",
             "filename": "pool.mp3",
             "path": "US/pool.mp3"
+          },
+          {
+            "word": "pool",
+            "accent": "uk",
+            "filename": "pool_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/pool_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
         "ring": [
@@ -1810,6 +3366,14 @@
             "accent": "us",
             "filename": "room.mp3",
             "path": "US/room.mp3"
+          },
+          {
+            "word": "room",
+            "accent": "uk",
+            "filename": "room_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/room_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
         "sing": [
@@ -1820,20 +3384,20 @@
             "path": "US/sing.mp3"
           }
         ],
-        "size": [
-          {
-            "word": "size",
-            "accent": "us",
-            "filename": "size.mp3",
-            "path": "US/size.mp3"
-          }
-        ],
         "song": [
           {
             "word": "song",
             "accent": "us",
             "filename": "song.mp3",
             "path": "US/song.mp3"
+          },
+          {
+            "word": "song",
+            "accent": "uk",
+            "filename": "song_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/song_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
           }
         ],
         "soon": [
@@ -1842,6 +3406,14 @@
             "accent": "us",
             "filename": "soon.mp3",
             "path": "US/soon.mp3"
+          },
+          {
+            "word": "soon",
+            "accent": "uk",
+            "filename": "soon_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/soon_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
         "sting": [
@@ -1874,6 +3446,14 @@
             "accent": "us",
             "filename": "tool.mp3",
             "path": "US/tool.mp3"
+          },
+          {
+            "word": "tool",
+            "accent": "uk",
+            "filename": "tool_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/tool_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
         "van": [
@@ -1884,36 +3464,12 @@
             "path": "US/van.mp3"
           }
         ],
-        "view": [
-          {
-            "word": "view",
-            "accent": "us",
-            "filename": "view.mp3",
-            "path": "US/view.mp3"
-          }
-        ],
-        "vine": [
-          {
-            "word": "vine",
-            "accent": "us",
-            "filename": "vine.mp3",
-            "path": "US/vine.mp3"
-          }
-        ],
         "visit": [
           {
             "word": "visit",
             "accent": "us",
             "filename": "visit.mp3",
             "path": "US/visit.mp3"
-          }
-        ],
-        "vote": [
-          {
-            "word": "vote",
-            "accent": "us",
-            "filename": "vote.mp3",
-            "path": "US/vote.mp3"
           }
         ],
         "walk": [
@@ -1932,22 +3488,6 @@
             "path": "US/wall.mp3"
           }
         ],
-        "wax": [
-          {
-            "word": "wax",
-            "accent": "us",
-            "filename": "wax.mp3",
-            "path": "US/wax.mp3"
-          }
-        ],
-        "way": [
-          {
-            "word": "way",
-            "accent": "us",
-            "filename": "way.mp3",
-            "path": "US/way.mp3"
-          }
-        ],
         "web": [
           {
             "word": "web",
@@ -1964,12 +3504,38 @@
             "path": "US/wet.mp3"
           }
         ],
+        "wheel": [
+          {
+            "word": "wheel",
+            "accent": "us",
+            "filename": "wheel.mp3",
+            "path": "US/wheel.mp3"
+          }
+        ],
         "wig": [
           {
             "word": "wig",
             "accent": "us",
             "filename": "wig.mp3",
             "path": "US/wig.mp3"
+          }
+        ],
+        "wild": [
+          {
+            "word": "wild",
+            "accent": "uk",
+            "filename": "wild_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/wild_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          },
+          {
+            "word": "wild",
+            "accent": "us",
+            "filename": "wild_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/wild_us.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
         "will": [
@@ -2020,12 +3586,12 @@
             "path": "US/wool.mp3"
           }
         ],
-        "wow": [
+        "worn": [
           {
-            "word": "wow",
+            "word": "worn",
             "accent": "us",
-            "filename": "wow.mp3",
-            "path": "US/wow.mp3"
+            "filename": "worn.mp3",
+            "path": "US/worn.mp3"
           }
         ],
         "wrist": [
@@ -2034,14 +3600,6 @@
             "accent": "us",
             "filename": "wrist.mp3",
             "path": "US/wrist.mp3"
-          }
-        ],
-        "write": [
-          {
-            "word": "write",
-            "accent": "us",
-            "filename": "write.mp3",
-            "path": "US/write.mp3"
           }
         ],
         "wrong": [
@@ -2066,14 +3624,6 @@
             "accent": "us",
             "filename": "zip.mp3",
             "path": "US/zip.mp3"
-          }
-        ],
-        "zone": [
-          {
-            "word": "zone",
-            "accent": "us",
-            "filename": "zone.mp3",
-            "path": "US/zone.mp3"
           }
         ],
         "zoo": [
@@ -2102,7 +3652,7 @@
         "sh",
         "th"
       ],
-      "word_count": 51,
+      "word_count": 64,
       "words": {
         "box": [
           {
@@ -2120,12 +3670,38 @@
             "path": "US/bush.mp3"
           }
         ],
+        "by": [
+          {
+            "word": "by",
+            "accent": "uk",
+            "filename": "by_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/by_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          },
+          {
+            "word": "by",
+            "accent": "us",
+            "filename": "by_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/by_us.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          }
+        ],
         "chain": [
           {
             "word": "chain",
             "accent": "us",
             "filename": "chain.mp3",
             "path": "US/chain.mp3"
+          },
+          {
+            "word": "chain",
+            "accent": "uk",
+            "filename": "chain_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/chain_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
         "chat": [
@@ -2152,6 +3728,24 @@
             "path": "US/cheese.mp3"
           }
         ],
+        "chemist": [
+          {
+            "word": "chemist",
+            "accent": "uk",
+            "filename": "chemist_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/chemist_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "chemist",
+            "accent": "us",
+            "filename": "chemist_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/chemist_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
         "chest": [
           {
             "word": "chest",
@@ -2168,12 +3762,38 @@
             "path": "US/chick.mp3"
           }
         ],
+        "chief": [
+          {
+            "word": "chief",
+            "accent": "uk",
+            "filename": "chief_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/chief_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          },
+          {
+            "word": "chief",
+            "accent": "us",
+            "filename": "chief_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/chief_us.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          }
+        ],
         "child": [
           {
             "word": "child",
             "accent": "us",
             "filename": "child.mp3",
             "path": "US/child.mp3"
+          },
+          {
+            "word": "child",
+            "accent": "uk",
+            "filename": "child_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/child_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
         "chip": [
@@ -2184,6 +3804,42 @@
             "path": "US/chip.mp3"
           }
         ],
+        "city": [
+          {
+            "word": "city",
+            "accent": "uk",
+            "filename": "city_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/city_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "city",
+            "accent": "us",
+            "filename": "city_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/city_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
+        "cry": [
+          {
+            "word": "cry",
+            "accent": "uk",
+            "filename": "cry_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/cry_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          },
+          {
+            "word": "cry",
+            "accent": "us",
+            "filename": "cry_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/cry_us.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          }
+        ],
         "cycle": [
           {
             "word": "cycle",
@@ -2192,12 +3848,56 @@
             "path": "US/cycle.mp3"
           }
         ],
+        "dry": [
+          {
+            "word": "dry",
+            "accent": "uk",
+            "filename": "dry_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/dry_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          },
+          {
+            "word": "dry",
+            "accent": "us",
+            "filename": "dry_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/dry_us.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          }
+        ],
+        "echo": [
+          {
+            "word": "echo",
+            "accent": "uk",
+            "filename": "echo_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/echo_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "echo",
+            "accent": "us",
+            "filename": "echo_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/echo_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
         "fish": [
           {
             "word": "fish",
             "accent": "us",
             "filename": "fish.mp3",
             "path": "US/fish.mp3"
+          },
+          {
+            "word": "fish",
+            "accent": "uk",
+            "filename": "fish_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/fish_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
           }
         ],
         "fix": [
@@ -2208,12 +3908,38 @@
             "path": "US/fix.mp3"
           }
         ],
+        "fly": [
+          {
+            "word": "fly",
+            "accent": "uk",
+            "filename": "fly_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/fly_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          },
+          {
+            "word": "fly",
+            "accent": "us",
+            "filename": "fly_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/fly_us.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          }
+        ],
         "fox": [
           {
             "word": "fox",
             "accent": "us",
             "filename": "fox.mp3",
             "path": "US/fox.mp3"
+          },
+          {
+            "word": "fox",
+            "accent": "uk",
+            "filename": "fox_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/fox_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
           }
         ],
         "gym": [
@@ -2222,6 +3948,14 @@
             "accent": "us",
             "filename": "gym.mp3",
             "path": "US/gym.mp3"
+          },
+          {
+            "word": "gym",
+            "accent": "uk",
+            "filename": "gym_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/gym_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
           }
         ],
         "happy": [
@@ -2232,12 +3966,22 @@
             "path": "US/happy.mp3"
           }
         ],
-        "key": [
+        "jelly": [
           {
-            "word": "key",
+            "word": "jelly",
+            "accent": "uk",
+            "filename": "jelly_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/jelly_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "jelly",
             "accent": "us",
-            "filename": "key.mp3",
-            "path": "US/key.mp3"
+            "filename": "jelly_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/jelly_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
           }
         ],
         "math": [
@@ -2256,6 +4000,24 @@
             "path": "US/max.mp3"
           }
         ],
+        "mechanic": [
+          {
+            "word": "mechanic",
+            "accent": "uk",
+            "filename": "mechanic_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/mechanic_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "mechanic",
+            "accent": "us",
+            "filename": "mechanic_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/mechanic_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
         "mix": [
           {
             "word": "mix",
@@ -2270,6 +4032,24 @@
             "accent": "us",
             "filename": "much.mp3",
             "path": "US/much.mp3"
+          }
+        ],
+        "my": [
+          {
+            "word": "my",
+            "accent": "uk",
+            "filename": "my_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/my_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          },
+          {
+            "word": "my",
+            "accent": "us",
+            "filename": "my_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/my_us.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
         "path": [
@@ -2296,6 +4076,24 @@
             "path": "US/rich.mp3"
           }
         ],
+        "school": [
+          {
+            "word": "school",
+            "accent": "uk",
+            "filename": "school_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/school_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "school",
+            "accent": "us",
+            "filename": "school_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/school_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
         "shell": [
           {
             "word": "shell",
@@ -2304,12 +4102,22 @@
             "path": "US/shell.mp3"
           }
         ],
-        "shine": [
+        "shield": [
           {
-            "word": "shine",
+            "word": "shield",
+            "accent": "uk",
+            "filename": "shield_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/shield_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          },
+          {
+            "word": "shield",
             "accent": "us",
-            "filename": "shine.mp3",
-            "path": "US/shine.mp3"
+            "filename": "shield_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/shield_us.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
         "ship": [
@@ -2318,14 +4126,6 @@
             "accent": "us",
             "filename": "ship.mp3",
             "path": "US/ship.mp3"
-          }
-        ],
-        "shoe": [
-          {
-            "word": "shoe",
-            "accent": "us",
-            "filename": "shoe.mp3",
-            "path": "US/shoe.mp3"
           }
         ],
         "shop": [
@@ -2344,6 +4144,24 @@
             "path": "US/short.mp3"
           }
         ],
+        "shy": [
+          {
+            "word": "shy",
+            "accent": "uk",
+            "filename": "shy_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/shy_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          },
+          {
+            "word": "shy",
+            "accent": "us",
+            "filename": "shy_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/shy_us.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          }
+        ],
         "six": [
           {
             "word": "six",
@@ -2352,20 +4170,48 @@
             "path": "US/six.mp3"
           }
         ],
+        "sky": [
+          {
+            "word": "sky",
+            "accent": "uk",
+            "filename": "sky_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/sky_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          },
+          {
+            "word": "sky",
+            "accent": "us",
+            "filename": "sky_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/sky_us.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          }
+        ],
+        "stomach": [
+          {
+            "word": "stomach",
+            "accent": "uk",
+            "filename": "stomach_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/stomach_uk.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          },
+          {
+            "word": "stomach",
+            "accent": "us",
+            "filename": "stomach_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_consonants/stomach_us.mp3",
+            "group": 10,
+            "category": "alternative_consonants"
+          }
+        ],
         "tax": [
           {
             "word": "tax",
             "accent": "us",
             "filename": "tax.mp3",
             "path": "US/tax.mp3"
-          }
-        ],
-        "teach": [
-          {
-            "word": "teach",
-            "accent": "us",
-            "filename": "teach.mp3",
-            "path": "US/teach.mp3"
           }
         ],
         "thank": [
@@ -2382,14 +4228,6 @@
             "accent": "us",
             "filename": "that.mp3",
             "path": "US/that.mp3"
-          }
-        ],
-        "thaw": [
-          {
-            "word": "thaw",
-            "accent": "us",
-            "filename": "thaw.mp3",
-            "path": "US/thaw.mp3"
           }
         ],
         "the": [
@@ -2446,14 +4284,14 @@
             "accent": "us",
             "filename": "three.mp3",
             "path": "US/three.mp3"
-          }
-        ],
-        "throw": [
+          },
           {
-            "word": "throw",
-            "accent": "us",
-            "filename": "throw.mp3",
-            "path": "US/throw.mp3"
+            "word": "three",
+            "accent": "uk",
+            "filename": "three_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/three_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
           }
         ],
         "thumb": [
@@ -2464,12 +4302,38 @@
             "path": "US/thumb.mp3"
           }
         ],
+        "try": [
+          {
+            "word": "try",
+            "accent": "uk",
+            "filename": "try_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/try_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          },
+          {
+            "word": "try",
+            "accent": "us",
+            "filename": "try_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/try_us.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          }
+        ],
         "wash": [
           {
             "word": "wash",
             "accent": "us",
             "filename": "wash.mp3",
             "path": "US/wash.mp3"
+          }
+        ],
+        "wax": [
+          {
+            "word": "wax",
+            "accent": "us",
+            "filename": "wax.mp3",
+            "path": "US/wax.mp3"
           }
         ],
         "wish": [
@@ -2511,6 +4375,24 @@
             "filename": "yet.mp3",
             "path": "US/yet.mp3"
           }
+        ],
+        "yield": [
+          {
+            "word": "yield",
+            "accent": "uk",
+            "filename": "yield_uk.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/yield_uk.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          },
+          {
+            "word": "yield",
+            "accent": "us",
+            "filename": "yield_us.mp3",
+            "path": "advanced_phonics_sounds/alternative_vowels/yield_us.mp3",
+            "group": 9,
+            "category": "alternative_vowels"
+          }
         ]
       }
     },
@@ -2549,5 +4431,5 @@
     }
   },
   "generated_at": "2025-08-27",
-  "total_words_analyzed": 300
+  "total_words_analyzed": 357
 }
