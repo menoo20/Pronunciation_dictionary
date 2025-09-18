@@ -978,116 +978,102 @@
             });
         }
 
-        // Generate multiple choice options for a word
+        // Generate multiple choice options for a word with rhyming and phonetic similarity
         function generateMultipleChoiceOptions(correctWord, groupNumber) {
             const options = [correctWord];
             
-            // Get words from current group
-            const groupWords = getAllWordsForGroup(groupNumber);
-            console.log(`Group ${groupNumber} has ${groupWords.length} words:`, groupWords);
-            
-            // Get words from nearby groups as additional options
-            const allAvailableWords = [];
-            for (let i = 1; i <= 7; i++) {
-                if (i !== groupNumber) {
-                    const otherGroupWords = getAllWordsForGroup(i);
-                    allAvailableWords.push(...otherGroupWords);
-                }
+            // Get words from current and previous groups (progressive difficulty)
+            const availableWords = [];
+            for (let i = 1; i <= groupNumber; i++) {
+                const groupWords = getAllWordsForGroup(i);
+                availableWords.push(...groupWords);
             }
             
-            // Combine all potential distractors
-            const allWords = [...groupWords, ...allAvailableWords];
-            
-            // Add common basic words as ultimate fallback
-            const commonWords = [
-                'cat', 'bat', 'hat', 'rat', 'mat', 'sat', 'pat', 'fat',
-                'dog', 'log', 'fog', 'big', 'pig', 'dig', 'bag', 'tag',
-                'pen', 'hen', 'ten', 'men', 'red', 'bed', 'led', 'web',
-                'run', 'sun', 'fun', 'gun', 'bun', 'cut', 'but', 'hut',
-                'fish', 'dish', 'wish', 'ship', 'chip', 'trip', 'skip',
-                'book', 'look', 'took', 'cook', 'good', 'food', 'moon',
-                'came', 'make', 'take', 'home', 'time', 'same', 'name'
+            // Comprehensive rhyming and phonetic word bank
+            const phoneticWords = [
+                // -ite family (like kite)
+                'bite', 'cite', 'fight', 'height', 'kite', 'light', 'might', 'night', 
+                'quite', 'right', 'sight', 'site', 'tight', 'white', 'write',
+                
+                // -ake family  
+                'bake', 'cake', 'fake', 'lake', 'make', 'rake', 'sake', 'take', 'wake',
+                
+                // -ame family
+                'came', 'fame', 'game', 'lame', 'name', 'same', 'tame', 'blame', 'flame', 'frame',
+                
+                // -ine family
+                'dine', 'fine', 'line', 'mine', 'nine', 'pine', 'shine', 'spine', 'vine', 'wine',
+                
+                // -one family
+                'bone', 'cone', 'done', 'gone', 'lone', 'none', 'phone', 'stone', 'tone', 'zone',
+                
+                // -ope family
+                'cope', 'hope', 'mope', 'pope', 'rope', 'scope', 'slope',
+                
+                // -ose family
+                'chose', 'close', 'nose', 'pose', 'rose', 'those',
+                
+                // -ice family
+                'dice', 'lice', 'mice', 'nice', 'price', 'rice', 'slice', 'spice', 'twice', 'vice',
+                
+                // -ide family
+                'hide', 'ride', 'side', 'tide', 'wide', 'bride', 'glide', 'pride', 'slide',
+                
+                // -ue family
+                'blue', 'clue', 'due', 'glue', 'hue', 'sue', 'true', 'value', 'rescue',
+                
+                // Short vowel rhymes
+                'cat', 'bat', 'hat', 'mat', 'pat', 'rat', 'sat', 'fat', 'chat', 'flat',
+                'bed', 'fed', 'led', 'red', 'wed', 'bread', 'dead', 'head', 'read', 'thread',
+                'big', 'dig', 'fig', 'pig', 'wig', 'twig', 'ship', 'chip', 'clip', 'drip',
+                'dog', 'fog', 'hog', 'jog', 'log', 'cog', 'frog', 'shop', 'stop', 'drop',
+                'bug', 'dug', 'hug', 'jug', 'mug', 'rug', 'tug', 'plug', 'snug',
+                
+                // Consonant blends and digraphs
+                'black', 'block', 'brick', 'crack', 'thick', 'quick', 'stick', 'trick',
+                'chair', 'chain', 'check', 'chess', 'chest', 'child', 'chin', 'chip',
+                'fresh', 'flash', 'brush', 'crash', 'splash', 'throw', 'three', 'through'
             ];
             
-            allWords.push(...commonWords);
+            // Combine all available words
+            const allWords = [...new Set([...availableWords, ...phoneticWords])];
             
             // Filter out the correct answer and clean up words
-            const cleanWords = [...new Set(allWords)].filter(word => 
+            const cleanWords = allWords.filter(word => 
                 word !== correctWord && 
                 word && 
                 typeof word === 'string' &&
                 word.length >= 2 && 
-                word.length <= 8 &&
-                /^[a-zA-Z]+$/.test(word) // Only alphabetic characters
+                word.length <= 10 &&
+                /^[a-zA-Z]+$/.test(word)
             );
             
-            console.log(`Available words for "${correctWord}":`, cleanWords.length);
+            console.log(`Generating distractors for "${correctWord}" from ${cleanWords.length} available words`);
             
-            // Generate smart distractors
-            const smartDistractors = [];
+            // Advanced phonetic similarity scoring
+            const scoredDistractors = cleanWords.map(word => ({
+                word: word,
+                score: calculatePhoneticSimilarity(correctWord, word)
+            }));
             
-            // 1. Same length words
-            const sameLengthWords = cleanWords.filter(word => word.length === correctWord.length);
-            if (sameLengthWords.length > 0) {
-                smartDistractors.push(...sameLengthWords.slice(0, 2));
-            }
+            // Sort by phonetic similarity (highest score = most similar)
+            scoredDistractors.sort((a, b) => b.score - a.score);
             
-            // 2. Same first letter
-            const sameFirstLetter = cleanWords.filter(word => 
-                word[0].toLowerCase() === correctWord[0].toLowerCase()
-            );
-            if (sameFirstLetter.length > 0) {
-                smartDistractors.push(sameFirstLetter[0]);
-            }
+            // Select the top 3 most phonetically similar words
+            const selectedDistractors = scoredDistractors.slice(0, 3).map(item => item.word);
             
-            // 3. Same last letter
-            const sameLastLetter = cleanWords.filter(word => 
-                word[word.length-1].toLowerCase() === correctWord[correctWord.length-1].toLowerCase()
-            );
-            if (sameLastLetter.length > 0) {
-                smartDistractors.push(sameLastLetter[0]);
-            }
-            
-            // 4. Words from the same group (most relevant)
-            const groupSpecificWords = groupWords.filter(word => word !== correctWord);
-            if (groupSpecificWords.length > 0) {
-                smartDistractors.push(...groupSpecificWords.slice(0, 2));
-            }
-            
-            // Remove duplicates and the correct answer
-            const uniqueDistractors = [...new Set(smartDistractors)].filter(word => 
-                word !== correctWord
-            );
-            
-            // Shuffle and add distractors to options
-            shuffleArray(uniqueDistractors);
-            
-            // Take the best 3 distractors
-            let selectedDistractors = uniqueDistractors.slice(0, 3);
-            
-            // If we don't have enough smart distractors, add random ones
-            if (selectedDistractors.length < 3) {
-                const remainingNeeded = 3 - selectedDistractors.length;
-                const additionalWords = cleanWords.filter(word => 
-                    !selectedDistractors.includes(word) && word !== correctWord
-                );
-                shuffleArray(additionalWords);
-                selectedDistractors.push(...additionalWords.slice(0, remainingNeeded));
-            }
-            
-            // Add distractors to options
+            // Add to options
             options.push(...selectedDistractors);
             
-            // Ensure we have exactly 4 options
-            while (options.length < 4) {
-                const fallbacks = ['and', 'the', 'yes', 'can', 'see', 'get', 'now', 'day'];
-                for (const fallback of fallbacks) {
-                    if (!options.includes(fallback) && fallback !== correctWord) {
-                        options.push(fallback);
-                        break;
+            // If we don't have enough good distractors, add some backup options
+            if (options.length < 4) {
+                const backupWords = ['time', 'home', 'come', 'some', 'like', 'make', 'take'];
+                for (const backup of backupWords) {
+                    if (!options.includes(backup) && backup !== correctWord) {
+                        options.push(backup);
+                        if (options.length >= 4) break;
                     }
                 }
-                if (options.length < 4) break; // Prevent infinite loop
             }
             
             // Shuffle the final options
@@ -1095,7 +1081,105 @@
             const finalOptions = options.slice(0, 4);
             
             console.log(`Final options for "${correctWord}":`, finalOptions);
+            console.log(`Phonetic scores:`, selectedDistractors.map(word => 
+                `${word}: ${calculatePhoneticSimilarity(correctWord, word)}`
+            ));
+            
             return finalOptions;
+        }
+        
+        // Calculate phonetic similarity between two words
+        function calculatePhoneticSimilarity(word1, word2) {
+            let score = 0;
+            const w1 = word1.toLowerCase();
+            const w2 = word2.toLowerCase();
+            
+            // Rhyming patterns (highest priority)
+            const rhymeScore = calculateRhymeScore(w1, w2);
+            score += rhymeScore * 100; // High weight for rhyming
+            
+            // Vowel pattern similarity
+            const vowelScore = calculateVowelSimilarity(w1, w2);
+            score += vowelScore * 50;
+            
+            // Length similarity
+            const lengthDiff = Math.abs(w1.length - w2.length);
+            const lengthScore = Math.max(0, 5 - lengthDiff);
+            score += lengthScore * 10;
+            
+            // First letter bonus
+            if (w1[0] === w2[0]) {
+                score += 20;
+            }
+            
+            // Last letter bonus
+            if (w1[w1.length-1] === w2[w2.length-1]) {
+                score += 15;
+            }
+            
+            // Similar consonant patterns
+            const consonantScore = calculateConsonantSimilarity(w1, w2);
+            score += consonantScore * 25;
+            
+            return score;
+        }
+        
+        // Calculate rhyme score based on ending patterns
+        function calculateRhymeScore(word1, word2) {
+            const endings = [
+                ['ite', 'ight'], ['ake', 'aik'], ['ame', 'aim'], ['ine', 'ign'], 
+                ['one', 'oan'], ['ope', 'oap'], ['ose', 'oze'], ['ice', 'ise'],
+                ['ide', 'ied'], ['ue', 'ew'], ['at', 'hat'], ['ed', 'ead'],
+                ['ig', 'pig'], ['og', 'frog'], ['ug', 'hug'], ['an', 'man'],
+                ['en', 'hen'], ['in', 'pin'], ['on', 'con'], ['un', 'sun']
+            ];
+            
+            for (const endingGroup of endings) {
+                const word1Ending = endingGroup.find(ending => word1.endsWith(ending));
+                const word2Ending = endingGroup.find(ending => word2.endsWith(ending));
+                
+                if (word1Ending && word2Ending) {
+                    return 1.0; // Perfect rhyme family match
+                }
+            }
+            
+            // Check for exact ending matches (2+ characters)
+            for (let len = 2; len <= Math.min(word1.length, word2.length); len++) {
+                const end1 = word1.slice(-len);
+                const end2 = word2.slice(-len);
+                if (end1 === end2) {
+                    return len / Math.max(word1.length, word2.length);
+                }
+            }
+            
+            return 0;
+        }
+        
+        // Calculate vowel pattern similarity
+        function calculateVowelSimilarity(word1, word2) {
+            const vowels1 = (word1.match(/[aeiou]/g) || []).join('');
+            const vowels2 = (word2.match(/[aeiou]/g) || []).join('');
+            
+            if (vowels1 === vowels2) return 1.0;
+            if (vowels1.length === vowels2.length) return 0.5;
+            return 0;
+        }
+        
+        // Calculate consonant pattern similarity
+        function calculateConsonantSimilarity(word1, word2) {
+            const consonants1 = word1.replace(/[aeiou]/g, '');
+            const consonants2 = word2.replace(/[aeiou]/g, '');
+            
+            let matches = 0;
+            const maxLen = Math.max(consonants1.length, consonants2.length);
+            
+            for (let i = 0; i < Math.min(consonants1.length, consonants2.length); i++) {
+                if (consonants1[i] === consonants2[i]) {
+                    matches++;
+                }
+            }
+            
+            return maxLen > 0 ? matches / maxLen : 0;
         }
 
         // Get all words available for a specific group
