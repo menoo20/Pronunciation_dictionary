@@ -298,6 +298,30 @@
             margin-top: 30px;
         }
 
+        .controls .btn {
+            margin: 8px 12px;
+        }
+
+        /* Practice recommendation */
+        .practice-recommendation {
+            background: #fff3cd;
+            border: 2px solid #ffeaa7;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .practice-recommendation h4 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+
+        .practice-recommendation p {
+            color: #856404;
+            margin-bottom: 15px;
+        }
+
         /* Gap mode UI */
         .masked-word { /* kept for backward compatibility */
             font-size: 2em;
@@ -396,6 +420,16 @@
 
         .btn-secondary:hover {
             background: #545b62;
+        }
+
+        .btn-warning {
+            background: #ffc107;
+            color: #212529;
+            border: none;
+        }
+
+        .btn-warning:hover {
+            background: #e0a800;
         }
 
         .btn:disabled {
@@ -656,6 +690,13 @@
             <h2>🎉 Test Complete!</h2>
             <div class="score" id="finalScore">8/10</div>
             <div class="feedback" id="feedback">Excellent work!</div>
+            
+            <!-- Practice Recommendation -->
+            <div class="practice-recommendation" id="practiceRecommendation" style="display: none;">
+                <h4>📚 Need More Practice?</h4>
+                <p id="practiceMessage">Practice the sounds from this group to improve your performance.</p>
+                <button class="btn btn-warning" onclick="goToSoundTeacher()">🎵 Practice in Sound Teacher</button>
+            </div>
             
             <!-- Mistakes Review Section -->
             <div class="mistakes-review" id="mistakesReview" style="display: none;">
@@ -1225,6 +1266,27 @@
                 feedback.className = 'feedback needs-practice';
             }
 
+            // Show practice recommendation if score is low
+            if (percentage < 70) {
+                const practiceRecommendation = document.getElementById('practiceRecommendation');
+                const practiceMessage = document.getElementById('practiceMessage');
+                
+                let groupName = `Group ${currentGroup}`;
+                if (isAdvancedTest) {
+                    const advancedNames = {8: 'Split Digraphs', 9: 'Alternative Vowels', 10: 'Alternative Consonants'};
+                    groupName = `Group ${currentGroup}: ${advancedNames[currentGroup]}`;
+                }
+                
+                practiceMessage.textContent = `Practice the sounds from ${groupName} in the Sound Teacher to improve your performance.`;
+                
+                // Update the practice button to show specific group
+                const practiceBtn = practiceRecommendation.querySelector('.btn');
+                practiceBtn.textContent = `🎵 Practice ${groupName} Sounds`;
+                practiceBtn.onclick = () => goToSoundTeacherGroup(currentGroup);
+                
+                practiceRecommendation.style.display = 'block';
+            }
+
             // Show mistakes review if there are any mistakes
             if (mistakes.length > 0) {
                 displayMistakesReview();
@@ -1316,6 +1378,15 @@
 
         function goHome() {
             window.location.href = 'index.html';
+        }
+
+        function goToSoundTeacher() {
+            window.location.href = 'sound_teacher.html';
+        }
+
+        function goToSoundTeacherGroup(groupNumber) {
+            // Direct to Sound Teacher with specific group selected
+            window.location.href = `sound_teacher.html?group=${groupNumber}`;
         }
 
         // Initialize

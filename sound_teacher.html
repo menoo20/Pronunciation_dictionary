@@ -836,6 +836,18 @@
         // Initialize the page
         window.addEventListener('load', function() {
             console.log('Sound Teacher loaded successfully!');
+            
+            // Check for group parameter in URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const groupParam = urlParams.get('group');
+            
+            if (groupParam) {
+                const groupNumber = parseInt(groupParam);
+                if (groupNumber >= 1 && groupNumber <= 10) {
+                    // Auto-load the specified group
+                    showSounds(groupNumber);
+                }
+            }
         });
     </script>
 </body>
