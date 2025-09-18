@@ -1,10 +1,16 @@
 {
-  "last_updated": "2025-09-18T13:42:08.123830",
-  "build_version": 1758192128,
-  "total_files": 885,
+  "last_updated": "2025-09-18T14:27:42.106866",
+  "build_version": 1758194862,
+  "total_files": 1047,
   "uk_files": 336,
-  "us_files": 549,
+  "us_files": 711,
   "files": [
+    {
+      "word": "about",
+      "accent": "us",
+      "filename": "about.mp3",
+      "path": "US/about.mp3"
+    },
     {
       "word": "age",
       "accent": "uk",
@@ -88,6 +94,12 @@
       "path": "US/ask.mp3"
     },
     {
+      "word": "asp",
+      "accent": "us",
+      "filename": "asp.mp3",
+      "path": "US/asp.mp3"
+    },
+    {
       "word": "athlete",
       "accent": "uk",
       "filename": "athlete_uk.mp3",
@@ -140,6 +152,12 @@
       "category": "alternative_consonants"
     },
     {
+      "word": "bag",
+      "accent": "us",
+      "filename": "bag.mp3",
+      "path": "US/bag.mp3"
+    },
+    {
       "word": "ball",
       "accent": "us",
       "filename": "ball.mp3",
@@ -158,10 +176,22 @@
       "path": "US/band_us.mp3"
     },
     {
+      "word": "bang",
+      "accent": "us",
+      "filename": "bang.mp3",
+      "path": "US/bang.mp3"
+    },
+    {
       "word": "bar",
       "accent": "us",
       "filename": "bar.mp3",
       "path": "US/bar.mp3"
+    },
+    {
+      "word": "barge",
+      "accent": "us",
+      "filename": "barge.mp3",
+      "path": "US/barge.mp3"
     },
     {
       "word": "bat",
@@ -198,6 +228,12 @@
       "path": "US/bee.mp3"
     },
     {
+      "word": "been",
+      "accent": "us",
+      "filename": "been.mp3",
+      "path": "US/been.mp3"
+    },
+    {
       "word": "behind",
       "accent": "uk",
       "filename": "behind_uk.mp3",
@@ -212,6 +248,18 @@
       "path": "advanced_phonics_sounds/alternative_vowels/behind_us.mp3",
       "group": 9,
       "category": "alternative_vowels"
+    },
+    {
+      "word": "bell",
+      "accent": "us",
+      "filename": "bell.mp3",
+      "path": "US/bell.mp3"
+    },
+    {
+      "word": "bet",
+      "accent": "us",
+      "filename": "bet.mp3",
+      "path": "US/bet.mp3"
     },
     {
       "word": "big",
@@ -318,6 +366,18 @@
       "category": "alternative_vowels"
     },
     {
+      "word": "bog",
+      "accent": "us",
+      "filename": "bog.mp3",
+      "path": "US/bog.mp3"
+    },
+    {
+      "word": "boil",
+      "accent": "us",
+      "filename": "boil.mp3",
+      "path": "US/boil.mp3"
+    },
+    {
       "word": "bold",
       "accent": "uk",
       "filename": "bold_uk.mp3",
@@ -354,6 +414,12 @@
       "accent": "us",
       "filename": "book.mp3",
       "path": "US/book.mp3"
+    },
+    {
+      "word": "boom",
+      "accent": "us",
+      "filename": "boom.mp3",
+      "path": "US/boom.mp3"
     },
     {
       "word": "boot",
@@ -474,6 +540,24 @@
       "category": "alternative_vowels"
     },
     {
+      "word": "bring",
+      "accent": "us",
+      "filename": "bring.mp3",
+      "path": "US/bring.mp3"
+    },
+    {
+      "word": "brush",
+      "accent": "us",
+      "filename": "brush.mp3",
+      "path": "US/brush.mp3"
+    },
+    {
+      "word": "bud",
+      "accent": "us",
+      "filename": "bud.mp3",
+      "path": "US/bud.mp3"
+    },
+    {
       "word": "buff",
       "accent": "uk",
       "filename": "buff_uk.mp3",
@@ -488,6 +572,42 @@
       "path": "advanced_phonics_sounds/alternative_consonants/buff_us.mp3",
       "group": 10,
       "category": "alternative_consonants"
+    },
+    {
+      "word": "bug",
+      "accent": "us",
+      "filename": "bug.mp3",
+      "path": "US/bug.mp3"
+    },
+    {
+      "word": "bulb",
+      "accent": "us",
+      "filename": "bulb.mp3",
+      "path": "US/bulb.mp3"
+    },
+    {
+      "word": "bulk",
+      "accent": "us",
+      "filename": "bulk.mp3",
+      "path": "US/bulk.mp3"
+    },
+    {
+      "word": "bull",
+      "accent": "us",
+      "filename": "bull.mp3",
+      "path": "US/bull.mp3"
+    },
+    {
+      "word": "bunch",
+      "accent": "us",
+      "filename": "bunch.mp3",
+      "path": "US/bunch.mp3"
+    },
+    {
+      "word": "bus",
+      "accent": "us",
+      "filename": "bus.mp3",
+      "path": "US/bus.mp3"
     },
     {
       "word": "bush",
@@ -522,6 +642,12 @@
       "path": "advanced_phonics_sounds/alternative_vowels/by_us.mp3",
       "group": 9,
       "category": "alternative_vowels"
+    },
+    {
+      "word": "cad",
+      "accent": "us",
+      "filename": "cad.mp3",
+      "path": "US/cad.mp3"
     },
     {
       "word": "cage",
@@ -570,18 +696,22 @@
       "category": "alternative_consonants"
     },
     {
-      "word": "came",
-      "accent": "uk",
-      "filename": "came_uk.mp3",
-      "path": "advanced_phonics_sounds/split_digraphs/came_uk.mp3",
-      "group": 8,
-      "category": "split_digraphs"
+      "word": "cam",
+      "accent": "us",
+      "filename": "cam.mp3",
+      "path": "US/cam.mp3"
     },
     {
       "word": "came",
       "accent": "us",
-      "filename": "came_us.mp3",
-      "path": "advanced_phonics_sounds/split_digraphs/came_us.mp3",
+      "filename": "came.mp3",
+      "path": "US/came.mp3"
+    },
+    {
+      "word": "came",
+      "accent": "uk",
+      "filename": "came_uk.mp3",
+      "path": "advanced_phonics_sounds/split_digraphs/came_uk.mp3",
       "group": 8,
       "category": "split_digraphs"
     },
@@ -606,6 +736,12 @@
       "category": "alternative_consonants"
     },
     {
+      "word": "cap",
+      "accent": "us",
+      "filename": "cap.mp3",
+      "path": "US/cap.mp3"
+    },
+    {
       "word": "car",
       "accent": "us",
       "filename": "car.mp3",
@@ -626,6 +762,12 @@
       "path": "US/card.mp3"
     },
     {
+      "word": "cash",
+      "accent": "us",
+      "filename": "cash.mp3",
+      "path": "US/cash.mp3"
+    },
+    {
       "word": "cat",
       "accent": "us",
       "filename": "cat.mp3",
@@ -638,6 +780,12 @@
       "path": "advanced_phonics_sounds/alternative_consonants/cat_uk.mp3",
       "group": 10,
       "category": "alternative_consonants"
+    },
+    {
+      "word": "catch",
+      "accent": "us",
+      "filename": "catch.mp3",
+      "path": "US/catch.mp3"
     },
     {
       "word": "cent",
@@ -688,6 +836,12 @@
       "path": "advanced_phonics_sounds/alternative_consonants/character_us.mp3",
       "group": 10,
       "category": "alternative_consonants"
+    },
+    {
+      "word": "charge",
+      "accent": "us",
+      "filename": "charge.mp3",
+      "path": "US/charge.mp3"
     },
     {
       "word": "chat",
@@ -766,6 +920,12 @@
       "category": "alternative_vowels"
     },
     {
+      "word": "chin",
+      "accent": "us",
+      "filename": "chin.mp3",
+      "path": "US/chin.mp3"
+    },
+    {
       "word": "chip",
       "accent": "us",
       "filename": "chip.mp3",
@@ -776,6 +936,12 @@
       "accent": "us",
       "filename": "choice.mp3",
       "path": "US/choice.mp3"
+    },
+    {
+      "word": "chop",
+      "accent": "us",
+      "filename": "chop.mp3",
+      "path": "US/chop.mp3"
     },
     {
       "word": "circus",
@@ -858,6 +1024,12 @@
       "category": "alternative_vowels"
     },
     {
+      "word": "coal",
+      "accent": "us",
+      "filename": "coal.mp3",
+      "path": "US/coal.mp3"
+    },
+    {
       "word": "coat",
       "accent": "us",
       "filename": "coat.mp3",
@@ -870,6 +1042,12 @@
       "path": "advanced_phonics_sounds/alternative_vowels/coat_uk.mp3",
       "group": 9,
       "category": "alternative_vowels"
+    },
+    {
+      "word": "cod",
+      "accent": "us",
+      "filename": "cod.mp3",
+      "path": "US/cod.mp3"
     },
     {
       "word": "coin",
@@ -998,6 +1176,12 @@
       "path": "US/corn.mp3"
     },
     {
+      "word": "cot",
+      "accent": "us",
+      "filename": "cot.mp3",
+      "path": "US/cot.mp3"
+    },
+    {
       "word": "cough",
       "accent": "uk",
       "filename": "cough_uk.mp3",
@@ -1014,10 +1198,22 @@
       "category": "alternative_consonants"
     },
     {
+      "word": "count",
+      "accent": "us",
+      "filename": "count.mp3",
+      "path": "US/count.mp3"
+    },
+    {
       "word": "crank",
       "accent": "us",
       "filename": "crank.mp3",
       "path": "US/crank.mp3"
+    },
+    {
+      "word": "crash",
+      "accent": "us",
+      "filename": "crash.mp3",
+      "path": "US/crash.mp3"
     },
     {
       "word": "crew",
@@ -1122,6 +1318,12 @@
       "path": "US/cure.mp3"
     },
     {
+      "word": "curve",
+      "accent": "us",
+      "filename": "curve.mp3",
+      "path": "US/curve.mp3"
+    },
+    {
       "word": "cut",
       "accent": "us",
       "filename": "cut.mp3",
@@ -1156,6 +1358,12 @@
       "path": "US/cycle.mp3"
     },
     {
+      "word": "dam",
+      "accent": "us",
+      "filename": "dam.mp3",
+      "path": "US/dam.mp3"
+    },
+    {
       "word": "dance",
       "accent": "uk",
       "filename": "dance_uk.mp3",
@@ -1172,6 +1380,18 @@
       "category": "alternative_consonants"
     },
     {
+      "word": "dark",
+      "accent": "us",
+      "filename": "dark.mp3",
+      "path": "US/dark.mp3"
+    },
+    {
+      "word": "dash",
+      "accent": "us",
+      "filename": "dash.mp3",
+      "path": "US/dash.mp3"
+    },
+    {
       "word": "day",
       "accent": "uk",
       "filename": "day_uk.mp3",
@@ -1186,6 +1406,12 @@
       "path": "advanced_phonics_sounds/alternative_vowels/day_us.mp3",
       "group": 9,
       "category": "alternative_vowels"
+    },
+    {
+      "word": "deck",
+      "accent": "us",
+      "filename": "deck.mp3",
+      "path": "US/deck.mp3"
     },
     {
       "word": "deep",
@@ -1220,6 +1446,12 @@
       "category": "split_digraphs"
     },
     {
+      "word": "den",
+      "accent": "us",
+      "filename": "den.mp3",
+      "path": "US/den.mp3"
+    },
+    {
       "word": "descend",
       "accent": "uk",
       "filename": "descend_uk.mp3",
@@ -1248,6 +1480,12 @@
       "path": "advanced_phonics_sounds/alternative_vowels/die_uk.mp3",
       "group": 9,
       "category": "alternative_vowels"
+    },
+    {
+      "word": "dim",
+      "accent": "us",
+      "filename": "dim.mp3",
+      "path": "US/dim.mp3"
     },
     {
       "word": "dip",
@@ -1298,6 +1536,12 @@
       "path": "advanced_phonics_sounds/alternative_consonants/dolphin_us.mp3",
       "group": 10,
       "category": "alternative_consonants"
+    },
+    {
+      "word": "doom",
+      "accent": "us",
+      "filename": "doom.mp3",
+      "path": "US/doom.mp3"
     },
     {
       "word": "draught",
@@ -1508,6 +1752,18 @@
       "category": "alternative_consonants"
     },
     {
+      "word": "equal",
+      "accent": "us",
+      "filename": "equal.mp3",
+      "path": "US/equal.mp3"
+    },
+    {
+      "word": "exit",
+      "accent": "us",
+      "filename": "exit.mp3",
+      "path": "US/exit.mp3"
+    },
+    {
       "word": "face",
       "accent": "uk",
       "filename": "face_uk.mp3",
@@ -1522,6 +1778,12 @@
       "path": "advanced_phonics_sounds/split_digraphs/face_us.mp3",
       "group": 8,
       "category": "split_digraphs"
+    },
+    {
+      "word": "fag",
+      "accent": "us",
+      "filename": "fag.mp3",
+      "path": "US/fag.mp3"
     },
     {
       "word": "fair",
@@ -1582,10 +1844,34 @@
       "category": "alternative_consonants"
     },
     {
+      "word": "fat",
+      "accent": "us",
+      "filename": "fat.mp3",
+      "path": "US/fat.mp3"
+    },
+    {
       "word": "feel",
       "accent": "us",
       "filename": "feel.mp3",
       "path": "US/feel.mp3"
+    },
+    {
+      "word": "feet",
+      "accent": "us",
+      "filename": "feet.mp3",
+      "path": "US/feet.mp3"
+    },
+    {
+      "word": "fell",
+      "accent": "us",
+      "filename": "fell.mp3",
+      "path": "US/fell.mp3"
+    },
+    {
+      "word": "felt",
+      "accent": "us",
+      "filename": "felt.mp3",
+      "path": "US/felt.mp3"
     },
     {
       "word": "fence",
@@ -1642,6 +1928,12 @@
       "category": "alternative_vowels"
     },
     {
+      "word": "fig",
+      "accent": "us",
+      "filename": "fig.mp3",
+      "path": "US/fig.mp3"
+    },
+    {
       "word": "fight",
       "accent": "uk",
       "filename": "fight_uk.mp3",
@@ -1656,6 +1948,18 @@
       "path": "advanced_phonics_sounds/alternative_vowels/fight_us.mp3",
       "group": 9,
       "category": "alternative_vowels"
+    },
+    {
+      "word": "fill",
+      "accent": "us",
+      "filename": "fill.mp3",
+      "path": "US/fill.mp3"
+    },
+    {
+      "word": "film",
+      "accent": "us",
+      "filename": "film.mp3",
+      "path": "US/film.mp3"
     },
     {
       "word": "find",
@@ -1688,6 +1992,12 @@
       "path": "advanced_phonics_sounds/split_digraphs/fine_us.mp3",
       "group": 8,
       "category": "split_digraphs"
+    },
+    {
+      "word": "finish",
+      "accent": "us",
+      "filename": "finish.mp3",
+      "path": "US/finish.mp3"
     },
     {
       "word": "fire",
@@ -1752,6 +2062,12 @@
       "accent": "us",
       "filename": "fizz.mp3",
       "path": "US/fizz.mp3"
+    },
+    {
+      "word": "flash",
+      "accent": "us",
+      "filename": "flash.mp3",
+      "path": "US/flash.mp3"
     },
     {
       "word": "flew",
@@ -1834,6 +2150,12 @@
       "category": "alternative_vowels"
     },
     {
+      "word": "fold",
+      "accent": "us",
+      "filename": "fold.mp3",
+      "path": "US/fold.mp3"
+    },
+    {
       "word": "food",
       "accent": "us",
       "filename": "food.mp3",
@@ -1846,6 +2168,12 @@
       "path": "advanced_phonics_sounds/alternative_vowels/food_uk.mp3",
       "group": 9,
       "category": "alternative_vowels"
+    },
+    {
+      "word": "fool",
+      "accent": "us",
+      "filename": "fool.mp3",
+      "path": "US/fool.mp3"
     },
     {
       "word": "foot",
@@ -1922,6 +2250,12 @@
       "category": "alternative_vowels"
     },
     {
+      "word": "fresh",
+      "accent": "us",
+      "filename": "fresh.mp3",
+      "path": "US/fresh.mp3"
+    },
+    {
       "word": "fridge",
       "accent": "uk",
       "filename": "fridge_uk.mp3",
@@ -1982,6 +2316,12 @@
       "path": "UK/full_gb.mp3"
     },
     {
+      "word": "full",
+      "accent": "us",
+      "filename": "full.mp3",
+      "path": "US/full.mp3"
+    },
+    {
       "word": "fun",
       "accent": "us",
       "filename": "fun.mp3",
@@ -2012,6 +2352,12 @@
       "category": "split_digraphs"
     },
     {
+      "word": "gab",
+      "accent": "us",
+      "filename": "gab.mp3",
+      "path": "US/gab.mp3"
+    },
+    {
       "word": "game",
       "accent": "us",
       "filename": "game.mp3",
@@ -2024,6 +2370,18 @@
       "path": "advanced_phonics_sounds/split_digraphs/game_uk.mp3",
       "group": 8,
       "category": "split_digraphs"
+    },
+    {
+      "word": "gap",
+      "accent": "us",
+      "filename": "gap.mp3",
+      "path": "US/gap.mp3"
+    },
+    {
+      "word": "gas",
+      "accent": "us",
+      "filename": "gas.mp3",
+      "path": "US/gas.mp3"
     },
     {
       "word": "gate",
@@ -2154,6 +2512,12 @@
       "category": "alternative_vowels"
     },
     {
+      "word": "goal",
+      "accent": "us",
+      "filename": "goal.mp3",
+      "path": "US/goal.mp3"
+    },
+    {
       "word": "goat",
       "accent": "us",
       "filename": "goat.mp3",
@@ -2184,10 +2548,22 @@
       "category": "alternative_vowels"
     },
     {
+      "word": "golf",
+      "accent": "us",
+      "filename": "golf.mp3",
+      "path": "US/golf.mp3"
+    },
+    {
       "word": "good",
       "accent": "us",
       "filename": "good.mp3",
       "path": "US/good.mp3"
+    },
+    {
+      "word": "got",
+      "accent": "us",
+      "filename": "got.mp3",
+      "path": "US/got.mp3"
     },
     {
       "word": "graph",
@@ -2268,6 +2644,12 @@
       "category": "alternative_vowels"
     },
     {
+      "word": "ground",
+      "accent": "us",
+      "filename": "ground.mp3",
+      "path": "US/ground.mp3"
+    },
+    {
       "word": "group",
       "accent": "uk",
       "filename": "group_uk.mp3",
@@ -2300,6 +2682,30 @@
       "category": "alternative_vowels"
     },
     {
+      "word": "gulf",
+      "accent": "us",
+      "filename": "gulf.mp3",
+      "path": "US/gulf.mp3"
+    },
+    {
+      "word": "gull",
+      "accent": "us",
+      "filename": "gull.mp3",
+      "path": "US/gull.mp3"
+    },
+    {
+      "word": "gum",
+      "accent": "us",
+      "filename": "gum.mp3",
+      "path": "US/gum.mp3"
+    },
+    {
+      "word": "gut",
+      "accent": "us",
+      "filename": "gut.mp3",
+      "path": "US/gut.mp3"
+    },
+    {
       "word": "gym",
       "accent": "us",
       "filename": "gym.mp3",
@@ -2312,6 +2718,12 @@
       "path": "advanced_phonics_sounds/alternative_consonants/gym_uk.mp3",
       "group": 10,
       "category": "alternative_consonants"
+    },
+    {
+      "word": "had",
+      "accent": "us",
+      "filename": "had.mp3",
+      "path": "US/had.mp3"
     },
     {
       "word": "hair",
@@ -2332,6 +2744,12 @@
       "path": "UK/hand_gb.mp3"
     },
     {
+      "word": "hang",
+      "accent": "us",
+      "filename": "hang.mp3",
+      "path": "US/hang.mp3"
+    },
+    {
       "word": "happy",
       "accent": "us",
       "filename": "happy.mp3",
@@ -2344,6 +2762,12 @@
       "path": "US/hard.mp3"
     },
     {
+      "word": "harm",
+      "accent": "us",
+      "filename": "harm.mp3",
+      "path": "US/harm.mp3"
+    },
+    {
       "word": "has",
       "accent": "us",
       "filename": "has.mp3",
@@ -2354,6 +2778,12 @@
       "accent": "us",
       "filename": "hat.mp3",
       "path": "US/hat.mp3"
+    },
+    {
+      "word": "have",
+      "accent": "us",
+      "filename": "have.mp3",
+      "path": "US/have.mp3"
     },
     {
       "word": "heat",
@@ -2388,10 +2818,28 @@
       "category": "alternative_consonants"
     },
     {
+      "word": "help",
+      "accent": "us",
+      "filename": "help.mp3",
+      "path": "US/help.mp3"
+    },
+    {
+      "word": "hem",
+      "accent": "us",
+      "filename": "hem.mp3",
+      "path": "US/hem.mp3"
+    },
+    {
       "word": "hen",
       "accent": "uk",
       "filename": "hen.mp3",
       "path": "UK/hen.mp3"
+    },
+    {
+      "word": "hep",
+      "accent": "us",
+      "filename": "hep.mp3",
+      "path": "US/hep.mp3"
     },
     {
       "word": "her",
@@ -2412,6 +2860,24 @@
       "path": "US/herd.mp3"
     },
     {
+      "word": "here",
+      "accent": "us",
+      "filename": "here.mp3",
+      "path": "US/here.mp3"
+    },
+    {
+      "word": "hid",
+      "accent": "us",
+      "filename": "hid.mp3",
+      "path": "US/hid.mp3"
+    },
+    {
+      "word": "him",
+      "accent": "us",
+      "filename": "him.mp3",
+      "path": "US/him.mp3"
+    },
+    {
       "word": "hint",
       "accent": "uk",
       "filename": "hint_gb.mp3",
@@ -2428,6 +2894,12 @@
       "accent": "us",
       "filename": "hit.mp3",
       "path": "US/hit.mp3"
+    },
+    {
+      "word": "hod",
+      "accent": "us",
+      "filename": "hod.mp3",
+      "path": "US/hod.mp3"
     },
     {
       "word": "hoe",
@@ -2522,6 +2994,12 @@
       "path": "advanced_phonics_sounds/alternative_vowels/honey_us.mp3",
       "group": 9,
       "category": "alternative_vowels"
+    },
+    {
+      "word": "hop",
+      "accent": "us",
+      "filename": "hop.mp3",
+      "path": "US/hop.mp3"
     },
     {
       "word": "hope",
@@ -2634,6 +3112,12 @@
       "category": "alternative_consonants"
     },
     {
+      "word": "jail",
+      "accent": "us",
+      "filename": "jail.mp3",
+      "path": "US/jail.mp3"
+    },
+    {
       "word": "jam",
       "accent": "us",
       "filename": "jam.mp3",
@@ -2676,6 +3160,12 @@
       "path": "US/jet.mp3"
     },
     {
+      "word": "job",
+      "accent": "us",
+      "filename": "job.mp3",
+      "path": "US/job.mp3"
+    },
+    {
       "word": "jog",
       "accent": "us",
       "filename": "jog.mp3",
@@ -2696,6 +3186,12 @@
       "category": "alternative_consonants"
     },
     {
+      "word": "joint",
+      "accent": "us",
+      "filename": "joint.mp3",
+      "path": "US/joint.mp3"
+    },
+    {
       "word": "joke",
       "accent": "us",
       "filename": "joke.mp3",
@@ -2708,6 +3204,12 @@
       "path": "advanced_phonics_sounds/split_digraphs/joke_uk.mp3",
       "group": 8,
       "category": "split_digraphs"
+    },
+    {
+      "word": "jot",
+      "accent": "us",
+      "filename": "jot.mp3",
+      "path": "US/jot.mp3"
     },
     {
       "word": "journey",
@@ -2754,6 +3256,12 @@
       "path": "advanced_phonics_sounds/alternative_consonants/judge_us.mp3",
       "group": 10,
       "category": "alternative_consonants"
+    },
+    {
+      "word": "jug",
+      "accent": "us",
+      "filename": "jug.mp3",
+      "path": "US/jug.mp3"
     },
     {
       "word": "jump",
@@ -2962,6 +3470,24 @@
       "category": "alternative_vowels"
     },
     {
+      "word": "lab",
+      "accent": "us",
+      "filename": "lab.mp3",
+      "path": "US/lab.mp3"
+    },
+    {
+      "word": "lag",
+      "accent": "us",
+      "filename": "lag.mp3",
+      "path": "US/lag.mp3"
+    },
+    {
+      "word": "large",
+      "accent": "us",
+      "filename": "large.mp3",
+      "path": "US/large.mp3"
+    },
+    {
       "word": "laugh",
       "accent": "uk",
       "filename": "laugh_uk.mp3",
@@ -3030,6 +3556,12 @@
       "path": "US/leg.mp3"
     },
     {
+      "word": "let",
+      "accent": "us",
+      "filename": "let.mp3",
+      "path": "US/let.mp3"
+    },
+    {
       "word": "lie",
       "accent": "us",
       "filename": "lie.mp3",
@@ -3096,6 +3628,18 @@
       "path": "US/lip.mp3"
     },
     {
+      "word": "lit",
+      "accent": "us",
+      "filename": "lit.mp3",
+      "path": "US/lit.mp3"
+    },
+    {
+      "word": "live",
+      "accent": "us",
+      "filename": "live.mp3",
+      "path": "US/live.mp3"
+    },
+    {
       "word": "load",
       "accent": "us",
       "filename": "load.mp3",
@@ -3144,6 +3688,12 @@
       "path": "US/look.mp3"
     },
     {
+      "word": "loop",
+      "accent": "us",
+      "filename": "loop.mp3",
+      "path": "US/loop.mp3"
+    },
+    {
       "word": "loss",
       "accent": "uk",
       "filename": "loss_uk.mp3",
@@ -3160,10 +3710,34 @@
       "category": "alternative_consonants"
     },
     {
+      "word": "lot",
+      "accent": "us",
+      "filename": "lot.mp3",
+      "path": "US/lot.mp3"
+    },
+    {
+      "word": "loud",
+      "accent": "us",
+      "filename": "loud.mp3",
+      "path": "US/loud.mp3"
+    },
+    {
       "word": "love",
       "accent": "us",
       "filename": "love.mp3",
       "path": "US/love.mp3"
+    },
+    {
+      "word": "lug",
+      "accent": "us",
+      "filename": "lug.mp3",
+      "path": "US/lug.mp3"
+    },
+    {
+      "word": "lunch",
+      "accent": "us",
+      "filename": "lunch.mp3",
+      "path": "US/lunch.mp3"
     },
     {
       "word": "lure",
@@ -3176,6 +3750,12 @@
       "accent": "us",
       "filename": "lute.mp3",
       "path": "US/lute.mp3"
+    },
+    {
+      "word": "mad",
+      "accent": "us",
+      "filename": "mad.mp3",
+      "path": "US/mad.mp3"
     },
     {
       "word": "magic",
@@ -3211,6 +3791,12 @@
     },
     {
       "word": "make",
+      "accent": "us",
+      "filename": "make.mp3",
+      "path": "US/make.mp3"
+    },
+    {
+      "word": "make",
       "accent": "uk",
       "filename": "make_uk.mp3",
       "path": "advanced_phonics_sounds/split_digraphs/make_uk.mp3",
@@ -3218,12 +3804,16 @@
       "category": "split_digraphs"
     },
     {
-      "word": "make",
+      "word": "map",
       "accent": "us",
-      "filename": "make_us.mp3",
-      "path": "advanced_phonics_sounds/split_digraphs/make_us.mp3",
-      "group": 8,
-      "category": "split_digraphs"
+      "filename": "map.mp3",
+      "path": "US/map.mp3"
+    },
+    {
+      "word": "mark",
+      "accent": "us",
+      "filename": "mark.mp3",
+      "path": "US/mark.mp3"
     },
     {
       "word": "market",
@@ -3236,6 +3826,12 @@
       "accent": "us",
       "filename": "mat.mp3",
       "path": "US/mat.mp3"
+    },
+    {
+      "word": "match",
+      "accent": "us",
+      "filename": "match.mp3",
+      "path": "US/match.mp3"
     },
     {
       "word": "math",
@@ -3304,10 +3900,34 @@
       "category": "alternative_consonants"
     },
     {
+      "word": "meet",
+      "accent": "us",
+      "filename": "meet.mp3",
+      "path": "US/meet.mp3"
+    },
+    {
+      "word": "men",
+      "accent": "us",
+      "filename": "men.mp3",
+      "path": "US/men.mp3"
+    },
+    {
+      "word": "merge",
+      "accent": "us",
+      "filename": "merge.mp3",
+      "path": "US/merge.mp3"
+    },
+    {
       "word": "mess",
       "accent": "uk",
       "filename": "mess.mp3",
       "path": "UK/mess.mp3"
+    },
+    {
+      "word": "met",
+      "accent": "us",
+      "filename": "met.mp3",
+      "path": "US/met.mp3"
     },
     {
       "word": "mice",
@@ -3454,6 +4074,12 @@
       "category": "alternative_vowels"
     },
     {
+      "word": "more",
+      "accent": "us",
+      "filename": "more.mp3",
+      "path": "US/more.mp3"
+    },
+    {
       "word": "mosque",
       "accent": "uk",
       "filename": "mosque_uk.mp3",
@@ -3476,6 +4102,12 @@
       "path": "US/mother.mp3"
     },
     {
+      "word": "mount",
+      "accent": "us",
+      "filename": "mount.mp3",
+      "path": "US/mount.mp3"
+    },
+    {
       "word": "mouse",
       "accent": "us",
       "filename": "mouse.mp3",
@@ -3488,10 +4120,22 @@
       "path": "US/mouth.mp3"
     },
     {
+      "word": "move",
+      "accent": "us",
+      "filename": "move.mp3",
+      "path": "US/move.mp3"
+    },
+    {
       "word": "much",
       "accent": "us",
       "filename": "much.mp3",
       "path": "US/much.mp3"
+    },
+    {
+      "word": "mud",
+      "accent": "us",
+      "filename": "mud.mp3",
+      "path": "US/mud.mp3"
     },
     {
       "word": "mug",
@@ -3574,6 +4218,12 @@
       "path": "US/nap.mp3"
     },
     {
+      "word": "nat",
+      "accent": "us",
+      "filename": "nat.mp3",
+      "path": "US/nat.mp3"
+    },
+    {
       "word": "neigh",
       "accent": "uk",
       "filename": "neigh_uk.mp3",
@@ -3588,6 +4238,12 @@
       "path": "advanced_phonics_sounds/alternative_vowels/neigh_us.mp3",
       "group": 9,
       "category": "alternative_vowels"
+    },
+    {
+      "word": "nerve",
+      "accent": "us",
+      "filename": "nerve.mp3",
+      "path": "US/nerve.mp3"
     },
     {
       "word": "nest",
@@ -3614,6 +4270,12 @@
       "path": "advanced_phonics_sounds/alternative_vowels/new_uk.mp3",
       "group": 9,
       "category": "alternative_vowels"
+    },
+    {
+      "word": "next",
+      "accent": "us",
+      "filename": "next.mp3",
+      "path": "US/next.mp3"
     },
     {
       "word": "nice",
@@ -3662,6 +4324,12 @@
       "path": "advanced_phonics_sounds/alternative_vowels/night_us.mp3",
       "group": 9,
       "category": "alternative_vowels"
+    },
+    {
+      "word": "nip",
+      "accent": "us",
+      "filename": "nip.mp3",
+      "path": "US/nip.mp3"
     },
     {
       "word": "no",
@@ -3916,6 +4584,18 @@
       "category": "alternative_consonants"
     },
     {
+      "word": "pat",
+      "accent": "us",
+      "filename": "pat.mp3",
+      "path": "US/pat.mp3"
+    },
+    {
+      "word": "patch",
+      "accent": "us",
+      "filename": "patch.mp3",
+      "path": "US/patch.mp3"
+    },
+    {
       "word": "path",
       "accent": "us",
       "filename": "path.mp3",
@@ -4128,6 +4808,12 @@
       "category": "split_digraphs"
     },
     {
+      "word": "polish",
+      "accent": "us",
+      "filename": "polish.mp3",
+      "path": "US/polish.mp3"
+    },
+    {
       "word": "pool",
       "accent": "us",
       "filename": "pool.mp3",
@@ -4146,6 +4832,12 @@
       "accent": "us",
       "filename": "pop.mp3",
       "path": "US/pop.mp3"
+    },
+    {
+      "word": "pound",
+      "accent": "us",
+      "filename": "pound.mp3",
+      "path": "US/pound.mp3"
     },
     {
       "word": "press",
@@ -4300,6 +4992,12 @@
       "path": "US/quit.mp3"
     },
     {
+      "word": "quite",
+      "accent": "us",
+      "filename": "quite.mp3",
+      "path": "US/quite.mp3"
+    },
+    {
       "word": "quiz",
       "accent": "us",
       "filename": "quiz.mp3",
@@ -4340,6 +5038,18 @@
       "path": "advanced_phonics_sounds/alternative_vowels/rain_uk.mp3",
       "group": 9,
       "category": "alternative_vowels"
+    },
+    {
+      "word": "ram",
+      "accent": "us",
+      "filename": "ram.mp3",
+      "path": "US/ram.mp3"
+    },
+    {
+      "word": "rat",
+      "accent": "us",
+      "filename": "rat.mp3",
+      "path": "US/rat.mp3"
     },
     {
       "word": "read",
@@ -4446,6 +5156,12 @@
       "category": "alternative_vowels"
     },
     {
+      "word": "rim",
+      "accent": "us",
+      "filename": "rim.mp3",
+      "path": "US/rim.mp3"
+    },
+    {
       "word": "ring",
       "accent": "us",
       "filename": "ring.mp3",
@@ -4500,6 +5216,12 @@
       "accent": "us",
       "filename": "rocks.mp3",
       "path": "US/rocks.mp3"
+    },
+    {
+      "word": "rod",
+      "accent": "us",
+      "filename": "rod.mp3",
+      "path": "US/rod.mp3"
     },
     {
       "word": "room",
@@ -4596,6 +5318,12 @@
       "path": "US/runs.mp3"
     },
     {
+      "word": "rush",
+      "accent": "us",
+      "filename": "rush.mp3",
+      "path": "US/rush.mp3"
+    },
+    {
       "word": "sad",
       "accent": "uk",
       "filename": "sad_uk.mp3",
@@ -4629,6 +5357,12 @@
     },
     {
       "word": "same",
+      "accent": "us",
+      "filename": "same.mp3",
+      "path": "US/same.mp3"
+    },
+    {
+      "word": "same",
       "accent": "uk",
       "filename": "same_uk.mp3",
       "path": "advanced_phonics_sounds/split_digraphs/same_uk.mp3",
@@ -4636,12 +5370,22 @@
       "category": "split_digraphs"
     },
     {
-      "word": "same",
+      "word": "sap",
       "accent": "us",
-      "filename": "same_us.mp3",
-      "path": "advanced_phonics_sounds/split_digraphs/same_us.mp3",
-      "group": 8,
-      "category": "split_digraphs"
+      "filename": "sap.mp3",
+      "path": "US/sap.mp3"
+    },
+    {
+      "word": "sat",
+      "accent": "us",
+      "filename": "sat.mp3",
+      "path": "US/sat.mp3"
+    },
+    {
+      "word": "save",
+      "accent": "us",
+      "filename": "save.mp3",
+      "path": "US/save.mp3"
     },
     {
       "word": "say",
@@ -4786,6 +5530,24 @@
       "category": "alternative_vowels"
     },
     {
+      "word": "seen",
+      "accent": "us",
+      "filename": "seen.mp3",
+      "path": "US/seen.mp3"
+    },
+    {
+      "word": "self",
+      "accent": "us",
+      "filename": "self.mp3",
+      "path": "US/self.mp3"
+    },
+    {
+      "word": "serve",
+      "accent": "us",
+      "filename": "serve.mp3",
+      "path": "US/serve.mp3"
+    },
+    {
       "word": "share",
       "accent": "us",
       "filename": "share.mp3",
@@ -4848,6 +5610,12 @@
       "accent": "us",
       "filename": "short.mp3",
       "path": "US/short.mp3"
+    },
+    {
+      "word": "shout",
+      "accent": "us",
+      "filename": "shout.mp3",
+      "path": "US/shout.mp3"
     },
     {
       "word": "show",
@@ -4942,6 +5710,12 @@
       "path": "US/sing.mp3"
     },
     {
+      "word": "sip",
+      "accent": "us",
+      "filename": "sip.mp3",
+      "path": "US/sip.mp3"
+    },
+    {
       "word": "sit",
       "accent": "us",
       "filename": "sit.mp3",
@@ -4984,6 +5758,18 @@
       "category": "alternative_vowels"
     },
     {
+      "word": "slap",
+      "accent": "us",
+      "filename": "slap.mp3",
+      "path": "US/slap.mp3"
+    },
+    {
+      "word": "slat",
+      "accent": "us",
+      "filename": "slat.mp3",
+      "path": "US/slat.mp3"
+    },
+    {
       "word": "sleep",
       "accent": "uk",
       "filename": "sleep_uk.mp3",
@@ -5016,6 +5802,12 @@
       "category": "alternative_vowels"
     },
     {
+      "word": "slip",
+      "accent": "us",
+      "filename": "slip.mp3",
+      "path": "US/slip.mp3"
+    },
+    {
       "word": "slow",
       "accent": "uk",
       "filename": "slow_uk.mp3",
@@ -5036,6 +5828,18 @@
       "accent": "us",
       "filename": "snake.mp3",
       "path": "US/snake.mp3"
+    },
+    {
+      "word": "snap",
+      "accent": "us",
+      "filename": "snap.mp3",
+      "path": "US/snap.mp3"
+    },
+    {
+      "word": "snit",
+      "accent": "us",
+      "filename": "snit.mp3",
+      "path": "US/snit.mp3"
     },
     {
       "word": "snow",
@@ -5172,6 +5976,12 @@
       "category": "alternative_vowels"
     },
     {
+      "word": "spa",
+      "accent": "us",
+      "filename": "spa.mp3",
+      "path": "US/spa.mp3"
+    },
+    {
       "word": "space",
       "accent": "uk",
       "filename": "space_uk.mp3",
@@ -5186,6 +5996,54 @@
       "path": "advanced_phonics_sounds/alternative_consonants/space_us.mp3",
       "group": 10,
       "category": "alternative_consonants"
+    },
+    {
+      "word": "span",
+      "accent": "us",
+      "filename": "span.mp3",
+      "path": "US/span.mp3"
+    },
+    {
+      "word": "spat",
+      "accent": "us",
+      "filename": "spat.mp3",
+      "path": "US/spat.mp3"
+    },
+    {
+      "word": "spin",
+      "accent": "us",
+      "filename": "spin.mp3",
+      "path": "US/spin.mp3"
+    },
+    {
+      "word": "spit",
+      "accent": "us",
+      "filename": "spit.mp3",
+      "path": "US/spit.mp3"
+    },
+    {
+      "word": "split",
+      "accent": "us",
+      "filename": "split.mp3",
+      "path": "US/split.mp3"
+    },
+    {
+      "word": "spoil",
+      "accent": "us",
+      "filename": "spoil.mp3",
+      "path": "US/spoil.mp3"
+    },
+    {
+      "word": "spring",
+      "accent": "us",
+      "filename": "spring.mp3",
+      "path": "US/spring.mp3"
+    },
+    {
+      "word": "square",
+      "accent": "us",
+      "filename": "square.mp3",
+      "path": "US/square.mp3"
     },
     {
       "word": "staff",
@@ -5244,6 +6102,12 @@
       "accent": "us",
       "filename": "star.mp3",
       "path": "US/star.mp3"
+    },
+    {
+      "word": "statue",
+      "accent": "us",
+      "filename": "statue.mp3",
+      "path": "US/statue.mp3"
     },
     {
       "word": "stay",
@@ -5306,6 +6170,12 @@
       "category": "alternative_consonants"
     },
     {
+      "word": "string",
+      "accent": "us",
+      "filename": "string.mp3",
+      "path": "US/string.mp3"
+    },
+    {
       "word": "strong",
       "accent": "us",
       "filename": "strong.mp3",
@@ -5326,6 +6196,12 @@
       "path": "advanced_phonics_sounds/alternative_consonants/stuff_us.mp3",
       "group": 10,
       "category": "alternative_consonants"
+    },
+    {
+      "word": "such",
+      "accent": "us",
+      "filename": "such.mp3",
+      "path": "US/such.mp3"
     },
     {
       "word": "sue",
@@ -5378,6 +6254,24 @@
       "category": "alternative_vowels"
     },
     {
+      "word": "sweet",
+      "accent": "us",
+      "filename": "sweet.mp3",
+      "path": "US/sweet.mp3"
+    },
+    {
+      "word": "swing",
+      "accent": "us",
+      "filename": "swing.mp3",
+      "path": "US/swing.mp3"
+    },
+    {
+      "word": "take",
+      "accent": "us",
+      "filename": "take.mp3",
+      "path": "US/take.mp3"
+    },
+    {
       "word": "take",
       "accent": "uk",
       "filename": "take_uk.mp3",
@@ -5386,12 +6280,10 @@
       "category": "split_digraphs"
     },
     {
-      "word": "take",
+      "word": "tan",
       "accent": "us",
-      "filename": "take_us.mp3",
-      "path": "advanced_phonics_sounds/split_digraphs/take_us.mp3",
-      "group": 8,
-      "category": "split_digraphs"
+      "filename": "tan.mp3",
+      "path": "US/tan.mp3"
     },
     {
       "word": "tap",
@@ -5684,6 +6576,12 @@
       "path": "advanced_phonics_sounds/split_digraphs/time_uk.mp3",
       "group": 8,
       "category": "split_digraphs"
+    },
+    {
+      "word": "tin",
+      "accent": "us",
+      "filename": "tin.mp3",
+      "path": "US/tin.mp3"
     },
     {
       "word": "tip",
@@ -6014,6 +6912,12 @@
       "category": "alternative_vowels"
     },
     {
+      "word": "value",
+      "accent": "us",
+      "filename": "value.mp3",
+      "path": "US/value.mp3"
+    },
+    {
       "word": "van",
       "accent": "us",
       "filename": "van.mp3",
@@ -6030,6 +6934,18 @@
       "accent": "us",
       "filename": "very.mp3",
       "path": "US/very.mp3"
+    },
+    {
+      "word": "vest",
+      "accent": "us",
+      "filename": "vest.mp3",
+      "path": "US/vest.mp3"
+    },
+    {
+      "word": "vet",
+      "accent": "us",
+      "filename": "vet.mp3",
+      "path": "US/vet.mp3"
     },
     {
       "word": "view",
@@ -6062,6 +6978,18 @@
       "path": "US/vote.mp3"
     },
     {
+      "word": "wag",
+      "accent": "us",
+      "filename": "wag.mp3",
+      "path": "US/wag.mp3"
+    },
+    {
+      "word": "wait",
+      "accent": "us",
+      "filename": "wait.mp3",
+      "path": "US/wait.mp3"
+    },
+    {
       "word": "walk",
       "accent": "us",
       "filename": "walk.mp3",
@@ -6074,10 +7002,34 @@
       "path": "US/wall.mp3"
     },
     {
+      "word": "want",
+      "accent": "us",
+      "filename": "want.mp3",
+      "path": "US/want.mp3"
+    },
+    {
+      "word": "warm",
+      "accent": "us",
+      "filename": "warm.mp3",
+      "path": "US/warm.mp3"
+    },
+    {
+      "word": "was",
+      "accent": "us",
+      "filename": "was.mp3",
+      "path": "US/was.mp3"
+    },
+    {
       "word": "wash",
       "accent": "us",
       "filename": "wash.mp3",
       "path": "US/wash.mp3"
+    },
+    {
+      "word": "watch",
+      "accent": "us",
+      "filename": "watch.mp3",
+      "path": "US/watch.mp3"
     },
     {
       "word": "water",
@@ -6142,6 +7094,18 @@
       "path": "advanced_phonics_sounds/alternative_vowels/weight_us.mp3",
       "group": 9,
       "category": "alternative_vowels"
+    },
+    {
+      "word": "well",
+      "accent": "us",
+      "filename": "well.mp3",
+      "path": "US/well.mp3"
+    },
+    {
+      "word": "went",
+      "accent": "us",
+      "filename": "went.mp3",
+      "path": "US/went.mp3"
     },
     {
       "word": "wet",

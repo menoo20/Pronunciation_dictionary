@@ -9,7 +9,7 @@
         "f",
         "b"
       ],
-      "word_count": 78,
+      "word_count": 116,
       "words": {
         "age": [
           {
@@ -1032,6 +1032,310 @@
             "group": 8,
             "category": "split_digraphs"
           }
+        ],
+        "got": [
+          {
+            "word": "got",
+            "accent": "us",
+            "filename": "got.mp3",
+            "path": "US/got.mp3"
+          }
+        ],
+        "gut": [
+          {
+            "word": "gut",
+            "accent": "us",
+            "filename": "gut.mp3",
+            "path": "US/gut.mp3"
+          }
+        ],
+        "gum": [
+          {
+            "word": "gum",
+            "accent": "us",
+            "filename": "gum.mp3",
+            "path": "US/gum.mp3"
+          }
+        ],
+        "gap": [
+          {
+            "word": "gap",
+            "accent": "us",
+            "filename": "gap.mp3",
+            "path": "US/gap.mp3"
+          }
+        ],
+        "gas": [
+          {
+            "word": "gas",
+            "accent": "us",
+            "filename": "gas.mp3",
+            "path": "US/gas.mp3"
+          }
+        ],
+        "gab": [
+          {
+            "word": "gab",
+            "accent": "us",
+            "filename": "gab.mp3",
+            "path": "US/gab.mp3"
+          }
+        ],
+        "bag": [
+          {
+            "word": "bag",
+            "accent": "us",
+            "filename": "bag.mp3",
+            "path": "US/bag.mp3"
+          }
+        ],
+        "bet": [
+          {
+            "word": "bet",
+            "accent": "us",
+            "filename": "bet.mp3",
+            "path": "US/bet.mp3"
+          }
+        ],
+        "bog": [
+          {
+            "word": "bog",
+            "accent": "us",
+            "filename": "bog.mp3",
+            "path": "US/bog.mp3"
+          }
+        ],
+        "bug": [
+          {
+            "word": "bug",
+            "accent": "us",
+            "filename": "bug.mp3",
+            "path": "US/bug.mp3"
+          }
+        ],
+        "bus": [
+          {
+            "word": "bus",
+            "accent": "us",
+            "filename": "bus.mp3",
+            "path": "US/bus.mp3"
+          }
+        ],
+        "bud": [
+          {
+            "word": "bud",
+            "accent": "us",
+            "filename": "bud.mp3",
+            "path": "US/bud.mp3"
+          }
+        ],
+        "lab": [
+          {
+            "word": "lab",
+            "accent": "us",
+            "filename": "lab.mp3",
+            "path": "US/lab.mp3"
+          }
+        ],
+        "lag": [
+          {
+            "word": "lag",
+            "accent": "us",
+            "filename": "lag.mp3",
+            "path": "US/lag.mp3"
+          }
+        ],
+        "lug": [
+          {
+            "word": "lug",
+            "accent": "us",
+            "filename": "lug.mp3",
+            "path": "US/lug.mp3"
+          }
+        ],
+        "lot": [
+          {
+            "word": "lot",
+            "accent": "us",
+            "filename": "lot.mp3",
+            "path": "US/lot.mp3"
+          }
+        ],
+        "let": [
+          {
+            "word": "let",
+            "accent": "us",
+            "filename": "let.mp3",
+            "path": "US/let.mp3"
+          }
+        ],
+        "lit": [
+          {
+            "word": "lit",
+            "accent": "us",
+            "filename": "lit.mp3",
+            "path": "US/lit.mp3"
+          }
+        ],
+        "fat": [
+          {
+            "word": "fat",
+            "accent": "us",
+            "filename": "fat.mp3",
+            "path": "US/fat.mp3"
+          }
+        ],
+        "fag": [
+          {
+            "word": "fag",
+            "accent": "us",
+            "filename": "fag.mp3",
+            "path": "US/fag.mp3"
+          }
+        ],
+        "fig": [
+          {
+            "word": "fig",
+            "accent": "us",
+            "filename": "fig.mp3",
+            "path": "US/fig.mp3"
+          }
+        ],
+        "gull": [
+          {
+            "word": "gull",
+            "accent": "us",
+            "filename": "gull.mp3",
+            "path": "US/gull.mp3"
+          }
+        ],
+        "full": [
+          {
+            "word": "full",
+            "accent": "us",
+            "filename": "full.mp3",
+            "path": "US/full.mp3"
+          }
+        ],
+        "bull": [
+          {
+            "word": "bull",
+            "accent": "us",
+            "filename": "bull.mp3",
+            "path": "US/bull.mp3"
+          }
+        ],
+        "bell": [
+          {
+            "word": "bell",
+            "accent": "us",
+            "filename": "bell.mp3",
+            "path": "US/bell.mp3"
+          }
+        ],
+        "ball": [
+          {
+            "word": "ball",
+            "accent": "us",
+            "filename": "ball.mp3",
+            "path": "US/ball.mp3"
+          }
+        ],
+        "fall": [
+          {
+            "word": "fall",
+            "accent": "us",
+            "filename": "fall.mp3",
+            "path": "US/fall.mp3"
+          }
+        ],
+        "fill": [
+          {
+            "word": "fill",
+            "accent": "us",
+            "filename": "fill.mp3",
+            "path": "US/fill.mp3"
+          }
+        ],
+        "fell": [
+          {
+            "word": "fell",
+            "accent": "us",
+            "filename": "fell.mp3",
+            "path": "US/fell.mp3"
+          }
+        ],
+        "golf": [
+          {
+            "word": "golf",
+            "accent": "us",
+            "filename": "golf.mp3",
+            "path": "US/golf.mp3"
+          }
+        ],
+        "gulf": [
+          {
+            "word": "gulf",
+            "accent": "us",
+            "filename": "gulf.mp3",
+            "path": "US/gulf.mp3"
+          }
+        ],
+        "bulb": [
+          {
+            "word": "bulb",
+            "accent": "us",
+            "filename": "bulb.mp3",
+            "path": "US/bulb.mp3"
+          }
+        ],
+        "film": [
+          {
+            "word": "film",
+            "accent": "us",
+            "filename": "film.mp3",
+            "path": "US/film.mp3"
+          }
+        ],
+        "fold": [
+          {
+            "word": "fold",
+            "accent": "us",
+            "filename": "fold.mp3",
+            "path": "US/fold.mp3"
+          }
+        ],
+        "felt": [
+          {
+            "word": "felt",
+            "accent": "us",
+            "filename": "felt.mp3",
+            "path": "US/felt.mp3"
+          }
+        ],
+        "bulk": [
+          {
+            "word": "bulk",
+            "accent": "us",
+            "filename": "bulk.mp3",
+            "path": "US/bulk.mp3"
+          }
+        ],
+        "help": [
+          {
+            "word": "help",
+            "accent": "us",
+            "filename": "help.mp3",
+            "path": "US/help.mp3"
+          }
+        ],
+        "self": [
+          {
+            "word": "self",
+            "accent": "us",
+            "filename": "self.mp3",
+            "path": "US/self.mp3"
+          }
         ]
       }
     },
@@ -1044,7 +1348,7 @@
         "p",
         "n"
       ],
-      "word_count": 8,
+      "word_count": 28,
       "words": {
         "ant": [
           {
@@ -1117,6 +1421,166 @@
             "filename": "tip.mp3",
             "path": "UK/tip.mp3"
           }
+        ],
+        "sat": [
+          {
+            "word": "sat",
+            "accent": "us",
+            "filename": "sat.mp3",
+            "path": "US/sat.mp3"
+          }
+        ],
+        "pat": [
+          {
+            "word": "pat",
+            "accent": "us",
+            "filename": "pat.mp3",
+            "path": "US/pat.mp3"
+          }
+        ],
+        "nip": [
+          {
+            "word": "nip",
+            "accent": "us",
+            "filename": "nip.mp3",
+            "path": "US/nip.mp3"
+          }
+        ],
+        "sip": [
+          {
+            "word": "sip",
+            "accent": "us",
+            "filename": "sip.mp3",
+            "path": "US/sip.mp3"
+          }
+        ],
+        "tin": [
+          {
+            "word": "tin",
+            "accent": "us",
+            "filename": "tin.mp3",
+            "path": "US/tin.mp3"
+          }
+        ],
+        "sap": [
+          {
+            "word": "sap",
+            "accent": "us",
+            "filename": "sap.mp3",
+            "path": "US/sap.mp3"
+          }
+        ],
+        "spa": [
+          {
+            "word": "spa",
+            "accent": "us",
+            "filename": "spa.mp3",
+            "path": "US/spa.mp3"
+          }
+        ],
+        "asp": [
+          {
+            "word": "asp",
+            "accent": "us",
+            "filename": "asp.mp3",
+            "path": "US/asp.mp3"
+          }
+        ],
+        "tan": [
+          {
+            "word": "tan",
+            "accent": "us",
+            "filename": "tan.mp3",
+            "path": "US/tan.mp3"
+          }
+        ],
+        "nat": [
+          {
+            "word": "nat",
+            "accent": "us",
+            "filename": "nat.mp3",
+            "path": "US/nat.mp3"
+          }
+        ],
+        "snit": [
+          {
+            "word": "snit",
+            "accent": "us",
+            "filename": "snit.mp3",
+            "path": "US/snit.mp3"
+          }
+        ],
+        "span": [
+          {
+            "word": "span",
+            "accent": "us",
+            "filename": "span.mp3",
+            "path": "US/span.mp3"
+          }
+        ],
+        "snap": [
+          {
+            "word": "snap",
+            "accent": "us",
+            "filename": "snap.mp3",
+            "path": "US/snap.mp3"
+          }
+        ],
+        "spin": [
+          {
+            "word": "spin",
+            "accent": "us",
+            "filename": "spin.mp3",
+            "path": "US/spin.mp3"
+          }
+        ],
+        "spit": [
+          {
+            "word": "spit",
+            "accent": "us",
+            "filename": "spit.mp3",
+            "path": "US/spit.mp3"
+          }
+        ],
+        "slip": [
+          {
+            "word": "slip",
+            "accent": "us",
+            "filename": "slip.mp3",
+            "path": "US/slip.mp3"
+          }
+        ],
+        "slap": [
+          {
+            "word": "slap",
+            "accent": "us",
+            "filename": "slap.mp3",
+            "path": "US/slap.mp3"
+          }
+        ],
+        "slat": [
+          {
+            "word": "slat",
+            "accent": "us",
+            "filename": "slat.mp3",
+            "path": "US/slat.mp3"
+          }
+        ],
+        "spat": [
+          {
+            "word": "spat",
+            "accent": "us",
+            "filename": "spat.mp3",
+            "path": "US/spat.mp3"
+          }
+        ],
+        "split": [
+          {
+            "word": "split",
+            "accent": "us",
+            "filename": "split.mp3",
+            "path": "US/split.mp3"
+          }
         ]
       }
     },
@@ -1129,7 +1593,7 @@
         "er",
         "ar"
       ],
-      "word_count": 63,
+      "word_count": 93,
       "words": {
         "argue": [
           {
@@ -1844,6 +2308,246 @@
             "filename": "zero.mp3",
             "path": "US/zero.mp3"
           }
+        ],
+        "quit": [
+          {
+            "word": "quit",
+            "accent": "us",
+            "filename": "quit.mp3",
+            "path": "US/quit.mp3"
+          }
+        ],
+        "quiz": [
+          {
+            "word": "quiz",
+            "accent": "us",
+            "filename": "quiz.mp3",
+            "path": "US/quiz.mp3"
+          }
+        ],
+        "quick": [
+          {
+            "word": "quick",
+            "accent": "us",
+            "filename": "quick.mp3",
+            "path": "US/quick.mp3"
+          }
+        ],
+        "queen": [
+          {
+            "word": "queen",
+            "accent": "us",
+            "filename": "queen.mp3",
+            "path": "US/queen.mp3"
+          }
+        ],
+        "quiet": [
+          {
+            "word": "quiet",
+            "accent": "us",
+            "filename": "quiet.mp3",
+            "path": "US/quiet.mp3"
+          }
+        ],
+        "quite": [
+          {
+            "word": "quite",
+            "accent": "us",
+            "filename": "quite.mp3",
+            "path": "US/quite.mp3"
+          }
+        ],
+        "quote": [
+          {
+            "word": "quote",
+            "accent": "us",
+            "filename": "quote.mp3",
+            "path": "US/quote.mp3"
+          }
+        ],
+        "square": [
+          {
+            "word": "square",
+            "accent": "us",
+            "filename": "square.mp3",
+            "path": "US/square.mp3"
+          }
+        ],
+        "equal": [
+          {
+            "word": "equal",
+            "accent": "us",
+            "filename": "equal.mp3",
+            "path": "US/equal.mp3"
+          }
+        ],
+        "loud": [
+          {
+            "word": "loud",
+            "accent": "us",
+            "filename": "loud.mp3",
+            "path": "US/loud.mp3"
+          }
+        ],
+        "shout": [
+          {
+            "word": "shout",
+            "accent": "us",
+            "filename": "shout.mp3",
+            "path": "US/shout.mp3"
+          }
+        ],
+        "about": [
+          {
+            "word": "about",
+            "accent": "us",
+            "filename": "about.mp3",
+            "path": "US/about.mp3"
+          }
+        ],
+        "ground": [
+          {
+            "word": "ground",
+            "accent": "us",
+            "filename": "ground.mp3",
+            "path": "US/ground.mp3"
+          }
+        ],
+        "pound": [
+          {
+            "word": "pound",
+            "accent": "us",
+            "filename": "pound.mp3",
+            "path": "US/pound.mp3"
+          }
+        ],
+        "mount": [
+          {
+            "word": "mount",
+            "accent": "us",
+            "filename": "mount.mp3",
+            "path": "US/mount.mp3"
+          }
+        ],
+        "count": [
+          {
+            "word": "count",
+            "accent": "us",
+            "filename": "count.mp3",
+            "path": "US/count.mp3"
+          }
+        ],
+        "joint": [
+          {
+            "word": "joint",
+            "accent": "us",
+            "filename": "joint.mp3",
+            "path": "US/joint.mp3"
+          }
+        ],
+        "voice": [
+          {
+            "word": "voice",
+            "accent": "us",
+            "filename": "voice.mp3",
+            "path": "US/voice.mp3"
+          }
+        ],
+        "choice": [
+          {
+            "word": "choice",
+            "accent": "us",
+            "filename": "choice.mp3",
+            "path": "US/choice.mp3"
+          }
+        ],
+        "spoil": [
+          {
+            "word": "spoil",
+            "accent": "us",
+            "filename": "spoil.mp3",
+            "path": "US/spoil.mp3"
+          }
+        ],
+        "boil": [
+          {
+            "word": "boil",
+            "accent": "us",
+            "filename": "boil.mp3",
+            "path": "US/boil.mp3"
+          }
+        ],
+        "value": [
+          {
+            "word": "value",
+            "accent": "us",
+            "filename": "value.mp3",
+            "path": "US/value.mp3"
+          }
+        ],
+        "statue": [
+          {
+            "word": "statue",
+            "accent": "us",
+            "filename": "statue.mp3",
+            "path": "US/statue.mp3"
+          }
+        ],
+        "serve": [
+          {
+            "word": "serve",
+            "accent": "us",
+            "filename": "serve.mp3",
+            "path": "US/serve.mp3"
+          }
+        ],
+        "nerve": [
+          {
+            "word": "nerve",
+            "accent": "us",
+            "filename": "nerve.mp3",
+            "path": "US/nerve.mp3"
+          }
+        ],
+        "curve": [
+          {
+            "word": "curve",
+            "accent": "us",
+            "filename": "curve.mp3",
+            "path": "US/curve.mp3"
+          }
+        ],
+        "merge": [
+          {
+            "word": "merge",
+            "accent": "us",
+            "filename": "merge.mp3",
+            "path": "US/merge.mp3"
+          }
+        ],
+        "large": [
+          {
+            "word": "large",
+            "accent": "us",
+            "filename": "large.mp3",
+            "path": "US/large.mp3"
+          }
+        ],
+        "charge": [
+          {
+            "word": "charge",
+            "accent": "us",
+            "filename": "charge.mp3",
+            "path": "US/charge.mp3"
+          }
+        ],
+        "barge": [
+          {
+            "word": "barge",
+            "accent": "us",
+            "filename": "barge.mp3",
+            "path": "US/barge.mp3"
+          }
         ]
       }
     },
@@ -1857,7 +2561,7 @@
         "m",
         "d"
       ],
-      "word_count": 38,
+      "word_count": 81,
       "words": {
         "ask": [
           {
@@ -2298,6 +3002,350 @@
             "filename": "test.mp3",
             "path": "US/test.mp3"
           }
+        ],
+        "car": [
+          {
+            "word": "car",
+            "accent": "us",
+            "filename": "car.mp3",
+            "path": "US/car.mp3"
+          }
+        ],
+        "cap": [
+          {
+            "word": "cap",
+            "accent": "us",
+            "filename": "cap.mp3",
+            "path": "US/cap.mp3"
+          }
+        ],
+        "cot": [
+          {
+            "word": "cot",
+            "accent": "us",
+            "filename": "cot.mp3",
+            "path": "US/cot.mp3"
+          }
+        ],
+        "cod": [
+          {
+            "word": "cod",
+            "accent": "us",
+            "filename": "cod.mp3",
+            "path": "US/cod.mp3"
+          }
+        ],
+        "cad": [
+          {
+            "word": "cad",
+            "accent": "us",
+            "filename": "cad.mp3",
+            "path": "US/cad.mp3"
+          }
+        ],
+        "cam": [
+          {
+            "word": "cam",
+            "accent": "us",
+            "filename": "cam.mp3",
+            "path": "US/cam.mp3"
+          }
+        ],
+        "her": [
+          {
+            "word": "her",
+            "accent": "us",
+            "filename": "her.mp3",
+            "path": "US/her.mp3"
+          }
+        ],
+        "hem": [
+          {
+            "word": "hem",
+            "accent": "us",
+            "filename": "hem.mp3",
+            "path": "US/hem.mp3"
+          }
+        ],
+        "had": [
+          {
+            "word": "had",
+            "accent": "us",
+            "filename": "had.mp3",
+            "path": "US/had.mp3"
+          }
+        ],
+        "hid": [
+          {
+            "word": "hid",
+            "accent": "us",
+            "filename": "hid.mp3",
+            "path": "US/hid.mp3"
+          }
+        ],
+        "him": [
+          {
+            "word": "him",
+            "accent": "us",
+            "filename": "him.mp3",
+            "path": "US/him.mp3"
+          }
+        ],
+        "hep": [
+          {
+            "word": "hep",
+            "accent": "us",
+            "filename": "hep.mp3",
+            "path": "US/hep.mp3"
+          }
+        ],
+        "hop": [
+          {
+            "word": "hop",
+            "accent": "us",
+            "filename": "hop.mp3",
+            "path": "US/hop.mp3"
+          }
+        ],
+        "hot": [
+          {
+            "word": "hot",
+            "accent": "us",
+            "filename": "hot.mp3",
+            "path": "US/hot.mp3"
+          }
+        ],
+        "hod": [
+          {
+            "word": "hod",
+            "accent": "us",
+            "filename": "hod.mp3",
+            "path": "US/hod.mp3"
+          }
+        ],
+        "rod": [
+          {
+            "word": "rod",
+            "accent": "us",
+            "filename": "rod.mp3",
+            "path": "US/rod.mp3"
+          }
+        ],
+        "rim": [
+          {
+            "word": "rim",
+            "accent": "us",
+            "filename": "rim.mp3",
+            "path": "US/rim.mp3"
+          }
+        ],
+        "ram": [
+          {
+            "word": "ram",
+            "accent": "us",
+            "filename": "ram.mp3",
+            "path": "US/ram.mp3"
+          }
+        ],
+        "rat": [
+          {
+            "word": "rat",
+            "accent": "us",
+            "filename": "rat.mp3",
+            "path": "US/rat.mp3"
+          }
+        ],
+        "mad": [
+          {
+            "word": "mad",
+            "accent": "us",
+            "filename": "mad.mp3",
+            "path": "US/mad.mp3"
+          }
+        ],
+        "map": [
+          {
+            "word": "map",
+            "accent": "us",
+            "filename": "map.mp3",
+            "path": "US/map.mp3"
+          }
+        ],
+        "met": [
+          {
+            "word": "met",
+            "accent": "us",
+            "filename": "met.mp3",
+            "path": "US/met.mp3"
+          }
+        ],
+        "men": [
+          {
+            "word": "men",
+            "accent": "us",
+            "filename": "men.mp3",
+            "path": "US/men.mp3"
+          }
+        ],
+        "mud": [
+          {
+            "word": "mud",
+            "accent": "us",
+            "filename": "mud.mp3",
+            "path": "US/mud.mp3"
+          }
+        ],
+        "dam": [
+          {
+            "word": "dam",
+            "accent": "us",
+            "filename": "dam.mp3",
+            "path": "US/dam.mp3"
+          }
+        ],
+        "dim": [
+          {
+            "word": "dim",
+            "accent": "us",
+            "filename": "dim.mp3",
+            "path": "US/dim.mp3"
+          }
+        ],
+        "den": [
+          {
+            "word": "den",
+            "accent": "us",
+            "filename": "den.mp3",
+            "path": "US/den.mp3"
+          }
+        ],
+        "deck": [
+          {
+            "word": "deck",
+            "accent": "us",
+            "filename": "deck.mp3",
+            "path": "US/deck.mp3"
+          }
+        ],
+        "park": [
+          {
+            "word": "park",
+            "accent": "us",
+            "filename": "park.mp3",
+            "path": "US/park.mp3"
+          }
+        ],
+        "dark": [
+          {
+            "word": "dark",
+            "accent": "us",
+            "filename": "dark.mp3",
+            "path": "US/dark.mp3"
+          }
+        ],
+        "mark": [
+          {
+            "word": "mark",
+            "accent": "us",
+            "filename": "mark.mp3",
+            "path": "US/mark.mp3"
+          }
+        ],
+        "harm": [
+          {
+            "word": "harm",
+            "accent": "us",
+            "filename": "harm.mp3",
+            "path": "US/harm.mp3"
+          }
+        ],
+        "hard": [
+          {
+            "word": "hard",
+            "accent": "us",
+            "filename": "hard.mp3",
+            "path": "US/hard.mp3"
+          }
+        ],
+        "card": [
+          {
+            "word": "card",
+            "accent": "us",
+            "filename": "card.mp3",
+            "path": "US/card.mp3"
+          }
+        ],
+        "came": [
+          {
+            "word": "came",
+            "accent": "us",
+            "filename": "came.mp3",
+            "path": "US/came.mp3"
+          }
+        ],
+        "home": [
+          {
+            "word": "home",
+            "accent": "us",
+            "filename": "home.mp3",
+            "path": "US/home.mp3"
+          }
+        ],
+        "make": [
+          {
+            "word": "make",
+            "accent": "us",
+            "filename": "make.mp3",
+            "path": "US/make.mp3"
+          }
+        ],
+        "take": [
+          {
+            "word": "take",
+            "accent": "us",
+            "filename": "take.mp3",
+            "path": "US/take.mp3"
+          }
+        ],
+        "here": [
+          {
+            "word": "here",
+            "accent": "us",
+            "filename": "here.mp3",
+            "path": "US/here.mp3"
+          }
+        ],
+        "more": [
+          {
+            "word": "more",
+            "accent": "us",
+            "filename": "more.mp3",
+            "path": "US/more.mp3"
+          }
+        ],
+        "time": [
+          {
+            "word": "time",
+            "accent": "us",
+            "filename": "time.mp3",
+            "path": "US/time.mp3"
+          }
+        ],
+        "same": [
+          {
+            "word": "same",
+            "accent": "us",
+            "filename": "same.mp3",
+            "path": "US/same.mp3"
+          }
+        ],
+        "name": [
+          {
+            "word": "name",
+            "accent": "us",
+            "filename": "name.mp3",
+            "path": "US/name.mp3"
+          }
         ]
       }
     },
@@ -2310,7 +3358,7 @@
         "ee",
         "or"
       ],
-      "word_count": 59,
+      "word_count": 91,
       "words": {
         "bee": [
           {
@@ -3161,6 +4209,262 @@
             "group": 9,
             "category": "alternative_vowels"
           }
+        ],
+        "jail": [
+          {
+            "word": "jail",
+            "accent": "us",
+            "filename": "jail.mp3",
+            "path": "US/jail.mp3"
+          }
+        ],
+        "join": [
+          {
+            "word": "join",
+            "accent": "us",
+            "filename": "join.mp3",
+            "path": "US/join.mp3"
+          }
+        ],
+        "jug": [
+          {
+            "word": "jug",
+            "accent": "us",
+            "filename": "jug.mp3",
+            "path": "US/jug.mp3"
+          }
+        ],
+        "job": [
+          {
+            "word": "job",
+            "accent": "us",
+            "filename": "job.mp3",
+            "path": "US/job.mp3"
+          }
+        ],
+        "jot": [
+          {
+            "word": "jot",
+            "accent": "us",
+            "filename": "jot.mp3",
+            "path": "US/jot.mp3"
+          }
+        ],
+        "goal": [
+          {
+            "word": "goal",
+            "accent": "us",
+            "filename": "goal.mp3",
+            "path": "US/goal.mp3"
+          }
+        ],
+        "coal": [
+          {
+            "word": "coal",
+            "accent": "us",
+            "filename": "coal.mp3",
+            "path": "US/coal.mp3"
+          }
+        ],
+        "moon": [
+          {
+            "word": "moon",
+            "accent": "us",
+            "filename": "moon.mp3",
+            "path": "US/moon.mp3"
+          }
+        ],
+        "soon": [
+          {
+            "word": "soon",
+            "accent": "us",
+            "filename": "soon.mp3",
+            "path": "US/soon.mp3"
+          }
+        ],
+        "food": [
+          {
+            "word": "food",
+            "accent": "us",
+            "filename": "food.mp3",
+            "path": "US/food.mp3"
+          }
+        ],
+        "good": [
+          {
+            "word": "good",
+            "accent": "us",
+            "filename": "good.mp3",
+            "path": "US/good.mp3"
+          }
+        ],
+        "look": [
+          {
+            "word": "look",
+            "accent": "us",
+            "filename": "look.mp3",
+            "path": "US/look.mp3"
+          }
+        ],
+        "book": [
+          {
+            "word": "book",
+            "accent": "us",
+            "filename": "book.mp3",
+            "path": "US/book.mp3"
+          }
+        ],
+        "took": [
+          {
+            "word": "took",
+            "accent": "us",
+            "filename": "took.mp3",
+            "path": "US/took.mp3"
+          }
+        ],
+        "cook": [
+          {
+            "word": "cook",
+            "accent": "us",
+            "filename": "cook.mp3",
+            "path": "US/cook.mp3"
+          }
+        ],
+        "wood": [
+          {
+            "word": "wood",
+            "accent": "us",
+            "filename": "wood.mp3",
+            "path": "US/wood.mp3"
+          }
+        ],
+        "wool": [
+          {
+            "word": "wool",
+            "accent": "us",
+            "filename": "wool.mp3",
+            "path": "US/wool.mp3"
+          }
+        ],
+        "pool": [
+          {
+            "word": "pool",
+            "accent": "us",
+            "filename": "pool.mp3",
+            "path": "US/pool.mp3"
+          }
+        ],
+        "cool": [
+          {
+            "word": "cool",
+            "accent": "us",
+            "filename": "cool.mp3",
+            "path": "US/cool.mp3"
+          }
+        ],
+        "tool": [
+          {
+            "word": "tool",
+            "accent": "us",
+            "filename": "tool.mp3",
+            "path": "US/tool.mp3"
+          }
+        ],
+        "fool": [
+          {
+            "word": "fool",
+            "accent": "us",
+            "filename": "fool.mp3",
+            "path": "US/fool.mp3"
+          }
+        ],
+        "loop": [
+          {
+            "word": "loop",
+            "accent": "us",
+            "filename": "loop.mp3",
+            "path": "US/loop.mp3"
+          }
+        ],
+        "zoom": [
+          {
+            "word": "zoom",
+            "accent": "us",
+            "filename": "zoom.mp3",
+            "path": "US/zoom.mp3"
+          }
+        ],
+        "boom": [
+          {
+            "word": "boom",
+            "accent": "us",
+            "filename": "boom.mp3",
+            "path": "US/boom.mp3"
+          }
+        ],
+        "room": [
+          {
+            "word": "room",
+            "accent": "us",
+            "filename": "room.mp3",
+            "path": "US/room.mp3"
+          }
+        ],
+        "doom": [
+          {
+            "word": "doom",
+            "accent": "us",
+            "filename": "doom.mp3",
+            "path": "US/doom.mp3"
+          }
+        ],
+        "seen": [
+          {
+            "word": "seen",
+            "accent": "us",
+            "filename": "seen.mp3",
+            "path": "US/seen.mp3"
+          }
+        ],
+        "been": [
+          {
+            "word": "been",
+            "accent": "us",
+            "filename": "been.mp3",
+            "path": "US/been.mp3"
+          }
+        ],
+        "meet": [
+          {
+            "word": "meet",
+            "accent": "us",
+            "filename": "meet.mp3",
+            "path": "US/meet.mp3"
+          }
+        ],
+        "feet": [
+          {
+            "word": "feet",
+            "accent": "us",
+            "filename": "feet.mp3",
+            "path": "US/feet.mp3"
+          }
+        ],
+        "three": [
+          {
+            "word": "three",
+            "accent": "us",
+            "filename": "three.mp3",
+            "path": "US/three.mp3"
+          }
+        ],
+        "sweet": [
+          {
+            "word": "sweet",
+            "accent": "us",
+            "filename": "sweet.mp3",
+            "path": "US/sweet.mp3"
+          }
         ]
       }
     },
@@ -3172,7 +4476,7 @@
         "v",
         "oo"
       ],
-      "word_count": 47,
+      "word_count": 74,
       "words": {
         "book": [
           {
@@ -3641,6 +4945,222 @@
             "filename": "zoom.mp3",
             "path": "US/zoom.mp3"
           }
+        ],
+        "wag": [
+          {
+            "word": "wag",
+            "accent": "us",
+            "filename": "wag.mp3",
+            "path": "US/wag.mp3"
+          }
+        ],
+        "was": [
+          {
+            "word": "was",
+            "accent": "us",
+            "filename": "was.mp3",
+            "path": "US/was.mp3"
+          }
+        ],
+        "way": [
+          {
+            "word": "way",
+            "accent": "us",
+            "filename": "way.mp3",
+            "path": "US/way.mp3"
+          }
+        ],
+        "went": [
+          {
+            "word": "went",
+            "accent": "us",
+            "filename": "went.mp3",
+            "path": "US/went.mp3"
+          }
+        ],
+        "want": [
+          {
+            "word": "want",
+            "accent": "us",
+            "filename": "want.mp3",
+            "path": "US/want.mp3"
+          }
+        ],
+        "wait": [
+          {
+            "word": "wait",
+            "accent": "us",
+            "filename": "wait.mp3",
+            "path": "US/wait.mp3"
+          }
+        ],
+        "warm": [
+          {
+            "word": "warm",
+            "accent": "us",
+            "filename": "warm.mp3",
+            "path": "US/warm.mp3"
+          }
+        ],
+        "well": [
+          {
+            "word": "well",
+            "accent": "us",
+            "filename": "well.mp3",
+            "path": "US/well.mp3"
+          }
+        ],
+        "hang": [
+          {
+            "word": "hang",
+            "accent": "us",
+            "filename": "hang.mp3",
+            "path": "US/hang.mp3"
+          }
+        ],
+        "bang": [
+          {
+            "word": "bang",
+            "accent": "us",
+            "filename": "bang.mp3",
+            "path": "US/bang.mp3"
+          }
+        ],
+        "thing": [
+          {
+            "word": "thing",
+            "accent": "us",
+            "filename": "thing.mp3",
+            "path": "US/thing.mp3"
+          }
+        ],
+        "bring": [
+          {
+            "word": "bring",
+            "accent": "us",
+            "filename": "bring.mp3",
+            "path": "US/bring.mp3"
+          }
+        ],
+        "string": [
+          {
+            "word": "string",
+            "accent": "us",
+            "filename": "string.mp3",
+            "path": "US/string.mp3"
+          }
+        ],
+        "swing": [
+          {
+            "word": "swing",
+            "accent": "us",
+            "filename": "swing.mp3",
+            "path": "US/swing.mp3"
+          }
+        ],
+        "spring": [
+          {
+            "word": "spring",
+            "accent": "us",
+            "filename": "spring.mp3",
+            "path": "US/spring.mp3"
+          }
+        ],
+        "vet": [
+          {
+            "word": "vet",
+            "accent": "us",
+            "filename": "vet.mp3",
+            "path": "US/vet.mp3"
+          }
+        ],
+        "vest": [
+          {
+            "word": "vest",
+            "accent": "us",
+            "filename": "vest.mp3",
+            "path": "US/vest.mp3"
+          }
+        ],
+        "very": [
+          {
+            "word": "very",
+            "accent": "us",
+            "filename": "very.mp3",
+            "path": "US/very.mp3"
+          }
+        ],
+        "view": [
+          {
+            "word": "view",
+            "accent": "us",
+            "filename": "view.mp3",
+            "path": "US/view.mp3"
+          }
+        ],
+        "voice": [
+          {
+            "word": "voice",
+            "accent": "us",
+            "filename": "voice.mp3",
+            "path": "US/voice.mp3"
+          }
+        ],
+        "vote": [
+          {
+            "word": "vote",
+            "accent": "us",
+            "filename": "vote.mp3",
+            "path": "US/vote.mp3"
+          }
+        ],
+        "save": [
+          {
+            "word": "save",
+            "accent": "us",
+            "filename": "save.mp3",
+            "path": "US/save.mp3"
+          }
+        ],
+        "give": [
+          {
+            "word": "give",
+            "accent": "us",
+            "filename": "give.mp3",
+            "path": "US/give.mp3"
+          }
+        ],
+        "live": [
+          {
+            "word": "live",
+            "accent": "us",
+            "filename": "live.mp3",
+            "path": "US/live.mp3"
+          }
+        ],
+        "love": [
+          {
+            "word": "love",
+            "accent": "us",
+            "filename": "love.mp3",
+            "path": "US/love.mp3"
+          }
+        ],
+        "move": [
+          {
+            "word": "move",
+            "accent": "us",
+            "filename": "move.mp3",
+            "path": "US/move.mp3"
+          }
+        ],
+        "have": [
+          {
+            "word": "have",
+            "accent": "us",
+            "filename": "have.mp3",
+            "path": "US/have.mp3"
+          }
         ]
       }
     },
@@ -3652,7 +5172,7 @@
         "sh",
         "th"
       ],
-      "word_count": 64,
+      "word_count": 89,
       "words": {
         "box": [
           {
@@ -4392,6 +5912,206 @@
             "path": "advanced_phonics_sounds/alternative_vowels/yield_us.mp3",
             "group": 9,
             "category": "alternative_vowels"
+          }
+        ],
+        "you": [
+          {
+            "word": "you",
+            "accent": "us",
+            "filename": "you.mp3",
+            "path": "US/you.mp3"
+          }
+        ],
+        "your": [
+          {
+            "word": "your",
+            "accent": "us",
+            "filename": "your.mp3",
+            "path": "US/your.mp3"
+          }
+        ],
+        "year": [
+          {
+            "word": "year",
+            "accent": "us",
+            "filename": "year.mp3",
+            "path": "US/year.mp3"
+          }
+        ],
+        "yard": [
+          {
+            "word": "yard",
+            "accent": "us",
+            "filename": "yard.mp3",
+            "path": "US/yard.mp3"
+          }
+        ],
+        "young": [
+          {
+            "word": "young",
+            "accent": "us",
+            "filename": "young.mp3",
+            "path": "US/young.mp3"
+          }
+        ],
+        "next": [
+          {
+            "word": "next",
+            "accent": "us",
+            "filename": "next.mp3",
+            "path": "US/next.mp3"
+          }
+        ],
+        "exit": [
+          {
+            "word": "exit",
+            "accent": "us",
+            "filename": "exit.mp3",
+            "path": "US/exit.mp3"
+          }
+        ],
+        "chop": [
+          {
+            "word": "chop",
+            "accent": "us",
+            "filename": "chop.mp3",
+            "path": "US/chop.mp3"
+          }
+        ],
+        "chin": [
+          {
+            "word": "chin",
+            "accent": "us",
+            "filename": "chin.mp3",
+            "path": "US/chin.mp3"
+          }
+        ],
+        "such": [
+          {
+            "word": "such",
+            "accent": "us",
+            "filename": "such.mp3",
+            "path": "US/such.mp3"
+          }
+        ],
+        "lunch": [
+          {
+            "word": "lunch",
+            "accent": "us",
+            "filename": "lunch.mp3",
+            "path": "US/lunch.mp3"
+          }
+        ],
+        "bunch": [
+          {
+            "word": "bunch",
+            "accent": "us",
+            "filename": "bunch.mp3",
+            "path": "US/bunch.mp3"
+          }
+        ],
+        "catch": [
+          {
+            "word": "catch",
+            "accent": "us",
+            "filename": "catch.mp3",
+            "path": "US/catch.mp3"
+          }
+        ],
+        "match": [
+          {
+            "word": "match",
+            "accent": "us",
+            "filename": "match.mp3",
+            "path": "US/match.mp3"
+          }
+        ],
+        "watch": [
+          {
+            "word": "watch",
+            "accent": "us",
+            "filename": "watch.mp3",
+            "path": "US/watch.mp3"
+          }
+        ],
+        "patch": [
+          {
+            "word": "patch",
+            "accent": "us",
+            "filename": "patch.mp3",
+            "path": "US/patch.mp3"
+          }
+        ],
+        "rush": [
+          {
+            "word": "rush",
+            "accent": "us",
+            "filename": "rush.mp3",
+            "path": "US/rush.mp3"
+          }
+        ],
+        "cash": [
+          {
+            "word": "cash",
+            "accent": "us",
+            "filename": "cash.mp3",
+            "path": "US/cash.mp3"
+          }
+        ],
+        "dash": [
+          {
+            "word": "dash",
+            "accent": "us",
+            "filename": "dash.mp3",
+            "path": "US/dash.mp3"
+          }
+        ],
+        "flash": [
+          {
+            "word": "flash",
+            "accent": "us",
+            "filename": "flash.mp3",
+            "path": "US/flash.mp3"
+          }
+        ],
+        "crash": [
+          {
+            "word": "crash",
+            "accent": "us",
+            "filename": "crash.mp3",
+            "path": "US/crash.mp3"
+          }
+        ],
+        "brush": [
+          {
+            "word": "brush",
+            "accent": "us",
+            "filename": "brush.mp3",
+            "path": "US/brush.mp3"
+          }
+        ],
+        "fresh": [
+          {
+            "word": "fresh",
+            "accent": "us",
+            "filename": "fresh.mp3",
+            "path": "US/fresh.mp3"
+          }
+        ],
+        "finish": [
+          {
+            "word": "finish",
+            "accent": "us",
+            "filename": "finish.mp3",
+            "path": "US/finish.mp3"
+          }
+        ],
+        "polish": [
+          {
+            "word": "polish",
+            "accent": "us",
+            "filename": "polish.mp3",
+            "path": "US/polish.mp3"
           }
         ]
       }

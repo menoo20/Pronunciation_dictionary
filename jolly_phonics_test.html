@@ -174,28 +174,179 @@
             display: none;
         }
 
-        /* Mode selector */
+        /* Mode selector - Level-based design */
         .mode-controls {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 18px;
-            justify-content: center;
-            background: #f8f9ff;
-            border: 1px solid #e3e7ff;
-            border-radius: 12px;
-            padding: 10px 12px;
+            margin-bottom: 24px;
         }
-        .mode-controls label {
-            font-weight: 600;
+        
+        .mode-controls h3 {
+            text-align: center;
+            margin-bottom: 16px;
             color: #333;
+            font-size: 1.2em;
         }
-        .mode-controls select {
-            padding: 10px 14px;
-            border-radius: 10px;
-            border: 1px solid #ced4da;
-            background: #fff;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+        
+        .difficulty-levels {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .level-card {
+            flex: 1;
+            min-width: 200px;
+            max-width: 280px;
+            background: white;
+            border: 3px solid #e3e7ff;
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .level-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .level-card.selected {
+            border-color: #667eea;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        }
+        
+        .level-badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .level-card .level-badge {
+            background: #e8f4f8;
+            color: #2c5aa0;
+        }
+        
+        .level-card.selected .level-badge {
+            background: rgba(255,255,255,0.2);
+            color: white;
+        }
+        
+        .level-easy .level-badge {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .level-medium .level-badge {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .level-hard .level-badge {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .level-card.selected.level-easy .level-badge {
+            background: rgba(212, 237, 218, 0.3);
+            color: white;
+        }
+        
+        .level-card.selected.level-medium .level-badge {
+            background: rgba(255, 243, 205, 0.3);
+            color: white;
+        }
+        
+        .level-card.selected.level-hard .level-badge {
+            background: rgba(248, 215, 218, 0.3);
+            color: white;
+        }
+        
+        .level-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin: 8px 0;
+        }
+        
+        .level-description {
+            font-size: 0.9em;
+            opacity: 0.8;
+            line-height: 1.4;
+        }
+        
+        .level-card.selected .level-description {
+            opacity: 0.9;
+        }
+        
+        .difficulty-icon {
+            font-size: 2em;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        /* Multiple Choice Options */
+        .multiple-choice-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .choice-option {
+            background: white;
+            border: 3px solid #e9ecef;
+            border-radius: 12px;
+            padding: 15px 20px;
+            text-align: center;
+            cursor: pointer;
+            font-size: 1.2em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .choice-option:hover {
+            border-color: #667eea;
+            background: #f8f9ff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .choice-option.selected {
+            border-color: #667eea;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .choice-option.correct {
+            border-color: #28a745;
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .choice-option.incorrect {
+            border-color: #dc3545;
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .choice-option.correct-answer {
+            border-color: #28a745;
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
         }
 
         .test-header {
@@ -641,11 +792,27 @@
         <div class="group-selector" id="groupSelector">
             <h2>Choose Your Jolly Phonics Group</h2>
             <div class="mode-controls">
-                <label for="modeSelect">Question Mode:</label>
-                <select id="modeSelect">
-                    <option value="dictation" selected>Dictation (type full word)</option>
-                    <option value="gap">Fill the Gap (missing sound)</option>
-                </select>
+                <h3>📚 Choose Your Challenge Level</h3>
+                <div class="difficulty-levels">
+                    <div class="level-card level-easy" data-mode="gap" id="levelEasy">
+                        <span class="difficulty-icon">🟢</span>
+                        <div class="level-badge">Level 1 - Easy</div>
+                        <div class="level-title">Fill the Gap</div>
+                        <div class="level-description">Listen and fill in the missing sound. Perfect for beginners!</div>
+                    </div>
+                    <div class="level-card level-medium" data-mode="multiple-choice" id="levelMedium">
+                        <span class="difficulty-icon">🟡</span>
+                        <div class="level-badge">Level 2 - Medium</div>
+                        <div class="level-title">Multiple Choice</div>
+                        <div class="level-description">Listen and choose the correct word from options. Great for practice!</div>
+                    </div>
+                    <div class="level-card level-hard selected" data-mode="dictation" id="levelHard">
+                        <span class="difficulty-icon">🔴</span>
+                        <div class="level-badge">Level 3 - Difficult</div>
+                        <div class="level-title">Full Dictation</div>
+                        <div class="level-description">Listen and write the complete word. For advanced learners!</div>
+                    </div>
+                </div>
             </div>
             <div class="groups-grid" id="groupsGrid">
                 <!-- Groups will be loaded here -->
@@ -795,8 +962,224 @@
         }
 
         function getSelectedMode() {
-            const sel = document.getElementById('modeSelect');
-            return sel ? sel.value : 'dictation';
+            const selectedCard = document.querySelector('.level-card.selected');
+            return selectedCard ? selectedCard.dataset.mode : 'dictation';
+        }
+
+        // Initialize level card selection
+        function initializeLevelCards() {
+            document.querySelectorAll('.level-card').forEach(card => {
+                card.addEventListener('click', function() {
+                    // Remove selected class from all cards
+                    document.querySelectorAll('.level-card').forEach(c => c.classList.remove('selected'));
+                    // Add selected class to clicked card
+                    this.classList.add('selected');
+                });
+            });
+        }
+
+        // Generate multiple choice options for a word
+        function generateMultipleChoiceOptions(correctWord, groupNumber) {
+            const options = [correctWord];
+            
+            // Get words from current group
+            const groupWords = getAllWordsForGroup(groupNumber);
+            console.log(`Group ${groupNumber} has ${groupWords.length} words:`, groupWords);
+            
+            // Get words from nearby groups as additional options
+            const allAvailableWords = [];
+            for (let i = 1; i <= 7; i++) {
+                if (i !== groupNumber) {
+                    const otherGroupWords = getAllWordsForGroup(i);
+                    allAvailableWords.push(...otherGroupWords);
+                }
+            }
+            
+            // Combine all potential distractors
+            const allWords = [...groupWords, ...allAvailableWords];
+            
+            // Add common basic words as ultimate fallback
+            const commonWords = [
+                'cat', 'bat', 'hat', 'rat', 'mat', 'sat', 'pat', 'fat',
+                'dog', 'log', 'fog', 'big', 'pig', 'dig', 'bag', 'tag',
+                'pen', 'hen', 'ten', 'men', 'red', 'bed', 'led', 'web',
+                'run', 'sun', 'fun', 'gun', 'bun', 'cut', 'but', 'hut',
+                'fish', 'dish', 'wish', 'ship', 'chip', 'trip', 'skip',
+                'book', 'look', 'took', 'cook', 'good', 'food', 'moon',
+                'came', 'make', 'take', 'home', 'time', 'same', 'name'
+            ];
+            
+            allWords.push(...commonWords);
+            
+            // Filter out the correct answer and clean up words
+            const cleanWords = [...new Set(allWords)].filter(word => 
+                word !== correctWord && 
+                word && 
+                typeof word === 'string' &&
+                word.length >= 2 && 
+                word.length <= 8 &&
+                /^[a-zA-Z]+$/.test(word) // Only alphabetic characters
+            );
+            
+            console.log(`Available words for "${correctWord}":`, cleanWords.length);
+            
+            // Generate smart distractors
+            const smartDistractors = [];
+            
+            // 1. Same length words
+            const sameLengthWords = cleanWords.filter(word => word.length === correctWord.length);
+            if (sameLengthWords.length > 0) {
+                smartDistractors.push(...sameLengthWords.slice(0, 2));
+            }
+            
+            // 2. Same first letter
+            const sameFirstLetter = cleanWords.filter(word => 
+                word[0].toLowerCase() === correctWord[0].toLowerCase()
+            );
+            if (sameFirstLetter.length > 0) {
+                smartDistractors.push(sameFirstLetter[0]);
+            }
+            
+            // 3. Same last letter
+            const sameLastLetter = cleanWords.filter(word => 
+                word[word.length-1].toLowerCase() === correctWord[correctWord.length-1].toLowerCase()
+            );
+            if (sameLastLetter.length > 0) {
+                smartDistractors.push(sameLastLetter[0]);
+            }
+            
+            // 4. Words from the same group (most relevant)
+            const groupSpecificWords = groupWords.filter(word => word !== correctWord);
+            if (groupSpecificWords.length > 0) {
+                smartDistractors.push(...groupSpecificWords.slice(0, 2));
+            }
+            
+            // Remove duplicates and the correct answer
+            const uniqueDistractors = [...new Set(smartDistractors)].filter(word => 
+                word !== correctWord
+            );
+            
+            // Shuffle and add distractors to options
+            shuffleArray(uniqueDistractors);
+            
+            // Take the best 3 distractors
+            let selectedDistractors = uniqueDistractors.slice(0, 3);
+            
+            // If we don't have enough smart distractors, add random ones
+            if (selectedDistractors.length < 3) {
+                const remainingNeeded = 3 - selectedDistractors.length;
+                const additionalWords = cleanWords.filter(word => 
+                    !selectedDistractors.includes(word) && word !== correctWord
+                );
+                shuffleArray(additionalWords);
+                selectedDistractors.push(...additionalWords.slice(0, remainingNeeded));
+            }
+            
+            // Add distractors to options
+            options.push(...selectedDistractors);
+            
+            // Ensure we have exactly 4 options
+            while (options.length < 4) {
+                const fallbacks = ['and', 'the', 'yes', 'can', 'see', 'get', 'now', 'day'];
+                for (const fallback of fallbacks) {
+                    if (!options.includes(fallback) && fallback !== correctWord) {
+                        options.push(fallback);
+                        break;
+                    }
+                }
+                if (options.length < 4) break; // Prevent infinite loop
+            }
+            
+            // Shuffle the final options
+            shuffleArray(options);
+            const finalOptions = options.slice(0, 4);
+            
+            console.log(`Final options for "${correctWord}":`, finalOptions);
+            return finalOptions;
+        }
+
+        // Get all words available for a specific group
+        function getAllWordsForGroup(groupNumber) {
+            if (isAdvancedTest) {
+                return getAdvancedTestWords(groupNumber === 8 ? 'split_digraphs' : 
+                                         groupNumber === 9 ? 'alternative_vowels' : 'alternative_consonants');
+            } else {
+                const groupData = jollyPhonicData.groups[groupNumber.toString()];
+                if (!groupData || !groupData.words) {
+                    console.log(`No data found for group ${groupNumber}`);
+                    return [];
+                }
+                
+                // Extract word names (keys) from the words object
+                const allWords = Object.keys(groupData.words);
+                console.log(`Group ${groupNumber} words:`, allWords);
+                return allWords;
+            }
+        }
+
+        // Generate phonetically similar distractors
+        function generatePhoneticDistractors(word, wordPool) {
+            const distractors = [];
+            
+            // Same first letter
+            const sameFirstLetter = wordPool.filter(w => 
+                w !== word && w[0].toLowerCase() === word[0].toLowerCase()
+            );
+            if (sameFirstLetter.length > 0) {
+                distractors.push(sameFirstLetter[Math.floor(Math.random() * sameFirstLetter.length)]);
+            }
+            
+            // Same last letter
+            const sameLastLetter = wordPool.filter(w => 
+                w !== word && w[w.length-1].toLowerCase() === word[word.length-1].toLowerCase()
+            );
+            if (sameLastLetter.length > 0) {
+                distractors.push(sameLastLetter[Math.floor(Math.random() * sameLastLetter.length)]);
+            }
+            
+            // Similar vowel patterns
+            const wordVowels = word.toLowerCase().match(/[aeiou]/g) || [];
+            const sameVowelPattern = wordPool.filter(w => {
+                if (w === word) return false;
+                const wVowels = w.toLowerCase().match(/[aeiou]/g) || [];
+                return wVowels.length === wordVowels.length && 
+                       wVowels.join('') === wordVowels.join('');
+            });
+            if (sameVowelPattern.length > 0) {
+                distractors.push(sameVowelPattern[Math.floor(Math.random() * sameVowelPattern.length)]);
+            }
+            
+            return distractors;
+        }
+
+        // Utility function to shuffle array
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        // Handle multiple choice selection
+        function handleMultipleChoiceSelection(event) {
+            const selectedOption = event.target;
+            const selectedAnswer = selectedOption.dataset.answer;
+            
+            // Remove previous selections
+            document.querySelectorAll('.choice-option').forEach(opt => {
+                opt.classList.remove('selected');
+            });
+            
+            // Mark this option as selected
+            selectedOption.classList.add('selected');
+            
+            // Store the selected answer
+            currentWord.selectedAnswer = selectedAnswer;
+            
+            // Auto-submit after a short delay
+            setTimeout(() => {
+                submitAnswer();
+            }, 800);
         }
 
         function getGroupLetters(groupNumber) {
@@ -847,7 +1230,11 @@
             document.querySelector('.back-btn').style.display = 'block';
             
             // Update title
-            document.getElementById('testTitle').textContent = `Group ${groupNumber} Test — ${testMode === 'gap' ? 'Fill the Gap' : 'Dictation'}`;
+            document.getElementById('testTitle').textContent = `Group ${groupNumber} Test — ${
+                testMode === 'gap' ? 'Fill the Gap' : 
+                testMode === 'multiple-choice' ? 'Multiple Choice' : 
+                'Dictation'
+            }`;
             
             loadQuestion();
         }
@@ -902,7 +1289,11 @@
             
             // Update title
             const groupNames = {8: 'Split Digraphs', 9: 'Alternative Vowels', 10: 'Alternative Consonants'};
-            document.getElementById('testTitle').textContent = `Group ${groupNumber}: ${groupNames[groupNumber]} Test — ${testMode === 'gap' ? 'Fill the Gap' : 'Dictation'}`;
+            document.getElementById('testTitle').textContent = `Group ${groupNumber}: ${groupNames[groupNumber]} Test — ${
+                testMode === 'gap' ? 'Fill the Gap' : 
+                testMode === 'multiple-choice' ? 'Multiple Choice' : 
+                'Dictation'
+            }`;
             
             loadQuestion();
         }
@@ -1006,6 +1397,25 @@
                     container.appendChild(input);
                 }
                 if (container.firstChild) container.firstChild.focus();
+            } else if (testMode === 'multiple-choice') {
+                // Create multiple choice options
+                const optionsContainer = document.createElement('div');
+                optionsContainer.className = 'multiple-choice-options';
+                
+                // Generate options for this word
+                const options = generateMultipleChoiceOptions(question.word, currentGroup);
+                currentWord.correctAnswer = question.word;
+                
+                options.forEach((option, index) => {
+                    const optionButton = document.createElement('div');
+                    optionButton.className = 'choice-option';
+                    optionButton.textContent = option;
+                    optionButton.dataset.answer = option;
+                    optionButton.addEventListener('click', handleMultipleChoiceSelection);
+                    optionsContainer.appendChild(optionButton);
+                });
+                
+                container.appendChild(optionsContainer);
             } else {
                 const gap = buildGapForWord(question.word, currentGroup);
                 currentWord.gap = gap;
@@ -1078,7 +1488,12 @@
             document.getElementById('immediateFeedback').style.display = 'none';
 
             // Reset buttons
-            document.getElementById('submitBtn').disabled = true;
+            if (testMode === 'multiple-choice') {
+                document.getElementById('submitBtn').style.display = 'none';
+            } else {
+                document.getElementById('submitBtn').style.display = 'inline-block';
+                document.getElementById('submitBtn').disabled = true;
+            }
             document.getElementById('nextBtn').style.display = 'none';
             document.getElementById('playButton').disabled = false;
 
@@ -1191,6 +1606,36 @@
                     mistakes.push({ word: currentWord.word, userAnswer, correctAnswer, audioPath: currentWord.audioPath });
                     feedbackElement.className = 'immediate-feedback incorrect';
                     feedbackElement.innerHTML = `❌ Not quite right.<div class="correct-answer">The correct spelling is: <strong>${correctAnswer.toUpperCase()}</strong></div>`;
+                }
+            } else if (testMode === 'multiple-choice') {
+                const selectedAnswer = currentWord.selectedAnswer?.toLowerCase();
+                const isCorrect = selectedAnswer === correctAnswer;
+                
+                // Update visual feedback on choices
+                document.querySelectorAll('.choice-option').forEach(option => {
+                    const optionText = option.dataset.answer.toLowerCase();
+                    option.style.pointerEvents = 'none'; // Disable further clicks
+                    
+                    if (optionText === correctAnswer) {
+                        option.classList.add('correct-answer');
+                    } else if (optionText === selectedAnswer && !isCorrect) {
+                        option.classList.add('incorrect');
+                    }
+                });
+                
+                if (isCorrect) {
+                    score++;
+                    feedbackElement.className = 'immediate-feedback correct';
+                    feedbackElement.innerHTML = '✅ Correct! Well done!';
+                } else {
+                    mistakes.push({ 
+                        word: currentWord.word, 
+                        userAnswer: selectedAnswer || 'No selection', 
+                        correctAnswer, 
+                        audioPath: currentWord.audioPath 
+                    });
+                    feedbackElement.className = 'immediate-feedback incorrect';
+                    feedbackElement.innerHTML = `❌ Not quite right.<div class="correct-answer">The correct answer is: <strong>${correctAnswer.toUpperCase()}</strong></div>`;
                 }
             } else {
                 const gapInput = document.getElementById('gapInput');
@@ -1390,7 +1835,10 @@
         }
 
         // Initialize
-        window.addEventListener('load', loadJollyPhonicsData);
+        window.addEventListener('load', function() {
+            loadJollyPhonicsData();
+            initializeLevelCards();
+        });
     </script>
 </body>
 </html>
